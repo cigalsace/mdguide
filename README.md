@@ -1,4 +1,4 @@
 # mdguide
 Guide de métadonnées CIGAL.
 
-cf. le [wiki](https://github.com/cigalsace/mdguide/wiki)
+cf. [la documentation](http://cigalsace.github.io/mdguide/)
