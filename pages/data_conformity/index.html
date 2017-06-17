@@ -1,0 +1,1785 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Conformité des données">
+      
+      
+        <link rel="canonical" href="https://cigalsace.github.io/mdguide/pages/data_conformity/">
+      
+      
+        <meta name="author" content="Guillaume R. (GéoGrandEst)">
+      
+      
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.3">
+    
+    
+      
+        <title>Conformités</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-acc56dad49.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-8817cfa535.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"sans-serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://cigalsace.github.io/mdguide" title="mdGuide" class="md-logo md-header-nav__button">
+            <img src="../../img/open-book.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Guide
+                </span>
+              
+            
+            Conformité de la donnée
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/open-book.svg">
+      </i>
+    
+    mdGuide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../md_info/" title="Information sur les métadonnées" class="md-nav__link">
+      Information sur les métadonnées
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_info/" title="Description de la donnée géographique" class="md-nav__link">
+      Description de la donnée géographique
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_geo/" title="Référence géographique de la donnée" class="md-nav__link">
+      Référence géographique de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_quality/" title="Qualité de la donnée" class="md-nav__link">
+      Qualité de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_distribution/" title="Diffusion de la donnée" class="md-nav__link">
+      Diffusion de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Conformité de la donnée
+      </label>
+    
+    <a href="./" title="Conformité de la donnée" class="md-nav__link md-nav__link--active">
+      Conformité de la donnée
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee" title="Conformité de la donnée" class="md-nav__link">
+    Conformité de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites-sur-la-conformite-des-donnees" title="Généralités sur la conformité des données" class="md-nav__link">
+    Généralités sur la conformité des données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee-aux-regles-dinteroperabilite-inspire" title="Conformité de la donnée aux règles d’interopérabilité Inspire" class="md-nav__link">
+    Conformité de la donnée aux règles d’interopérabilité Inspire
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-la-specification" title="Nom de la spécification" class="md-nav__link">
+    Nom de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-de-creation-modification-publication-de-la-specification" title="Date de création / modification / publication de la spécification" class="md-nav__link">
+    Date de création / modification / publication de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explication-du-test-de-conformite" title="Explication du test de conformité" class="md-nav__link">
+    Explication du test de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degre-de-conformite" title="Degré de conformité" class="md-nav__link">
+    Degré de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee-a-dautres-specifications" title="Conformité de la donnée à d’autres spécifications" class="md-nav__link">
+    Conformité de la donnée à d’autres spécifications
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-la-specification_1" title="Nom de la spécification" class="md-nav__link">
+    Nom de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_4" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_4" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_4" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_4" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-de-creation-modification-publication-de-la-specification_1" title="Date de création / modification / publication de la spécification" class="md-nav__link">
+    Date de création / modification / publication de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_5" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_5" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_5" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_5" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explication-du-test-de-conformite_1" title="Explication du test de conformité" class="md-nav__link">
+    Explication du test de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_6" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_6" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_6" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_6" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degre-de-conformite_1" title="Degré de conformité" class="md-nav__link">
+    Degré de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_7" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_7" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_7" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_7" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annexes/" title="Annexes" class="md-nav__link">
+      Annexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../biblio/" title="Bibliographie" class="md-nav__link">
+      Bibliographie
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      A propos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        A propos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee" title="Conformité de la donnée" class="md-nav__link">
+    Conformité de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalites-sur-la-conformite-des-donnees" title="Généralités sur la conformité des données" class="md-nav__link">
+    Généralités sur la conformité des données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee-aux-regles-dinteroperabilite-inspire" title="Conformité de la donnée aux règles d’interopérabilité Inspire" class="md-nav__link">
+    Conformité de la donnée aux règles d’interopérabilité Inspire
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-la-specification" title="Nom de la spécification" class="md-nav__link">
+    Nom de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-de-creation-modification-publication-de-la-specification" title="Date de création / modification / publication de la spécification" class="md-nav__link">
+    Date de création / modification / publication de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explication-du-test-de-conformite" title="Explication du test de conformité" class="md-nav__link">
+    Explication du test de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degre-de-conformite" title="Degré de conformité" class="md-nav__link">
+    Degré de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conformite-de-la-donnee-a-dautres-specifications" title="Conformité de la donnée à d’autres spécifications" class="md-nav__link">
+    Conformité de la donnée à d’autres spécifications
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-la-specification_1" title="Nom de la spécification" class="md-nav__link">
+    Nom de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_4" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_4" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_4" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_4" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-de-creation-modification-publication-de-la-specification_1" title="Date de création / modification / publication de la spécification" class="md-nav__link">
+    Date de création / modification / publication de la spécification
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_5" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_5" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_5" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_5" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explication-du-test-de-conformite_1" title="Explication du test de conformité" class="md-nav__link">
+    Explication du test de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_6" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_6" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_6" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_6" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degre-de-conformite_1" title="Degré de conformité" class="md-nav__link">
+    Degré de conformité
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_7" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_7" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_7" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_7" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Conformité de la donnée</h1>
+                
+                <h2 id="conformite-de-la-donnee">Conformité de la donnée<a class="headerlink" href="#conformite-de-la-donnee" title="Permanent link">&para;</a></h2>
+<h3 id="generalites-sur-la-conformite-des-donnees">Généralités sur la conformité des données<a class="headerlink" href="#generalites-sur-la-conformite-des-donnees" title="Permanent link">&para;</a></h3>
+<p>Cette information vise à renseigner l’utilisateur sur le respect de normes, standards ou autre spécification dans la manière dont la donnée est produite, structurée et diffusée.</p>
+<p>Dans le cadre de GéoGrandEst, 2 niveaux distincts de conformité sont distingués afin de faciliter la saisie:</p>
+<ul>
+<li>La conformité aux règlements d’interopérabilité de la directive Inspire pour les données</li>
+<li>La conformité à d’autres spécifications sur lesquelles s’est appuyé le producteur de la donnée (COVADIS, CNIG, AFNOR, etc.).</li>
+</ul>
+<p>Le premier niveau dépend d’une liste fermée de valeurs. Si une classification européenne est renseignée (cf. <a href="../data_info/#classification-europeenne-inspire">Classification européenne Inspire</a>), le degré de conformité au règlement d’interopérabilité qui s’y rattache doit être fourni.
+Le second niveau n’est pas obligatoire et est rempli au libre choix de l’organisme décrivant les données.</p>
+<p>Dans les 2 cas, 4 informations suivantes sont attendues:</p>
+<ul>
+<li>Le nom de la spécification</li>
+<li>La date de sa création, révision ou publication</li>
+<li>La description des du contrôle de conformité réalisé</li>
+<li>Le degré de conformité</li>
+</ul>
+<hr />
+<h3 id="conformite-de-la-donnee-aux-regles-dinteroperabilite-inspire">Conformité de la donnée aux règles d’interopérabilité Inspire<a class="headerlink" href="#conformite-de-la-donnee-aux-regles-dinteroperabilite-inspire" title="Permanent link">&para;</a></h3>
+<h4 id="nom-de-la-specification">Nom de la spécification<a class="headerlink" href="#nom-de-la-specification" title="Permanent link">&para;</a></h4>
+<h5 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h5>
+<p>Cette information indique le nom et les références de la règle d’interopérabilité Inspire pour laquelle le degré de conformité a été évalué pour les données.</p>
+<p>La liste des valeurs proposées dans le cadre de GéoGrandEst est celle défini au niveau français par la Conseil National de l’Information Géographique (CNIG) et reprise dans le tableau suivant.</p>
+<p>Table: Liste des spécifications relatives aux règles d’interopérabilité Inspire publiées au 1er juin 2012</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Intitulé Inspire</th>
+<th align="left">Nom de la spécification</th>
+<th align="left">Date de publication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">None</td>
+<td align="left">Aucun test réalisé</td>
+<td align="left">--</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata (publication:2008-12-04)</td>
+<td align="left">COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata (publication:2008-12-04)</td>
+<td align="left">04/12/2008</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Corrigendum to INSPIRE Metadata Regulation published in the Official Journal of the European Union, L 328, page 83 (publication:2009-12-15))</td>
+<td align="left">Corrigendum to INSPIRE Metadata Regulation published in the Official Journal of the European Union, L 328, page 83 (publication:2009-12-15)</td>
+<td align="left">15/12/2009</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services (publication:2010-12-08)</td>
+<td align="left">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services (publication:2010-12-08)</td>
+<td align="left">08/12/2010</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">COMMISSION REGULATION (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services (publication:2010-12-08)</td>
+<td align="left">COMMISSION REGULATION (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services (publication:2010-12-08)</td>
+<td align="left">08/12/2010</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services (publication:2009-10-20)</td>
+<td align="left">COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services (publication:2009-10-20)</td>
+<td align="left">20/10/2009</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">COMMISSION REGULATION (EU) No 268/2010 of 29 March 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the access to spatial data sets and services of the Member States by Community institutions and bodies under harmonised conditions (publication:2010-03-30)</td>
+<td align="left">COMMISSION REGULATION (EU) No 268/2010 of 29 March 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the access to spatial data sets and services of the Member States by Community institutions and bodies under harmonised conditions (publication:2010-03-30)</td>
+<td align="left">30/03/2010</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC) (publication:2009-06-11)</td>
+<td align="left">Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC) (publication:2009-06-11)</td>
+<td align="left">11/06/2009</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations">Recommandations<a class="headerlink" href="#recommandations" title="Permanent link">&para;</a></h5>
+<p>Seules les règles d’interopérabilité en lien avec le thème de la donnée renseigné au paragraphe 3.9 doit être saisie.</p>
+<h5 id="exemples">Exemples<a class="headerlink" href="#exemples" title="Permanent link">&para;</a></h5>
+<p>Nom de la spécification : <code class="codehilite">COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata</code></p>
+<h5 id="references-techniques">Références techniques<a class="headerlink" href="#references-techniques" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 7.1
+- Nom:                  Specification (Spécification)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          130
+- Nom:                  specification
+- Code:                 conSpec
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/title
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<hr />
+<h4 id="date-de-creation-modification-publication-de-la-specification">Date de création / modification / publication de la spécification<a class="headerlink" href="#date-de-creation-modification-publication-de-la-specification" title="Permanent link">&para;</a></h4>
+<h5 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h5>
+<p>Cette information indique la date de modification, publication ou révision de la spécification renseignée.</p>
+<h5 id="recommandations_1">Recommandations<a class="headerlink" href="#recommandations_1" title="Permanent link">&para;</a></h5>
+<p>Se rapporter à la spécification pour en connaître la date de création, publication ou révision (cf. tableau du paragraphe 7.2.1.1).</p>
+<h5 id="exemples_1">Exemples<a class="headerlink" href="#exemples_1" title="Permanent link">&para;</a></h5>
+<p>Date de publication : <code class="codehilite">04/12/2008</code></p>
+<h5 id="references-techniques_1">Références techniques<a class="headerlink" href="#references-techniques_1" title="Permanent link">&para;</a></h5>
+<h6 id="date">Date<a class="headerlink" href="#date" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/date
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD`
+dans le fichier d’échange XML. Par exemple : `2008-10-02`.
+</pre></div>
+
+
+<h6 id="type-de-date">Type de date<a class="headerlink" href="#type-de-date" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/dateType
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Dans la norme ISO 19115, c&#39;est le champ &quot;type de date&quot; qui détermine si la date
+renseignée est une date de publication (`publication`), de révision (`revision`) ou
+de création (`creation`).
+- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs possibles et
+plus de détails.
+</pre></div>
+
+
+<hr />
+<h4 id="explication-du-test-de-conformite">Explication du test de conformité<a class="headerlink" href="#explication-du-test-de-conformite" title="Permanent link">&para;</a></h4>
+<h5 id="definition_2">Définition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h5>
+<p>Cette information permet de renseigner l’utilisateur sur la manière dont le degré de conformité a été évalué.</p>
+<h5 id="recommandations_2">Recommandations<a class="headerlink" href="#recommandations_2" title="Permanent link">&para;</a></h5>
+<p>Il ne s’agit pas d’indiquer le degré de conformité (cf. paragraphe 7.2.4), mais la façon dont celui-ci a été évalué et les éventuels problèmes rencontrés.</p>
+<h5 id="exemples_2">Exemples<a class="headerlink" href="#exemples_2" title="Permanent link">&para;</a></h5>
+<p>Test réalisé : <code class="codehilite">...</code></p>
+<h5 id="references-techniques_2">Références techniques<a class="headerlink" href="#references-techniques_2" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          131
+- Nom:                  explaination
+- Code:                 conExpl
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/explanation
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<hr />
+<h4 id="degre-de-conformite">Degré de conformité<a class="headerlink" href="#degre-de-conformite" title="Permanent link">&para;</a></h4>
+<h5 id="definition_3">Définition<a class="headerlink" href="#definition_3" title="Permanent link">&para;</a></h5>
+<p>Cette information précise le résultat du test de conformité.</p>
+<p>Table: Liste des valeurs possible pour le degré de conformité</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code</th>
+<th align="left">Degré de conformité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">true</td>
+<td align="left">Conforme</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">false</td>
+<td align="left">Non conforme</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">(vide)</td>
+<td align="left">Non évalué</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations_3">Recommandations<a class="headerlink" href="#recommandations_3" title="Permanent link">&para;</a></h5>
+<p>Si cette information n’est pas renseignée, le degré de conformité est considéré comme <code class="codehilite">Non évalué</code>.
+La valeur par défaut est <code class="codehilite">Non évalué</code>.</p>
+<h5 id="exemples_3">Exemples<a class="headerlink" href="#exemples_3" title="Permanent link">&para;</a></h5>
+<p>Degré de conformité : <code class="codehilite">Non évalué</code></p>
+<h5 id="references-techniques_3">Références techniques<a class="headerlink" href="#references-techniques_3" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 7.2
+- Nom:                  Degree (Degré)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          132
+- Nom:                  pass
+- Code:                 conPass
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/pass
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<hr />
+<h3 id="conformite-de-la-donnee-a-dautres-specifications">Conformité de la donnée à d’autres spécifications<a class="headerlink" href="#conformite-de-la-donnee-a-dautres-specifications" title="Permanent link">&para;</a></h3>
+<h4 id="nom-de-la-specification_1">Nom de la spécification<a class="headerlink" href="#nom-de-la-specification_1" title="Permanent link">&para;</a></h4>
+<h5 id="definition_4">Définition<a class="headerlink" href="#definition_4" title="Permanent link">&para;</a></h5>
+<p>Cette information indique le nom du standard, de la norme ou autre spécification pour lequel le degré de conformité de la donnée a été évalué.</p>
+<h5 id="recommandations_4">Recommandations<a class="headerlink" href="#recommandations_4" title="Permanent link">&para;</a></h5>
+<p>La conformité aux règles d’interopérabilité Inspire ne doit pas être renseigné à ce niveau (cf. paragraphe 7.2.1).</p>
+<h5 id="exemples_4">Exemples<a class="headerlink" href="#exemples_4" title="Permanent link">&para;</a></h5>
+<p>Nom de la spécification : <code class="codehilite">Géostandard de la COVADIS : Aménagement Numérique des Territoires - Infrastructures de communications électroniques</code></p>
+<h5 id="references-techniques_4">Références techniques<a class="headerlink" href="#references-techniques_4" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 7.1
+- Nom:                  Specification (Spécification)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          130
+- Nom:                  specification
+- Code:                 conSpec
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/title
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<hr />
+<h4 id="date-de-creation-modification-publication-de-la-specification_1">Date de création / modification / publication de la spécification<a class="headerlink" href="#date-de-creation-modification-publication-de-la-specification_1" title="Permanent link">&para;</a></h4>
+<h5 id="definition_5">Définition<a class="headerlink" href="#definition_5" title="Permanent link">&para;</a></h5>
+<p>Cette information indique la date de modification, publication ou révision de la spécification renseignée.</p>
+<h5 id="recommandations_5">Recommandations<a class="headerlink" href="#recommandations_5" title="Permanent link">&para;</a></h5>
+<p>Se rapporter à la spécification pour en connaître la date de création, publication ou révision.</p>
+<h5 id="exemples_5">Exemples<a class="headerlink" href="#exemples_5" title="Permanent link">&para;</a></h5>
+<p>Date de publication : <code class="codehilite">25/01/2012</code></p>
+<h5 id="references-techniques_5">Références techniques<a class="headerlink" href="#references-techniques_5" title="Permanent link">&para;</a></h5>
+<h6 id="date_1">Date<a class="headerlink" href="#date_1" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/date
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD` dans le fichier d’échange XML. Par exemple : `2008-10-02`.
+</pre></div>
+
+
+<h6 id="type-de-date_1">Type de date<a class="headerlink" href="#type-de-date_1" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*/result/*/specification/*
+                        /date/*/dateType
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs
+possibles.
+</pre></div>
+
+
+<hr />
+<h4 id="explication-du-test-de-conformite_1">Explication du test de conformité<a class="headerlink" href="#explication-du-test-de-conformite_1" title="Permanent link">&para;</a></h4>
+<h5 id="definition_6">Définition<a class="headerlink" href="#definition_6" title="Permanent link">&para;</a></h5>
+<p>Cette information permet de renseigner l’utilisateur sur la manière dont le degré de conformité a été évalué.</p>
+<h5 id="recommandations_6">Recommandations<a class="headerlink" href="#recommandations_6" title="Permanent link">&para;</a></h5>
+<p>Il ne s’agit pas d’indiquer le degré de conformité (cf. paragraphe 7.3.4), mais la façon dont celui-ci a été évalué et les éventuels problèmes rencontrés.</p>
+<h5 id="exemples_6">Exemples<a class="headerlink" href="#exemples_6" title="Permanent link">&para;</a></h5>
+<p>Résultat du test : <code class="codehilite">…</code></p>
+<h5 id="references-techniques_6">Références techniques<a class="headerlink" href="#references-techniques_6" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          131
+- Nom:                  explaination
+- Code:                 conExpl
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/explanation
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<hr />
+<h4 id="degre-de-conformite_1">Degré de conformité<a class="headerlink" href="#degre-de-conformite_1" title="Permanent link">&para;</a></h4>
+<h5 id="definition_7">Définition<a class="headerlink" href="#definition_7" title="Permanent link">&para;</a></h5>
+<p>Cette information précise le résultat du test de conformité.</p>
+<p>Table: Liste des valeurs possible pour le degré de conformité</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code</th>
+<th align="left">Degré de conformité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">true</td>
+<td align="left">Conforme</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">false</td>
+<td align="left">Non conforme</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">(vide)</td>
+<td align="left">Non évalué</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations_7">Recommandations<a class="headerlink" href="#recommandations_7" title="Permanent link">&para;</a></h5>
+<p>Si cette information n’est pas renseignée, le degré de conformité est considéré comme <code class="codehilite">Non évalué</code>.
+La valeur par défaut est <code class="codehilite">Non évalué</code>.</p>
+<h5 id="exemples_7">Exemples<a class="headerlink" href="#exemples_7" title="Permanent link">&para;</a></h5>
+<p>Degré de conformité : <code class="codehilite">Non évalué</code></p>
+<h5 id="references-techniques_7">Références techniques<a class="headerlink" href="#references-techniques_7" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 7.2
+- Nom:                  Degree (Degré)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          132
+- Nom:                  pass
+- Code:                 conPass
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/pass
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+                
+                  
+                    <h2 id="__source">Source</h2>
+                    
+                    
+                      <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master/docs/pages/data_conformity.md" title="data_conformity.md" class="md-source-file">
+                        data_conformity.md
+                      </a>
+                    
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data_distribution/" title="Diffusion de la donnée" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Diffusion de la donnée
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../annexes/" title="Annexes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Annexes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 GéoGrandEst
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://gogs.makou.org/guillaue_ryckelynck/mdguide" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/cigal_alsace" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="../../pdf/mdguide.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+      <a href="../../pdf/mdguide.epub" class="md-footer-social__link fa fa-book"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-b30566c560.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

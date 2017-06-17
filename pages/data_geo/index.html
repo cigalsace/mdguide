@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Description géographique des données">
+      
+      
+        <link rel="canonical" href="https://cigalsace.github.io/mdguide/pages/data_geo/">
+      
+      
+        <meta name="author" content="Guillaume R. (GéoGrandEst)">
+      
+      
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.3">
+    
+    
+      
+        <title>Géo</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-acc56dad49.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-8817cfa535.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"sans-serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://cigalsace.github.io/mdguide" title="mdGuide" class="md-logo md-header-nav__button">
+            <img src="../../img/open-book.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Guide
+                </span>
+              
+            
+            Référence géographique de la donnée
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/open-book.svg">
+      </i>
+    
+    mdGuide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../md_info/" title="Information sur les métadonnées" class="md-nav__link">
+      Information sur les métadonnées
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_info/" title="Description de la donnée géographique" class="md-nav__link">
+      Description de la donnée géographique
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Référence géographique de la donnée
+      </label>
+    
+    <a href="./" title="Référence géographique de la donnée" class="md-nav__link md-nav__link--active">
+      Référence géographique de la donnée
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#reference-geographique-de-la-donnee" title="Référence géographique de la donnée" class="md-nav__link">
+    Référence géographique de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emprise" title="Emprise" class="md-nav__link">
+    Emprise
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-lemprise" title="Nom de l’emprise" class="md-nav__link">
+    Nom de l’emprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordonnees-de-lemprise" title="Coordonnées de l’emprise" class="md-nav__link">
+    Coordonnées de l’emprise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-projection" title="Système de projection" class="md-nav__link">
+    Système de projection
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etendue-temporelle" title="Etendue temporelle" class="md-nav__link">
+    Etendue temporelle
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etendue-temporelle_1" title="Etendue temporelle" class="md-nav__link">
+    Etendue temporelle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-reference-temporel" title="Système de référence temporel" class="md-nav__link">
+    Système de référence temporel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-de-representation" title="Type de représentation" class="md-nav__link">
+    Type de représentation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_quality/" title="Qualité de la donnée" class="md-nav__link">
+      Qualité de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_distribution/" title="Diffusion de la donnée" class="md-nav__link">
+      Diffusion de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_conformity/" title="Conformité de la donnée" class="md-nav__link">
+      Conformité de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annexes/" title="Annexes" class="md-nav__link">
+      Annexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../biblio/" title="Bibliographie" class="md-nav__link">
+      Bibliographie
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      A propos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        A propos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#reference-geographique-de-la-donnee" title="Référence géographique de la donnée" class="md-nav__link">
+    Référence géographique de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emprise" title="Emprise" class="md-nav__link">
+    Emprise
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-de-lemprise" title="Nom de l’emprise" class="md-nav__link">
+    Nom de l’emprise
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordonnees-de-lemprise" title="Coordonnées de l’emprise" class="md-nav__link">
+    Coordonnées de l’emprise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-projection" title="Système de projection" class="md-nav__link">
+    Système de projection
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etendue-temporelle" title="Etendue temporelle" class="md-nav__link">
+    Etendue temporelle
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etendue-temporelle_1" title="Etendue temporelle" class="md-nav__link">
+    Etendue temporelle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-reference-temporel" title="Système de référence temporel" class="md-nav__link">
+    Système de référence temporel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-de-representation" title="Type de représentation" class="md-nav__link">
+    Type de représentation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Référence géographique de la donnée</h1>
+                
+                <h2 id="reference-geographique-de-la-donnee">Référence géographique de la donnée<a class="headerlink" href="#reference-geographique-de-la-donnee" title="Permanent link">&para;</a></h2>
+<h3 id="emprise">Emprise<a class="headerlink" href="#emprise" title="Permanent link">&para;</a></h3>
+<h4 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
+<p>Ce champ permet d’indiquer l'emprise explorée où des informations ont été recueillies pour constituer la donnée. Ils s’agit d’un rectangle de délimitation intégrant la zone d’étude dans laquelle les données ont été identifiées et localisées.</p>
+<p>Une emprise est ainsi constituée :</p>
+<ul>
+<li>D’un nom la qualifiant</li>
+<li>De 4 coordonnées précisant les longitudes ouest et est et les latitudes sud et nord du rectangle englobant dans
+lequel est située la zone concernant la donnée</li>
+</ul>
+<h4 id="recommandations">Recommandations<a class="headerlink" href="#recommandations" title="Permanent link">&para;</a></h4>
+<p>Dans le cas particulier où la donnée couvre plusieurs zones distinctes, il est possible de renseigner plusieurs emprises si celles-ci ne se superposent pas.</p>
+<p>L’emprise doit englober l’étendue du territoire pour lequel le producteur garantit la connaissance et la saisie de l’information fournie. L’absence vérifiée d’éléments sur un territoire constitue une information en soi, ainsi, le rectangle englobant peut parfois couvrir une zone bien plus large que l’emprise des données elles-mêmes.
+Cependant, dans un souci de qualité et de précision de la description de la donnée, le rectangle de délimitation doit être le plus ajusté possible, afin de délimiter le plus fidèlement possible la donnée décrite.</p>
+<h4 id="exemples">Exemples<a class="headerlink" href="#exemples" title="Permanent link">&para;</a></h4>
+<p>[A compléter]</p>
+<h4 id="references-techniques">Références techniques<a class="headerlink" href="#references-techniques" title="Permanent link">&para;</a></h4>
+<h5 id="nom-de-lemprise">Nom de l’emprise<a class="headerlink" href="#nom-de-lemprise" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          335
+- Nom:                  description
+- Code:                 exDesc
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/extent/*/description
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<h5 id="coordonnees-de-lemprise">Coordonnées de l’emprise<a class="headerlink" href="#coordonnees-de-lemprise" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 4.1
+- Nom:                  Geographic bounding box (Rectangle de délimitation géographique)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          344
+                        345
+                        346
+                        347
+- Nom:                  westBoundLongitude
+                        eastBoundLongitude
+                        southBoundLatitude
+                        northBoundLatitude
+- Code:                 westBL
+                        eastBL
+                        southBL
+                        northBL
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:
+    - identificationInfo/*/extent/*/geographicElement/*/westBoundLongitude
+    - identificationInfo/*/extent/*/geographicElement/*/estBoundLongitude
+    - identificationInfo/*/extent/*/geographicElement/*/southBoundLatitude
+    - identificationInfo/*/extent/*/geographicElement/*/northBoundLatitude
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Les coordonnées sont définies en degrés décimaux, avec une précision d’au moins deux
+chiffres après la virgule. Elles sont exprimées dans un système de coordonnées
+géodésique de référence définissant le méridien de Greenwich comme méridien d’origine.
+</pre></div>
+
+
+<hr />
+<h3 id="systeme-de-projection">Système de projection<a class="headerlink" href="#systeme-de-projection" title="Permanent link">&para;</a></h3>
+<h4 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h4>
+<p>Information qui indique le ou les systèmes de projections dans lesquels sont disponibles la donnée décrite.</p>
+<p>Table: Listes de systèmes de projection couramment utilisées en Grand Est</p>
+<table>
+<thead>
+<tr>
+<th align="left">Nom</th>
+<th align="left">Code EPSG</th>
+<th align="left">Valeur à saisir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Lambert 93</td>
+<td align="left">2154</td>
+<td align="left">RGF93 – Lambert 93 (EPSG:2154)</td>
+</tr>
+<tr>
+<td align="left">Lambert 93 CC48 zone 9</td>
+<td align="left">3948</td>
+<td align="left">RGF93 – Lambert 93 CC48 (EPSG:3948)</td>
+</tr>
+<tr>
+<td align="left">Lambert 93 CC49 zone 8</td>
+<td align="left">3949</td>
+<td align="left">RGF93 – Lambert 93 CC49 (EPSG:3949)</td>
+</tr>
+<tr>
+<td align="left">Lambert 2 étendu</td>
+<td align="left">27572</td>
+<td align="left">NTF Paris – Lambert zone II (EPSG:27572)</td>
+</tr>
+<tr>
+<td align="left">Lambert 1 Nord</td>
+<td align="left">27571</td>
+<td align="left">NTF Paris – Lambert zone I (EPSG:27571)</td>
+</tr>
+<tr>
+<td align="left">Lambert 1 Carto</td>
+<td align="left">27561</td>
+<td align="left">NTF Paris – Lambert Nord (EPSG:27561)</td>
+</tr>
+<tr>
+<td align="left">UTM 32N</td>
+<td align="left">32632</td>
+<td align="left">WGS84 – UTM Zone 32N (EPSG:32632)</td>
+</tr>
+<tr>
+<td align="left">WGS84 (2D)</td>
+<td align="left">4326</td>
+<td align="left">WGS84 – 2D (EPSG:4326)</td>
+</tr>
+<tr>
+<td align="left">WGS84 (3D)</td>
+<td align="left">4979</td>
+<td align="left">WGS84 – 3D (EPSG:4979)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recommandations_1">Recommandations<a class="headerlink" href="#recommandations_1" title="Permanent link">&para;</a></h4>
+<p>Toutes les données échangeables devraient être disponibles au moins en projection Lambert 93. Pour l’Alsace, la projection locale Lambert 93 CC48 (zone 9) est privilégiée.</p>
+<p>Il est recommandé d’indiquer le système géodésique utilisé (datum), le nom habituel d’usage de la projection le cas échéant et son code EPSG.</p>
+<p>Pour la France, la liste des systèmes de projection et des codes EPSG peut être consultée en suivant le lien : <a href="http://georezo.net/wiki/main/dico/epsg">http://georezo.net/wiki/main/dico/epsg</a>.</p>
+<h4 id="exemples_1">Exemples<a class="headerlink" href="#exemples_1" title="Permanent link">&para;</a></h4>
+<p>Système de projection : <code class="codehilite">RGF93 – Lambert 93 CC48 (EPSG:3948)</code></p>
+<h4 id="references-techniques_1">Références techniques<a class="headerlink" href="#references-techniques_1" title="Permanent link">&para;</a></h4>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          --
+- Nom:                  Reference system (Référentiel de coordonnées)
+- Obligation/condition: Obligatoire pour les données de l’annexe 1
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          187
+                        207
+- Nom:                  referenceSystemIdentifier
+- Code:                 refSysId
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/referenceSystemInfo/*
+                        /referenceSystemIdentifier/*/code
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Certaines applications utilisent également un espace de nom.
+</pre></div>
+
+
+<hr />
+<h3 id="etendue-temporelle">Etendue temporelle<a class="headerlink" href="#etendue-temporelle" title="Permanent link">&para;</a></h3>
+<h4 id="definition_2">Définition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h4>
+<p>L’étendue temporelle définit la période de temps couverte par le contenu de la donnée. C’est un indicateur de l’actualité de la donnée</p>
+<p>Cette période peut être exprimée de l’une des manières suivantes :
+- une date déterminée,
+- un intervalle de dates exprimé par la date de début et la date de fin de l’intervalle,
+- un mélange de dates et d’intervalles.</p>
+<h4 id="recommandations_2">Recommandations<a class="headerlink" href="#recommandations_2" title="Permanent link">&para;</a></h4>
+<p>Dans le cadre du partenariat CIGAL il est recommandé de renseigner prioritairement une date de création, de révision ou de publication pour la donnée (cf. paragraphe 2.4). L’étendu temporelle est une information alors considérée comme optionnelle.</p>
+<p>Pour les étendues temporelles, le système de référence par défaut est le calendrier grégorien.
+Indiquer le système de référence uniquement lors de l’utilisation d’un autre système de calcul des périodes de temps, comme par exemple les ères géologiques.</p>
+<h4 id="exemples_2">Exemples<a class="headerlink" href="#exemples_2" title="Permanent link">&para;</a></h4>
+<p>Il peut s’agir par exemple des dates de début et de fin d’une campagne de prise de mesures ou de la période de validité d’une donnée règlementaire.</p>
+<p>Etendue temporelle : <code class="codehilite">2011-08-24</code> / <code class="codehilite">2013-08-24</code></p>
+<h4 id="references-techniques_2">Références techniques<a class="headerlink" href="#references-techniques_2" title="Permanent link">&para;</a></h4>
+<h5 id="etendue-temporelle_1">Etendue temporelle<a class="headerlink" href="#etendue-temporelle_1" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 5.1
+- Nom:                  Temporal extent (Etendue temporelle)
+- Obligation/condition: Conditionnel
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          351
+- Nom:                  extent
+- Code:                 exTemp
+- Obligation/condition: Core ISO
+- Type:                 Date
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/extent/*/temporalElement/*/extent
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Les dates sont exprimées conformément à la norme ISO 8601
+(c’est-à-dire `YYYY-MM-DD`).
+- Une étendue temporelle est généralement constituée de 2 dates.
+- Pour plus d’information sur cet élément cf. nome ISO 19108.
+</pre></div>
+
+
+<h5 id="systeme-de-reference-temporel">Système de référence temporel<a class="headerlink" href="#systeme-de-reference-temporel" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 5.1
+- Nom:                  Temporal extent (Etendue temporelle)
+- Obligation/condition: Conditionnel
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Code:                 --
+<span class="m">-</span> Obligation/condition: --
+<span class="m">-</span> Type:                 --
+<span class="m">-</span> Cardinalité:          --
+<span class="m">-</span> Xpath:                --
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Par défaut, le système de référence est le calendrier grégorien.
+- Pour plus d’information sur cet élément cf. nome ISO 19108.
+</pre></div>
+
+
+<hr />
+<h3 id="type-de-representation">Type de représentation<a class="headerlink" href="#type-de-representation" title="Permanent link">&para;</a></h3>
+<h4 id="definition_3">Définition<a class="headerlink" href="#definition_3" title="Permanent link">&para;</a></h4>
+<p>Cette information permet de savoir s’il s’agit de données vecteur, raster, tabulaire, à maille triangulaire, 3D, etc.</p>
+<p>Parmi les valeurs possibles des type de représentations spatiales définies par la norme ISO 19115 (liste B.5.26 MD_SpatialRepresentationTypeCode), pour faciliter la saisi dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code class="codehilite">Vecteur</code> et <code class="codehilite">Raster</code> (cf. liste complète en annexe 6).</p>
+<p>Table: Liste des type de représentations spatiales proposés dans le cadre du partenariat GéograndEst</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Mode représentation de l’information géographique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">vector</td>
+<td align="left">Vecteur</td>
+<td align="left">Donnée vecteur (point, ligne, polygone)</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">grid</td>
+<td align="left">Raster</td>
+<td align="left">Donnée raster</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recommandations_3">Recommandations<a class="headerlink" href="#recommandations_3" title="Permanent link">&para;</a></h4>
+<p>La valeur par défaut est <code class="codehilite">Vecteur</code>.
+La représentation spatiale d’une carte est <code class="codehilite">Raster</code>.</p>
+<h4 id="exemples_3">Exemples<a class="headerlink" href="#exemples_3" title="Permanent link">&para;</a></h4>
+<p>Type de représentation : <code class="codehilite">Vecteur</code></p>
+<h4 id="references-techniques_3">Références techniques<a class="headerlink" href="#references-techniques_3" title="Permanent link">&para;</a></h4>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          37
+- Nom:                  spatialRepresentationType
+- Code:                 spatRpType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/spatialRepresentationType
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+                
+                  
+                    <h2 id="__source">Source</h2>
+                    
+                    
+                      <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master/docs/pages/data_geo.md" title="data_geo.md" class="md-source-file">
+                        data_geo.md
+                      </a>
+                    
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data_info/" title="Description de la donnée géographique" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Description de la donnée géographique
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../data_quality/" title="Qualité de la donnée" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Qualité de la donnée
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 GéoGrandEst
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://gogs.makou.org/guillaue_ryckelynck/mdguide" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/cigal_alsace" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="../../pdf/mdguide.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+      <a href="../../pdf/mdguide.epub" class="md-footer-social__link fa fa-book"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-b30566c560.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

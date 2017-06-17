@@ -1,0 +1,4351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<h1 id="accueil-.page-title">Accueil {: .page-title}</h1>
+<p>title: Home description: Page d'accueil du guide de saisie des métadonnées géographique de GéoGrandEst (mdGuide). path: docs source: index.md</p>
+<h2 id="guide-de-saisie-des-metadonnees-geograndest">GUIDE DE SAISIE DES METADONNEES GEOGRANDEST</h2>
+<p>V1.0 – 7 août 2012</p>
+<p>Le présent guide a vocation à servir de support pour la description des données géographique dans le cadre du partenariat GéoGrandEst. Les copies d'écran proviennent du formulaire de saisie <a href="">mdEdit</a>. Cependant, il n'est pas lié à un outil spécifique et se veut suffisamment général pour se décliner sur d'autres application de gestion de métadonnées.</p>
+<h1 id="guide-.page-title">Guide {: .page-title}</h1>
+<h2 id="introduction-.page-title">Introduction {: .page-title}</h2>
+<p>title: Intro description: Page d'introduction. path: docs/pages source: intro.md</p>
+<h3 id="introduction">Introduction</h3>
+<p>L’un des objectifs du partenariat GéoGrandEst (Coopération pour l’Information Géographique en Grand Est – https://www.cigalsace.org) est de faciliter l’échanges et le partage d’informations géographiques entre les acteurs de l’aménagement des territoires. La description des données géographiques et la constitution d’un inventaire régional est donc un élément clé pour la dynamique régionale.</p>
+<p>Ainsi, depuis plusieurs années, un groupe de travail consacré à la description des données géographiques a été mis en place. L’une de ses missions est de capitaliser l’expérience acquise dans ce domaine et vulgariser la connaissance afin d’apporter à chacun des moyens simples pour décrire ses données en respectant les normes et la réglementations en vigueur.</p>
+<p>Le présent document a pour objectif d’expliquer à tout utilisateur d’information géographique la manière de décrire ses données dans le respect de la directive européenne Inspire, ainsi que des recommandations formulées au niveau français dans le cadre du Conseil National de l’Information Géographique (CNIG). Pour cela, un profil de métadonnées GéoGrandEst a été établi en respectant les exigences nationales et européennes (cf. <a href="annexes/#annexe-1-profil-de-metadonnees-cigal">annexe 1</a>). Il n'a pas vocation à être normatif et repose avant tout sur des règles de bonnes pratiques partagées par les acteurs du Grand Est.</p>
+<p>Sur la base de cette liste d’informations, pour chaque élément de description, ce guide précise :</p>
+<ul>
+<li>La définition de l’élément concerné et les informations attendues</li>
+<li>Les recommandations à suivre pour bien décrire sa donnée tout en respectant les exigences de la directive INSPIRE, les spécificités françaises et les attentes locales</li>
+<li>Un ou plusieurs exemples de saisie</li>
+<li>Les références techniques de l’élément considéré pour ceux qui voudraient aller plus loin</li>
+</ul>
+<p>Pour faciliter la lecture du document et la description de vos données, vous pouvez également vous référer au formulaire Excel ou à l'application <a href="https://www.cigalsace.org/tools/mdEdit/">mdEdit</a> élaborés dans le cadre du groupe de travail métadonnées GéoGrandEst.</p>
+<h2 id="information-sur-les-métadonnées-.page-title">Information sur les métadonnées {: .page-title}</h2>
+<p>title: Info description: Information sur les métadonnées. path: docs/pages source: md_info.md</p>
+<h3 id="information-sur-les-métadonnées">Information sur les métadonnées</h3>
+<h4 id="identifiant-de-la-fiche">Identifiant de la fiche</h4>
+<h5 id="définition">Définition</h5>
+<p>Code permettant d’identifier de manière unique la fiche de description de la donnée. Ce code n’est jamais modifié pour une fiche même lors de sa mise à jour.</p>
+<h5 id="recommandations">Recommandations</h5>
+<p>Afin d’obtenir un code unique, il est recommandé de construire cet identifiant en associant le code pays de l’organisme propriétaire de la donnée, son numéro SIREN, ainsi qu’un code unique définit par le propriétaire de la donnée.</p>
+<p>Le code unique est le plus souvent généré automatiquement selon un algorithme ou de façon aléatoire.</p>
+<p>Structure recommandée de l’identifiant :</p>
+<ul>
+<li>Code du pays : <code>FR</code></li>
+<li>Séparateur : <code>&quot;-&quot; (tiret)</code></li>
+<li>Code SIREN : <code>code à 9 chiffres</code></li>
+<li>Séparateur : <code>&quot;_&quot; (underscore)</code></li>
+<li>Code unique : <code>composé de chiffres, de lettres et &quot;_&quot; (underscore)</code></li>
+</ul>
+<p>!!! Warning &quot;Attention&quot; :point_right: L'identifiant de la fiche est obligatoire. :point_right: Il ne doit pas être modifié lors de la mise à jour de la fiche. :point_right: Deux fiches ne doivent jamais avoir le même identifiant.</p>
+<h5 id="exemples">Exemples</h5>
+<p>Identifiant de la fiche : <code>FR–236700019–120523_004</code></p>
+<ul>
+<li><code>FR</code> : code pour la France</li>
+<li><code>236700019</code> : numéro SIREN de la Région Alsace</li>
+<li><code>120523_004</code> : numéro unique établi en interne à la Région Alsace, composé de la date de création de la fiche de description (23/05/2012) suivi d’un numéro d’ordre de la fiche.</li>
+</ul>
+<p>Identifiant de la fiche : <code>FR–236700019–110309_BdOCS2008-CIGAL</code></p>
+<ul>
+<li><code>FR</code> : code pour la France</li>
+<li><code>236700019</code> : numéro SIREN de la Région Alsace</li>
+<li><code>110309_BdOCS2008-CIGAL</code> : code unique établi en interne à la Région Alsace pour le partenariat CIGAL, composé de la date de création de la fiche de description (09/03/2011) suivi du nom officiel de la base de données.</li>
+</ul>
+<h5 id="références-techniques">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Non présent dans le profil INSPIRE</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          2
+- Nom:                  fileIdentifier
+- Code:                 mdFileId
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                fileIdentifier</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="langue-de-la-fiche">Langue de la fiche</h4>
+<h5 id="définition-1">Définition</h5>
+<p>Langue utilisée pour décrire la donnée.</p>
+<p>Parmi la liste des 23 langues officielles de l’union européenne indiquées par la directive Inspire, dans le cadre du partenariat CIGAL, 3 langues sont proposées par défaut (cf. liste complète en <a href="annexes/#annexe-2-liste-des-23-langues-officielles-de-lunion-europeenne-selon-la-directive-inspire">annexe 2</a>):</p>
+<ul>
+<li>Français (fre)</li>
+<li>Anglais (eng)</li>
+<li>Allemand (ger)</li>
+</ul>
+<h5 id="recommandations-1">Recommandations</h5>
+<p>La valeur par défaut est fixée à <code>français</code>. Si la description d’une donnée est disponible en plusieurs langues, il est recommandé de remplir une fiche pour chaque langue et de ne pas mélanger plusieurs langues au sein de la même fiche.</p>
+<h5 id="exemples-1">Exemples</h5>
+<p>Langue : <code>Français</code> Langue : <code>Allemand</code> Langue : <code>Anglais</code></p>
+<h5 id="références-techniques-1">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 10.3
+- Nom:                  Metadata language (Langue des métadonnées)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO:</strong></p>
+<pre><code>- Identifiant:          3
+- Nom:                  language
+- Code:                 mdLang
+- Obligation/condition: Obligatoire si non défini dans l’encodage de la fiche
+- Type:                 Liste de valeurs
+- Cardinalité:          1
+- Xpath:                language</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Cet élément doit être renseigné sous la forme d’un code à trois lettres
+  dans le fichier d’échange XML, en faisant référence aux langues officielles
+  communautaires identifiées dans la norme ISO 639-2.
+- Pour le français il s’agit de `fre ».</code></pre>
+<hr />
+<h4 id="jeu-de-caractères-encodage-de-la-fiche">Jeu de caractères (encodage) de la fiche</h4>
+<h5 id="définition-2">Définition</h5>
+<p>Il s’agit d’une information purement technique précisant l’encodage utilisé pour générer le fichier d’échange de la fiche au format XML. Il est normalement définit par l’application utilisée.</p>
+<p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>utf8 »,</code>utf16 », <code>8859part1 »,</code>8859part15 » et `8859part16 » (cf. liste complète en <a href="...">annexe 3</a>).</p>
+<p>Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL.</p>
+<table style="width:85%;">
+<colgroup>
+<col width="6%" />
+<col width="18%" />
+<col width="59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Valeur</th>
+<th align="left">Nom du standard de codage des caractères</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">utf8</td>
+<td align="left">8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">utf16</td>
+<td align="left">16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">8859part1</td>
+<td align="left">ISO/IEC 8859-1, Information technology – 8-bit single-byte coded graphic character sets – Part 1: Latin alphabet No. 1</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="left">8859part15</td>
+<td align="left">ISO/IEC 8859-15, Information technology – 8-bit single-byte coded graphic character sets – Part 15: Latin alphabet No. 9</td>
+</tr>
+<tr class="odd">
+<td align="left">21</td>
+<td align="left">8859part16</td>
+<td align="left">ISO/IEC 8859-16, Information technology – 8-bit single-byte coded graphic character sets – Part 16: Latin alphabet No. 10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-2">Recommandations</h5>
+<p>La valeur par défaut est <code>utf8</code>. En cas de doute, il est conseillé de laisser la valeur par défaut.</p>
+<h5 id="exemples-2">Exemples</h5>
+<p>Jeu de caractères de la fiche : <code>utf8</code> Jeu de caractères de la fiche : <code>8859part1</code></p>
+<h5 id="références-techniques-2">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO:</strong></p>
+<pre><code>- Identifiant:          4
+- Nom:                  characterSet
+- Code:                 mdChar
+- Obligation/condition: Core ISO
+- Type:                 Liste de valeurs
+- Cardinalité:          1
+- Xpath:                characterSet</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut, valeur définie à `utf8 ».
+  Se référer à la norme ISO 19115 pour plus d’informations.</code></pre>
+<hr />
+<h4 id="type-de-ressource-décrite">Type de ressource décrite</h4>
+<h5 id="définition-3">Définition</h5>
+<p>Cet élément de métadonnées renseigne le type de ressource décrit dans la fiche.</p>
+<p>La directive européenne INSPIRE concerne 3 types de ressource :</p>
+<ol style="list-style-type: decimal">
+<li>Les <code>séries de données géographiques</code> ou <code>jeu de données géographiques</code> correspondant à une compilation/ensemble identifiable et cohérent de données géographiques selon un thème dominant. Il peut s’agir d’une couche d’information ou d’un ensemble de couches (base de données géographique).</li>
+<li>Les <code>ensembles de séries de données géographiques</code> correspondant à une compilation de séries de données géographiques partageant la même spécification de produit. Par exemple, la BdOCS2000-CIGAL et la BdOCS2008-CIGAL forment un ensemble de jeux de données géographiques.</li>
+<li>Les <code>services de données géographiques</code>.</li>
+</ol>
+<p>Le présent document concerne uniquement la description des <code>séries et ensembles de séries de données géographiques</code>. Parmi les valeurs possibles de types de ressources définies par la norme ISO 19115 (liste B.5.25 MD_ScopeCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Jeu / série de données</code> et <code>Collection / ensemble de série de données</code> (cf. liste complète en <a href="annexes/#annexe-4-liste-des-types-de-ressources-selon-la-norme-iso-19115">annexe 4</a>).</p>
+<p>Liste des types de ressources proposées dans le cadre du partenariat GéoGrandEst:</p>
+<table style="width:86%;">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="15%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Description du type de ressource</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">dataset</td>
+<td align="left">Jeu / série de données</td>
+<td align="left">Informations appliquées aux caractéristiques de jeu de données</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">series</td>
+<td align="left">Collection / ensemble de séries de données</td>
+<td align="left">Informations appliquées aux caractéristiques de la collection de données</td>
+</tr>
+<tr class="odd">
+<td align="left">ées</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-3">Recommandations</h5>
+<p>Dans un souci de simplification et d’homogénéité, il est proposé dans le cadre du partenariat CIGAL de décrire les données à un niveau suffisamment fin (couche d’information ou base de donnée cohérente – ex. : BdOCS2008-CIGAL). Ainsi, par défaut la valeur utilisée est `jeu de données ».</p>
+<h5 id="exemples-3">Exemples</h5>
+<p>Type de donnée décrite : <code>jeu de données</code> Type de donnée décrite : <code>ensemble de jeux de données</code></p>
+<h5 id="références-techniques-3">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.3
+- Nom:                  Resource Type (Type de la ressource)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          6
+- Nom:                  hierarchyLevel
+- Code:                 mdHrLv
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          1
+- Xpath:                hierarchyLevel</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Dans le cadre de la directive INSPIRE, 3 valeurs sont possibles :
+    - `dataset` = jeu de données géographiques
+    - `series`  = ensemble de jeux de données géographiques
+    - `service` = service de données géographiques
+
+- Pour les données sortant du cadre de la directive, se référer si nécessaire à la norme
+ISO 19115 pour étudier les autres valeurs de la liste.</code></pre>
+<hr />
+<h4 id="contacts-pour-la-fiche">Contacts pour la fiche</h4>
+<h5 id="définition-4">Définition</h5>
+<p>Ce groupe de champs permet de connaître la personne ou l’organisme qui a décrit la donnée ou qui gère la fiche de description et en assure la maintenance.</p>
+<p>Il se compose :</p>
+<ul>
+<li>du Nom/Prénom,</li>
+<li>de la Fonction,</li>
+<li>du Nom de l’organisme,</li>
+<li>de l’Adresse,</li>
+<li>du Code postal,</li>
+<li>de la Ville,</li>
+<li>du Téléphone,</li>
+<li>de l’Email,</li>
+<li>et du Rôle de la personne à contacter</li>
+</ul>
+<p>Parmi les valeurs possibles des rôles pour un contact définies par la norme ISO 19115 (liste B.5.5 CI_RoleCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Fournisseur »,</code>Gestionnaire », <code>Point de contact » et</code>Auteur » (cf. liste complète en <a href="annexes/#annexe-5-liste-des-roles-selon-la-norme-iso-19115">annexe 5</a>).</p>
+<p>Liste des rôles proposés dans le cadre du partenariat:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="6%" />
+<col width="24%" />
+<col width="24%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Fonction de l’organisme cité en référence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">resourceProvider</td>
+<td align="left">Fournisseur</td>
+<td align="left">Organisme ou personne qui délivre physiquement la fiche de description, soit de manière directe au destinataire, soit par l’intermédiaire d’un diffuseur.</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">custodian</td>
+<td align="left">Gestionnaire</td>
+<td align="left">Organisme ou personne responsable de la gestion et de la mise à jour de la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">pointOfContact</td>
+<td align="left">Point de contact</td>
+<td align="left">Organisme ou personne que l’on peut contacter pour avoir des renseignements détaillés sur la fiche de description.</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="left">author</td>
+<td align="left">Auteur</td>
+<td align="left">Organisme ou personne qui a complété la fiche de description. Il en détient les droits moraux.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-4">Recommandations</h5>
+<p>Au moins un contact avec pour rôle `Point de contact » doit être défini pour chaque fiche. Il correspond au gestionnaire de la fiche ou de l’inventaire des données géographique. D’autres contacts peuvent être également ajoutés, comme par exemple l’auteur de la fiche en précisant le rôle correspondant.</p>
+<p>Il est recommandé de saisir l’ensemble des informations descriptives du contact, notamment :</p>
+<ul>
+<li>Le nom du contact en majuscules et le prénom avec la première lettre en majuscules</li>
+<li>La fonction du contact, en précisant si nécessaire la direction ou le service dont il dépend</li>
+<li>L’organisme en toute lettre (éviter les signes non explicités)</li>
+<li>L’adresse e-mail de la personne à contacter</li>
+<li>Le rôle, indispensable avec comme valeur par défaut `Point de contact »</li>
+</ul>
+<h5 id="exemples-4">Exemples</h5>
+<p>[A compléter]</p>
+<h5 id="références-techniques-4">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 10.1
+- Nom:                  Metadata point of contact
+                        (Point de contact des métadonnées)
+- Obligation/condition: Obligatoire (1 contact doit être renseigné)</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          8
+- Nom:                  contact
+- Code:                 mdContact
+- Obligation/condition: Core ISO
+- Type:                 Contact (ensemble d’informations)
+- Cardinalité:          N
+- Xpath:
+    - contact/*/individualName
+    - contact/*/organisationName
+    - contact/*/positionName
+    - contact/*/phone/*/voice
+    - contact/*/address/*/deliveryPoint
+    - contact/*/address/*/city
+    - contact/*/address/*/postalCode
+    - contact/*/address/*/electronicMailAddress</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- 3 éléments sont obligatoires pour définir un contact selon la directive INSPIRE :
+    - L’organisme
+    - L’email
+    - Le rôle (par défaut, `Point de contact` - se référer si nécessaire à la norme ISO 19115 pour plus de détails)</code></pre>
+<h6 id="rôle-du-contact">Rôle du contact</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 10.2
+- Nom:                  Metadata point of contact role
+                        (Rôle du contact pour les métadonnées)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          29 / 379
+- Nom:                  role
+- Code:                 role
+- Obligation/condition: Core ISO
+- Type:                 Liste de valeur fermée
+- Cardinalité:          1
+- Xpath:                contact/role/CI_RoleCode</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut le rôle est fixé à `Point de contact (pointOfContact)`</code></pre>
+<hr />
+<h4 id="date-de-la-fiche">Date de la fiche</h4>
+<h5 id="définition-5">Définition</h5>
+<p>Date de création ou de dernière mise à jour de la fiche.</p>
+<h5 id="recommandations-5">Recommandations</h5>
+<p>Cette information est généralement générée automatiquement par l’application lors de la création/modification de la fiche.</p>
+<h5 id="exemples-5">Exemples</h5>
+<p>Date de la fiche : <code>02/10/2008</code></p>
+<h5 id="références-techniques-5">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 10.2
+- Nom:                  Metadata date (Date des métadonnées)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          9
+- Nom:                  dateStamp
+- Code:                 mdDateSt
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                dateStamp</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- La date doit être encodée selon la norme ISO 8601, sous la forme `YYYY-MM-DD) dans
+le fichier d’échange XML.
+Par exemple : `2016-10-02`</code></pre>
+<hr />
+<h4 id="standard-des-métadonnées">Standard des métadonnées</h4>
+<h5 id="définition-6">Définition</h5>
+<p>Cette information est composée de 2 éléments :</p>
+<ul>
+<li>Le nom du standard</li>
+<li>La version du standard.</li>
+</ul>
+<p>Elle définit le standard ou la norme utilisée pour structurer la description de la donnée et la rédaction de la fiche.</p>
+<h5 id="recommandations-6">Recommandations</h5>
+<p>Par défaut le standard est <code>ISO19115</code> faisant référence à la norme du même nom et sa version <code>2003/Cor.1:2006</code>.</p>
+<h5 id="exemples-6">Exemples</h5>
+<p>Standard des métadonnées :</p>
+<ul>
+<li>Nom du standard : <code>ISO19115</code></li>
+<li>Version du standard : <code>2003/Cor.1 :2006</code></li>
+</ul>
+<h5 id="références-techniques-6">Références techniques</h5>
+<h6 id="nom-du-standard">Nom du standard</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          10
+- Nom:                  metadataStandardName
+- Code:                 mdStanName
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                metadataStandardName</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Valeur par défaut : `ISO19115`</code></pre>
+<h6 id="version-du-standard">Version du standard</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          11
+- Nom:                  metadataStandardVersion
+- Code:                 mdStanVer
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                metadataStandardVersion</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Valeur par défaut : `2003/Cor.1:2006`</code></pre>
+<h2 id="description-de-la-donnée-géographique-.page-title">Description de la donnée géographique {: .page-title}</h2>
+<p>title: Description description: Description des données path: docs/pages source: data_info.md</p>
+<h3 id="description-de-la-donnée-géographique">Description de la donnée géographique</h3>
+<h4 id="titre-de-la-donnée">Titre de la donnée</h4>
+<h5 id="définition-7">Définition</h5>
+<p>Le titre correspond à un ensemble d’informations permettant d’identifier et qualifier rapidement la donnée. C’est généralement l’information qui apparaît en premier à la suite des recherches effectuées pour trouver une donnée. Le titre doit être explicite et définir clairement la donnée.</p>
+<h5 id="recommandations-7">Recommandations</h5>
+<p>Il est recommandé de préciser dans le titre :</p>
+<ul>
+<li>Le type de donnée (carte, donnée thématique, référentiel, etc.)</li>
+<li>Le nom de la donnée, officiel ou habituel, en évitant l’utilisation d’un acronyme non explicité</li>
+<li>La version ou le millésime (année/date de production) de la donnée</li>
+<li>Le nom de l’emprise ou du territoire concerné par la donnée</li>
+</ul>
+<h5 id="exemples-7">Exemples</h5>
+<p>Titre de la donnée : <code>REFERENTIEL CIGAL : Base de données d’occupation du sol 2008 (BdOCS2008-CIGAL) – Alsace</code></p>
+<ul>
+<li><code>REFERENTIEL CIGAL</code> : la donnée correspond à un référentiel produit ou acquis dans le cadre du partenariat CIGAL.</li>
+<li><code>Base de données ... 2008 (BdOCS2008-CIGAL)</code> : nom développé de la donnée avec entre parenthèse la version abrégée.</li>
+<li><code>Alsace</code> : territoire couvert par la donnée.</li>
+</ul>
+<p>Titre de la donnée : <code>DONNEE THEMATIQUE : Piste cyclables 2010 – Communauté Urbaine de Strasbourg (CUS)</code></p>
+<ul>
+<li><code>DONNEE THEMATIQUE</code> : la donnée correspond à une donnée thématique.</li>
+<li><code>Piste cyclables 2010</code> : nom de la donnée, précisant le thème concerné ainsi que le millésime.</li>
+<li><code>Communauté Urbaine de Strasbourg (CUS)</code> : territoire couvert par la donnée.</li>
+</ul>
+<p>Titre de la donnée : <code>CARTE : Découpage administratif pas SCOT en 2004 – Haut-Rhin</code></p>
+<ul>
+<li><code>CARTE</code> : la fiche décrit une carte (donnée mise en forme).</li>
+<li><code>Découpage administratif pas SCOT en 2004</code> : titre de la carte précisant son objet ainsi que le millésime.</li>
+<li><code>Haut-Rhin</code> : territoire couvert par la donnée.</li>
+</ul>
+<h5 id="références-techniques-7">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.1
+- Nom:                  Resource title (intitulé de la ressource)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          360
+- Nom:                  title
+- Code:                 resTitle
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/citation/*/title</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="résumé">Résumé</h4>
+<h5 id="définition-8">Définition</h5>
+<p>Le résumé permet de décrire la donnée en lui attribuant une définition officielle, quand elle existe, ou une définition commune, afin de rendre la donnée compréhensible par l’utilisateur. Il s’agit en particulier de définir au mieux l’information ou le phénomène représenté dans la donnée. C’est un élément indispensable de la fiche de description.</p>
+<h5 id="recommandations-8">Recommandations</h5>
+<p>Le résumé doit reprendre les éléments essentiels et caractéristiques de la donnée pour offrir une description synthétique et précise.</p>
+<p>Voici quelques pistes qui peuvent servir d’aide à la saisie :</p>
+<ul>
+<li>Existe-il une définition de la donnée ? Si oui, elle peut être reprise dans le résumé.</li>
+<li>Quel est l’objectif du lot de données, pourquoi est-il produit/géré ?</li>
+<li>Des exemples d’usages de ces données géographiques ?</li>
+<li>A quelle(s) compétence(s) de la collectivité répond-il ?</li>
+<li>Combien de personnes gèrent le lot ?</li>
+<li>Comment est organisé le cycle de vie de l’information ? Est-ce sous traité à un bureau d’étude ?</li>
+<li>Quel est le nombre de classes ?</li>
+<li>Quel est le volume total (nombre d’enregistrements) ?</li>
+<li>En moyenne quel est le volume mis à jour par jour/semaine/mois ou autre ?</li>
+</ul>
+<h5 id="exemples-8">Exemples</h5>
+<p>[A compléter]</p>
+<h5 id="références-techniques-8">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.2
+- Nom:                  Resource abstract (Résumé de la ressource)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          25
+- Nom:                  abstract
+- Code:                 idAbs
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/abstract</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="illustration-de-la-donnée">Illustration de la donnée</h4>
+<h5 id="définition-9">Définition</h5>
+<p>Ce champ fourni un lien vers une image représentant la donnée (principalement le lot de donnée). Il peut s’agir d’une représentation de la donnée ou d’une carte basée sur cette donnée. La carte ou la couche de données doit être clairement mise en évidence sur l’image créée par une sémiologie graphique adaptée.</p>
+<h5 id="recommandations-9">Recommandations</h5>
+<p>Les caractéristiques de l’image ne sont pas imposées, cependant, il faut veiller à :</p>
+<ul>
+<li>Fournir une image lisible et représentative de la donnée décrite.</li>
+<li>Fournir une image de taille et de poids raisonnable, adaptée aux données représentées (ex. : 300 x 300px à 96dpi pour 50 à 200ko).</li>
+<li>Privilégier un format standard, adapté à une représentation sur internet (ex. : jpg, png, etc) et éviter les format non compressés ou spécifiques à une utilisation (ecw, geoTif, etc.)</li>
+</ul>
+<p>Il est recommandé de donner à l’image le même nom que le fichier de métadonnées. Un suffixe précisant le numéro d’ordre peut être ajouté lorsque plusieurs illustrations sont mises à disposition : <code>NomFiche-1.jpg</code>, <code>NomFiche-2.jpg</code>, etc.</p>
+<p>Le lien vers la ou les illustrations doit être unique, public et disponible de façon pérenne. Le stockage des illustration et leur accessibilité est sous la responsabilité de l’organisme qui saisie ou gère la fiche de métadonnées</p>
+<h5 id="exemples-9">Exemples</h5>
+<p>Illustration : <code>http://www. ...</code></p>
+<h5 id="références-techniques-9">Références techniques</h5>
+<h6 id="chemin-du-fichier">Chemin du fichier</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          49
+- Nom:                  fileName
+- Code:                 bgFileName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/graphicOverview/*/fileName</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="description-de-lillustration">Description de l’illustration</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          50
+- Nom:                  fileDescription
+- Code:                 bdFileDescription
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/graphicOverview/*/fileDescription</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="dates-de-création-de-mise-à-jour-et-de-publication-de-la-donnée">Dates de création, de mise à jour et de publication de la donnée</h4>
+<h5 id="définition-10">Définition</h5>
+<p>Ces informations permettent de préciser une ou plusieurs dates représentatives de la vie de la donnée :</p>
+<ul>
+<li><code>création</code>: la date de création de la donnée,</li>
+<li><code>publication</code>: la date de publication ou de diffusion de la donnée</li>
+<li><code>révision</code>: la date de révision, de dernière mise à jour ou de version de la donnée.</li>
+</ul>
+<h5 id="recommandations-10">Recommandations</h5>
+<p>Une date au moins doit être renseignée. Normalement, à minima ce sera la date de création.</p>
+<p>La date de mise à jour ou dernière révision n’a de sens que si elle se distingue de la date de création.</p>
+<p>Dans le cadre d’une donnée <code>vivante</code> c’est-à-dire, une donnée qui se complète ou se met à jour très régulièrement (tous les jours, plusieurs fois par semaine), il est alors préférable de remplir de façon précise, l’information sue le <code>rythme de mise à jour</code> qui fait l’objet du paragraphe suivant. Il est néanmoins recommandé d’indiquer la date de création initiale qui reste inchangée pendant toute la vie de la donnée.</p>
+<h5 id="exemples-10">Exemples</h5>
+<p>Actualité de la donnée :</p>
+<ul>
+<li>Date de création : <code>02/10/1978</code></li>
+<li>Date de mise à jour : <code>10/01/2012</code></li>
+</ul>
+<h5 id="références-techniques-10">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/date</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates doivent être encodées selon la norme ISO 8601,
+sous la forme `YYYY-MM-DD` dans le fichier d’échange XML.
+Par exemple : `2008-10-02`.</code></pre>
+<h6 id="type-de-date">Type de date :</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*/result/*
+                        /specification/*/date/*/dateType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs possibles.</code></pre>
+<hr />
+<h4 id="rythme-de-mise-à-jour">Rythme de mise à jour</h4>
+<h5 id="définition-11">Définition</h5>
+<p>Ce champ permet de spécifier la fréquence de mise à jour prévue de la donnée, selon une liste fermée de possibilités.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.18 MD_MaintenanceFrequencyCode) et reprise dans le tableau suivant.</p>
+<p>Liste des fréquences de mise à jour de la donnée :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Fréquence de mise à jour de la ressource</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">continual</td>
+<td align="left">en continue</td>
+<td align="left">Mise à jour continue</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">daily</td>
+<td align="left">quotidienne</td>
+<td align="left">Mise à jour quotidienne</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">weekly</td>
+<td align="left">hebdomadaire</td>
+<td align="left">Mise à jour hebdomadaire</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">fortnightly</td>
+<td align="left">tous les 15 jours</td>
+<td align="left">Mise à jour 2 fois par mois</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">monthly</td>
+<td align="left">mensuelle</td>
+<td align="left">Mise à jour mensuelle</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">quaterly</td>
+<td align="left">trimestrielle</td>
+<td align="left">Mise à jour trimestrielle</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">biannualy</td>
+<td align="left">semestrielle</td>
+<td align="left">Mise à jour bi-annuelle</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">annualy</td>
+<td align="left">annuelle</td>
+<td align="left">Mise à jour annuelle</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">adNeeded</td>
+<td align="left">quand nécessaire</td>
+<td align="left">Mise à jour lorsque cela est jugé nécessaire</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">irregular</td>
+<td align="left">irrégulière</td>
+<td align="left">Mise à jour irrégulière</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">notPlanned</td>
+<td align="left">non planifiée</td>
+<td align="left">Mise à jour non planifiée</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">unknow</td>
+<td align="left">inconnue</td>
+<td align="left">Mise à jour inconnue</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-11">Recommandations</h5>
+<p>Si la fréquence de mise à jour prévue n’est pas disponible dans la liste, utiliser le code &quot;Inconnue&quot;. Si aucun changement n'est programmé, sélectionnez &quot;Non planifiée&quot; dans la liste.</p>
+<p>La valeur par défaut est <code>Inconnue</code></p>
+<h5 id="exemples-11">Exemples</h5>
+<p>Fréquence de mise à jour : <code>Continue</code></p>
+<h5 id="références-techniques-11">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          143
+- Nom:                  maintenanceAndUpdateFrequency
+- Code:                 maintFreq
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/resourceMaintenance/*
+                        /maintenanceAndUpdateFrequency</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="langue-de-la-donnée">Langue de la donnée</h4>
+<h5 id="définition-12">Définition</h5>
+<p>Si la donnée décrite contient des informations textuelles (table attributaire avec des noms de lieu par exemple), c’est la ou les langue(s) utilisée(s) pour renseigner ces informations.</p>
+<p>Parmi la liste des 23 langues officielles de l’union européenne indiquées par la directive Inspire, dans le cadre du partenariat CIGAL, 3 langues sont proposées par défaut : le français, l’anglais et l’allemand (cf. liste complète en annexe 2).</p>
+<p>Liste des langues proposées dans le cadre du partenariat GéoGrandEst:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Nom en français</th>
+<th align="left">Nom en anglais</th>
+<th align="left">Code ISO 639-2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Anglais</td>
+<td align="left">English</td>
+<td align="left">eng</td>
+</tr>
+<tr class="even">
+<td align="left">Français</td>
+<td align="left">French</td>
+<td align="left">fre</td>
+</tr>
+<tr class="odd">
+<td align="left">Allemand</td>
+<td align="left">German</td>
+<td align="left">ger</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-12">Recommandations</h5>
+<p>Par défaut la langue de la donnée est <code>français</code>. Si la donnée ne contient pas de données textuelles (ex. : un modèle numérique de terrain (MNT) sous forme de fichiers de points XYZ, ou un orthophotographie), il est préconiser d’indiquer comme langue pour la donnée la même langue que pour la description de la fiche de métadonnées. Généralement ce sera le français.</p>
+<h5 id="exemples-12">Exemples</h5>
+<p>Langue de la donnée : <code>Français</code></p>
+<h5 id="références-techniques-12">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.7
+- Nom:                  Resource language (Langue de la ressource)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          39
+- Nom:                  language
+- Code:                 dataLang
+- Obligation/condition: Core ISO
+- Type:                 Liste de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/language</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Cet élément doit être renseigné sous la forme d’un code à trois lettres dans le
+fichier d’échange XML, en faisant référence aux langues officielles communautaires
+identifiées dans la norme ISO 639-2.
+- Pour le français il s’agit du code `fre`.
+- Les langues régionales peuvent être utilisées (ex. : alsacien = `gsw`).</code></pre>
+<hr />
+<h4 id="identifiant-de-la-donnée">Identifiant de la donnée</h4>
+<h5 id="définition-13">Définition</h5>
+<p>Le ou les identifiants de la donnée correspondent à un ou plusieurs codes permettant d’identifier de manière unique la donnée. Ces codes ne sont jamais modifiés pour une donnée même lors de sa mise à jour.</p>
+<h5 id="recommandations-13">Recommandations</h5>
+<p>Afin d’obtenir un code unique, il est recommandé de construire cet identifiant en associant le code pays de l’organisme propriétaire de la donnée, son numéro SIREN, ainsi qu’un code unique définit par le propriétaire de la donnée selon le schéma ci-dessous. Le code unique peut être généré de façon automatique selon un algorithme ou de façon aléatoire.</p>
+<p>Structure recommandée de l’identifiant :</p>
+<ul>
+<li>Code du pays : <code>FR</code></li>
+<li>Séparateur : <code>–</code></li>
+<li>Code SIREN : code à 9 chiffres</li>
+<li>Séparateur : <code>–</code></li>
+<li>Code unique</li>
+</ul>
+<p>Il est également possible d’associer au code un espace de nommage pour préciser sa provenance (cf. exemple 2 ci-dessous). L’espace de nommage correspond au domaine dans lequel la donnée est identifiée par ce code et renvoie généralement à l’organisme qui a attribué l’identifiant à la donnée. Il est recommandé d’intégrer les informations concernant l’espace de nom, dans le code de la donnée (cf. exemple 1 ci-dessous).</p>
+<h5 id="exemples-13">Exemples</h5>
+<p>Identifiant de la donnée : - Code : <code>FR–236700019–120523_D023</code></p>
+<p>Ce qui signifie :</p>
+<ul>
+<li><code>FR</code> : code pour la France</li>
+<li><code>236700019</code> : numéro SIREN de la Région Alsace</li>
+<li><code>120523_R004</code> : numéro unique établi en interne à la Région Alsace, composé de la date de création de la donnée (23/05/2012) suivi de la lettre <code>D</code> indiquant qu’il s’agit d’une donnée et d’un numéro d’ordre.</li>
+</ul>
+<p>Identifiant de la donnée :</p>
+<ul>
+<li>Code : <code>110309_BdOCS2008-CIGAL</code></li>
+<li>Espace de nommage : <code>FR–236700019</code></li>
+</ul>
+<p>Ce qui signifie :</p>
+<ul>
+<li>Pour le code : <code>110309_BdOCS2008-CIGAL</code> est un code unique établi en interne à la Région Alsace pour le partenariat CIGAL, composé de la date de création de la donnée (09/03/2011) suivi du nom officiel de la base de données</li>
+<li>Pour l’espace de nommage : <code>FR</code> est le code pour la France et <code>236700019</code>, le numéro SIREN de la Région Alsace</li>
+</ul>
+<h5 id="références-techniques-13">Références techniques</h5>
+<h6 id="identifiant-de-la-donnée-1">Identifiant de la donnée</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.5
+- Nom:                  Unique resource identifier (Identificateur de ressource unique)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          365 / 207
+- Nom:                  Identifier
+                        Code
+- Code:                 citId
+                        identCode
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/citation/*/identifier/*/code</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- L’identifiant de la fiche de description est généralement ajouté comme identifiant
+pour la donnée afin d’assurer le lien entre les 2. Cet identifiant est de la forme
+`FileID_XXX` où `FileID` permet de caractériser le code et `XXX` correspond à
+l’identifiant de la fiche. Cet ajout peut être automatisé.</code></pre>
+<h6 id="espace-de-nommage">Espace de nommage</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  Identificateur de donnée unique
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          365 / 208.1
+- Nom:                  Identifier
+                        codeSpace
+- Code:                 citId
+                        identCodeSpace
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/citation/*/identifier/*/codeSpace</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="catégorie-internationale">Catégorie internationale</h4>
+<h5 id="définition-14">Définition</h5>
+<p>Ce champ permet de classer la donnée dans une ou plusieurs catégories d’une liste fermée et internationale, facilitant ainsi la recherche de cette donnée. Il est important d’associer la donnée à la (ou les) thématique(s) la plus pertinente.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.27 MD_TopicCategories) et reprise dans le tableau suivant.</p>
+<p>Liste des catégories internationales:</p>
+<table style="width:56%;">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="18%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Intitulé</th>
+<th align="left">Définition</th>
+<th align="left">Exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Agriculture (farming)</td>
+<td align="left">Elevage et/ou cultures</td>
+<td align="left">agriculture, irrigation, aquaculture, plantations</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Flore et faune (biota)</td>
+<td align="left">Flore et faune dans un écosystème naturel</td>
+<td align="left">habitat, écologie, faune sauvage, faune aquatique, sciences biologiques, zones humides, végétation, biodiversité</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Limites politiques et administratives (boundaries)</td>
+<td align="left"></td>
+<td align="left">limites de pays, de provinces, de départements, de communes</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">Climatologie, météorologie (climatologyMeteorologyAtmosphere)</td>
+<td align="left">Processus et phénomènes atmosphériques</td>
+<td align="left">climat, météorologie, conditions atmosphériques, changements climatiques, couverture nuageuse</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">Economie (economy)</td>
+<td align="left">Activités économiques</td>
+<td align="left">production, travail, revenu, commerce, industrie, tourisme et éco-tourisme, foresterie, pêche, chasse, exploration et exploitation des ressources minières, pétrole, gaz naturel</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">Topographie (elevation)</td>
+<td align="left">Topographie au dessous et dessus du niveau de la mer</td>
+<td align="left">altitude, bathymétrie, MNT, pentes et calculs dérivés de l’altitude</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">Ressources et gestion de l’environnement (environnement)</td>
+<td align="left">Ressources naturelles, protection, conservation des ressources naturelles</td>
+<td align="left">pollution, traitement et stockage des déchets, suivi de l’environnement, gestion du risque, réserves naturelles, paysage</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">Géosciences (geoscientificInformation)</td>
+<td align="left">Informations relatives aux sciences de la terre</td>
+<td align="left">composants et processus géophysiques, géologie, minéralogie, tectonique, risque sismique</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Santé (health)</td>
+<td align="left">Santé, services de santé, épidémiologie</td>
+<td align="left">maladies et épidémie, facteurs affectant la santé, santé mentale et physique, services de santé</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">Carte de référence de la couverture terrestre (imageryBaseMapsEarthCover)</td>
+<td align="left">Carte de référence</td>
+<td align="left">occupation des terres, imagerie aérienne et satellitale, carte thématiques, carte topographiques</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">Infrastructures militaires (intelligenceMilitary)</td>
+<td align="left">Bases militaires et infrastructures</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">Hydrographie (inlandWaters)</td>
+<td align="left"></td>
+<td align="left">fleuves, rivières, glaciers, lacs salés, systèmes hydrographiques, barrages, débits, qualité de l’eau</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">Localisant (location)</td>
+<td align="left"></td>
+<td align="left">zones postales, adresses, points de contrôle, réseau géodésique</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">Océans (oceans)</td>
+<td align="left">Composants et caractéristiques du milieu maritime</td>
+<td align="left">littoral, récifs, marée, etc.</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">Planification et aménagement du territoire (planningCadastre)</td>
+<td align="left"></td>
+<td align="left">carte d’utilisation des terres, plan d’occupation des sols, planification pour la prévention des risques</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">Société (society)</td>
+<td align="left">Caractéristiques des sociétés et des cultures</td>
+<td align="left">Exemples :lois, anthropologie, éducation, données démographiques, archéologique, suivi des systèmes sociaux, croyances, us et coutumes, crimes et justices</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">Aménagements urbains (structure)</td>
+<td align="left"></td>
+<td align="left">musée, église, usines, maisons, monuments, boutiques, immeubles</td>
+</tr>
+<tr class="even">
+<td align="left">18</td>
+<td align="left">Infrastructures de transport (transportation)</td>
+<td align="left">Moyens de transports des personnes et des biens</td>
+<td align="left">routes, aéroports, tunnels, viaducs, ponts, chemin de fer</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">Réseaux de télécommunication, d’énergie (utilitiesCommunication)</td>
+<td align="left">Systèmes de distribution de gestion ou de stockage de l’énergie, de l’eau, des déchets. Infrastructures et services de communication.</td>
+<td align="left">source d’énergie solaire, hydroélectrique, nucléaire, épuration et distribution des eaux, réseau de distribution</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-14">Recommandations</h5>
+<p>Il est recommandé de n’indiquer qu’une seule catégorie. Une donnée appartenant à plusieurs catégories doit rester une exception, mais si elle appartient bien à plusieurs catégories alors ne pas hésiter à lui associer plusieurs catégories. Il est important de s’assurer de la cohérence des informations saisies pour la catégorie internationale et la classification européenne Inspire (cf. paragraphe 3.9 et tableau de correspondance en annexe 7).</p>
+<h5 id="exemples-14">Exemples</h5>
+<p>Catégorie internationale : <code>Localisant</code></p>
+<h5 id="références-techniques-14">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 2.1
+- Nom:                  Topic category (Catégorie thématique)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          41
+- Nom:                  topicCategory
+- Code:                 tpCat
+- Obligation/condition: Core ISO
+- Type:                 Liste de valeurs fermée
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/topicCategory</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Idiquer dans le fichier d’échange XML le code international de la catégorie.</code></pre>
+<hr />
+<h4 id="classification-européenne-inspire">Classification européenne INSPIRE</h4>
+<h5 id="définition-15">Définition</h5>
+<p>Ce champ permet de classer la donnée dans un ou plusieurs thèmes d’une liste fermée de valeurs définis au niveau européen via la directive INSPIRE. Cette classification vise à faciliter la recherche de cette donnée. Il est important d’associer la donnée au(x) thème(s) le(s) plus pertinent parmi les 34 thèmes ci-après définis.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la directive européenne Inspire, s’appuyant sur le Thesaurus GEMET des thèmes Inspire et reprise dans le tableau suivant.</p>
+<p>Liste des thèmes INSPIRE</p>
+<table style="width:57%;">
+<colgroup>
+<col width="6%" />
+<col width="16%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Intitulé</th>
+<th align="left">Défintion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Référentiels de coordonnées (Coordinate reference systems)</td>
+<td align="left">Systèmes de référencement unique des informations géographiques dans l'espace sous forme d'une série de coordonnées (x, y, z) et/ou la latitude et la longitude et l'altitude, en se fondant sur un point géodésique horizontal et vertical.</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Systèmes de maillage géographique (Geographical grid systems)</td>
+<td align="left">Grille multi-résolution harmonisée avec un point d'origine commun et une localisation ainsi qu'une taille des cellules harmonisées.</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Dénominations géographiques (Geographical names)</td>
+<td align="left">Noms de zones, de régions, de localités, de grandes villes, de banlieues, de villes moyennes ou d'implantations, ou tout autre élément géographique ou topographique d'intérêt public ou historique.</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">Unités administratives (Administrative units)</td>
+<td align="left">Unités d'administration séparées par des limites administratives et délimitant les zones dans lesquelles les États membres détiennent et/ou exercent leurs compétences, aux fins de l'administration locale, régionale et nationale.</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">Adresses (Addresses)</td>
+<td align="left">Localisation des propriétés fondée sur les identifiants des adresses, habituellement le nom de la rue, le numéro de la maison et le code postal.</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">Parcelles cadastrales (Cadastral parcels)</td>
+<td align="left">Zones définies par les registres cadastraux ou équivalents.</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">Réseaux de transport (Transport networks)</td>
+<td align="left">Réseaux routier, ferroviaire, aérien et navigable ainsi que les infrastructures associées. Sont également incluses les correspondances entre les différents réseaux, ainsi que le réseau transeuropéen de transport tel que défini dans la décision no 1692/96/CE du Parlement européen et du Conseil du 23 juillet 1996 sur les orientations communautaires pour le développement du réseau transeuropéen de transport et les révisions futures de cette décision.</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">Hydrographie (Hydrography)</td>
+<td align="left">Éléments hydrographiques, y compris les zones maritimes ainsi que toutes les autres masses d'eau et les éléments qui y sont liés, y compris les bassins et sous-bassins hydrographiques. Conformes, le cas échéant, aux définitions établies par la directive 2000/60/CE du Parlement européen et du Conseil du 23 octobre 2000 établissant un cadre pour une politique communautaire dans le domaine de l'eau et sous forme de réseaux.</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Sites protégés (Protected sites)</td>
+<td align="left">Zone désignée ou gérée dans un cadre législatif international, communautaire ou national en vue d'atteindre des objectifs spécifiques de conservation.</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">Altitude (Elevation)</td>
+<td align="left">Modèles numériques pour l'altitude des surfaces terrestres, glaciaires et océaniques. Comprend l'altitude terrestre, la bathymétrie et la ligne de rivage.</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">Occupation des terres (Land cover)</td>
+<td align="left">Couverture physique et biologique de la surface terrestre, y compris les surfaces artificielles, les zones agricoles, les forêts, les zones (semi-) naturelles, les zones humides et les masses d'eau.</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">Ortho-imagerie (Orthoimagery)</td>
+<td align="left">Images géoréférencées de la surface terrestre, provenant de satellites ou de capteurs aéroportés.</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">Géologie (Geology)</td>
+<td align="left">Géologie caractérisée en fonction de la composition et de la structure. Englobe le substratum rocheux, les aquifères et la géomorphologie.</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">Unités statistiques (Statistical units)</td>
+<td align="left">Unités de diffusion ou d'utilisation d'autres informations statistiques.</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">Bâtiments (Buildings)</td>
+<td align="left">Situation géographique des bâtiments.</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">Sols (Soil)</td>
+<td align="left">Sols et sous-sol caractérisés selon leur profondeur, texture, structure et teneur en particules et en matières organiques, pierrosité, érosion, le cas échéant pente moyenne et capacité anticipée de stockage de l'eau.</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">Usage des sols (Land use)</td>
+<td align="left">Territoire caractérisé selon sa dimension fonctionnelle prévue ou son objet socioéconomique actuel et futur (par exemple, résidentiel, industriel, commercial, agricole, forestier, récréatif).</td>
+</tr>
+<tr class="even">
+<td align="left">18</td>
+<td align="left">Santé et sécurité des personnes (Human health and safety)</td>
+<td align="left">Répartition géographique des pathologies dominantes (allergies, cancers, maladies respiratoires, etc.) liées directement (pollution de l'air, produits chimiques, appauvrissement de la couche d'ozone, bruit, etc.) ou indirectement (alimentation, organismes génétiquement modifiés, etc.) à la qualité de l'environnement, et ensemble des informations relatif à l'effet de celle-ci sur la santé des hommes (marqueurs biologiques, déclin de la fertilité, épidémies) ou leur bien-être (fatigue, stress, etc.).</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">Services d'utilité publique et services publics (Utility and governmental services)</td>
+<td align="left">Comprend les installations d'utilité publique, tels que les égouts ou les réseaux et installations liés à la gestion des déchets, à l'approvisionnement énergétique, à l'approvisionnement en eau, ainsi que les services administratifs et sociaux publics, tels que les administrations publiques, les sites de la protection civile, les écoles et les hôpitaux.</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="left">Installations de suivi environnemental (Environmental monitoring facilities)</td>
+<td align="left">La situation et le fonctionnement des installations de suivi environnemental comprennent l'observation et la mesure des émissions, de l'état du milieu environnemental et d'autres paramètres de l'écosystème (biodiversité, conditions écologiques de la végétation, etc.) par les autorités publiques ou pour leur compte.</td>
+</tr>
+<tr class="odd">
+<td align="left">21</td>
+<td align="left">Lieux de production et sites industriels (Production and industrial facilities)</td>
+<td align="left">Sites de production industrielle, y compris les installations couvertes par la directive 96/61/CE du Conseil du 24 septembre 1996 relative à la prévention et à la réduction intégrées de la pollution et les installations de captage d'eau, d'extraction minière et de stockage.</td>
+</tr>
+<tr class="even">
+<td align="left">22</td>
+<td align="left">Installations agricoles et aquacoles (Agricultural and aquaculture facilities)</td>
+<td align="left">Équipement et installations de production agricoles (y compris les systèmes d'irrigation, les serres et les étables).</td>
+</tr>
+<tr class="odd">
+<td align="left">23</td>
+<td align="left">Répartition de la population – démographie (Population distribution — demography)</td>
+<td align="left">Répartition géographique des personnes, avec les caractéristiques de population et les niveaux d'activité, regroupées par grille, région, unité administrative ou autre unité analytique.</td>
+</tr>
+<tr class="even">
+<td align="left">24</td>
+<td align="left">Zones de gestion, de restriction ou de réglementation et unités de déclaration (Area management / restriction / regulation zones and reporting units)</td>
+<td align="left">Zones gérées, réglementées ou utilisées pour les rapports aux niveaux international, européen, national, régional et local. Sont inclus les décharges, les zones restreintes aux alentours des sources d'eau potable, les zones vulnérables aux nitrates, les chenaux réglementés en mer ou les eaux intérieures importantes, les zones destinées à la décharge de déchets, les zones soumises à limitation du bruit, les zones faisant l'objet de permis d'exploration et d'extraction minière, les districts hydrographiques, les unités correspondantes utilisées pour les rapports et les zones de gestion du littoral.</td>
+</tr>
+<tr class="odd">
+<td align="left">25</td>
+<td align="left">Zones à risque naturel (Natural risk zones)</td>
+<td align="left">Zones sensibles caractérisées en fonction des risques naturels (tous les phénomènes atmosphériques, hydrologiques, sismiques, volcaniques, ainsi que les feux de friche qui peuvent, en raison de leur situation, de leur gravité et de leur fréquence, nuire gravement à la société), tels qu'inondations, glissements et affaissements de terrain, avalanches, incendies de forêts, tremblements de terre et éruptions volcaniques.</td>
+</tr>
+<tr class="even">
+<td align="left">26</td>
+<td align="left">Conditions atmosphériques (Atmospheric conditions)</td>
+<td align="left">Conditions physiques dans l'atmosphère. Comprend les données géographiques fondées sur des mesures, sur des modèles ou sur une combinaison des deux, ainsi que les lieux de mesure.</td>
+</tr>
+<tr class="odd">
+<td align="left">27</td>
+<td align="left">Caractéristiques géographiques météorologiques (Meteorological geographical features)</td>
+<td align="left">Conditions météorologiques et leur mesure: précipitations, température, évapotranspiration, vitesse et direction du vent.</td>
+</tr>
+<tr class="even">
+<td align="left">28</td>
+<td align="left">Caractéristiques géographiques océanographiques (Oceanographic geographical features)</td>
+<td align="left">Conditions physiques des océans (courants, salinité, hauteur des vagues, etc.).</td>
+</tr>
+<tr class="odd">
+<td align="left">29</td>
+<td align="left">Régions maritimes (Sea regions)</td>
+<td align="left">Conditions physiques des mers et des masses d'eau salée divisées en régions et en sous-régions à caractéristiques communes.</td>
+</tr>
+<tr class="even">
+<td align="left">30</td>
+<td align="left">Régions biogéographiques (Bio-geographical regions)</td>
+<td align="left">Zones présentant des conditions écologiques relativement homogènes avec des caractéristiques communes.</td>
+</tr>
+<tr class="odd">
+<td align="left">31</td>
+<td align="left">Habitats et biotopes (Habitats and biotopes)</td>
+<td align="left">Zones géographiques ayant des caractéristiques écologiques particulières — conditions, processus, structures et fonctions (de maintien de la vie) — favorables aux organismes qui y vivent. Sont incluses les zones terrestres et aquatiques qui se distinguent par leurs caractéristiques géographiques, abiotiques ou biotiques, qu'elles soient naturelles ou semi-naturelles.</td>
+</tr>
+<tr class="even">
+<td align="left">32</td>
+<td align="left">Répartition des espèces (Species distribution)</td>
+<td align="left">Répartition géographique de l'occurrence des espèces animales et végétales regroupées par grille, région, unité administrative ou autre unité analytique.</td>
+</tr>
+<tr class="odd">
+<td align="left">33</td>
+<td align="left">Sources d'énergie (Energy resources)</td>
+<td align="left">Sources d'énergie comprenant les hydrocarbures, l'énergie hydraulique, la bioénergie, l'énergie solaire, l'énergie éolienne, etc., le cas échéant accompagnées d'informations relatives à la profondeur/la hauteur de la source.</td>
+</tr>
+<tr class="even">
+<td align="left">34</td>
+<td align="left">Ressources minérales (Mineral resources)</td>
+<td align="left">Données minérales comprenant les minerais métalliques, les minéraux industriels, etc., le cas échéant accompagnées d'informations relatives à la profondeur/la hauteur de la donnée.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-15">Recommandations</h5>
+<p>Il est recommandé de n’indiquer qu’un seul thème INSPIRE. Une donnée appartenant à plusieurs thèmes doit rester une exception, mais si elle appartient bien à plusieurs thèmes, ne pas hésiter à lui associer plusieurs thèmes. Il est important de s’assurer de la cohérence des informations saisies pour la catégorie internationale et la classification européenne Inspire (cf. paragraphe 3.8 et tableau de correspondance en annexe 7).</p>
+<h5 id="exemples-15">Exemples</h5>
+<p>Classification européenne : <code>Répartition de la population – démographie</code></p>
+<h5 id="références-techniques-15">Références techniques</h5>
+<h6 id="classification-européenne-inspire-1">Classification européenne INSPIRE</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 3.1
+- Nom:                  Keyword value (Catégorie thématique)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          53
+- Nom:                  keyword
+- Code:                 keyword
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/descriptiveKeywords/*/keyword</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- INSPIRE n’identifie pas explicitement d’élément de métadonnées `Thème INSPIRE` mais
+induit son existence de par les exigences formulées sur la présence de mots-clés.
+Le thème INSPIRE est donc considéré comme un élément à part entière, mais sera codé
+dans le fichier d’échange XML comme un mot-clé lié au thésaurus spécifique
+`GEMET – INSPIRE Themes`.
+- Le langage dans lequel les thèmes INSPIRE sont exprimés dans le fichier d’échange
+XML doit concorder avec le ou les langages des métadonnées.</code></pre>
+<h6 id="thesaurus-gemet-inspire-theme">Thesaurus <code>GEMET – INSPIRE Theme</code></h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 3.2
+- Nom:                  Originating controlled vocabulary
+                        (Thesaurus / Vocabulaire contrôlé)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          55
+- Nom:                  thesaurusName
+- Code:                 thesaName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/descriptiveKeywords/*
+                        /thesaurusName/*/title</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Valeur par défaut pour les thèmes INSPIRE : `GEMET – INSPIRE Themes version 1.0`.
+- En respect de la norme ISO 19115 et de la directive INSPIRE, il est nécessaire de
+préciser la date de publication.
+Par défaut, pour la version 1.0 du thésaurus GEMET Inspire, la valeur est fixée
+ainsi :
+    - date Type : `publication`
+    - date : `2008-06-01`
+- Selon la norme ISO 19115, les mots-clés issus d’un même thésaurus doivent être
+regroupés dans une même instance au sein du fichier d’échange XML.</code></pre>
+<h6 id="date">Date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/descriptiveKeywords
+                        /*/date/*/date</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD`
+dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
+<h6 id="type-de-date-1">Type de date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*/result
+                        /*/specification/*/date/*/dateType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs possibles.</code></pre>
+<hr />
+<h4 id="mots-clés">Mots-clés</h4>
+<h5 id="définition-16">Définition</h5>
+<p>Lors de la description d’une donnée, il est possible et conseillé d’indiquer un ou plusieurs mots-clés qui faciliteront la recherche pour l’utilisateur final.</p>
+<h5 id="recommandations-16">Recommandations</h5>
+<p>Les mots-clés viennent en complément de la catégorie internationale et des éléments de la classification européenne. Il n’est donc pas nécessaire de reprendre les thèmes déjà définis. Les mots-clés doivent être écrits en minuscule, accentués et au singulier.</p>
+<p>Leur choix doit répondre à quelques règles de bon sens pour faciliter la recherche par l’utilisateur final :</p>
+<ul>
+<li>Inutile de saisir un trop grand nombre de mots-clés : 3 à 10 mots-clés doivent généralement suffire.</li>
+<li>Privilégier les termes qui qualifient la donnée au détriment de ceux qui seront trop génériques comme <code>donnée géographique</code> ou <code>base de données</code>.</li>
+<li>Eviter de renseigner ici une information qui relève d’un autre champ, comme le système de projection, le format de diffusion ou la catégorie internationale.</li>
+<li>Saisir des mots susceptibles d’être recherchés par l’utilisateur final, c’est à dire utilisés dans le langage habituel. Par exemple, le terme <code>chemin</code> sera sans doute préférable à celui de <code>sente</code>. Cependant, dans certains cas, données techniques par exemple, des termes spécifiques peuvent être privilégiés.</li>
+</ul>
+<p>Lorsque les mots-clés sont issus d’un thésaurus, il est recommandé de préciser les informations sur le thésaurus (nom du thesaurus et la date de création, publication ou mise à jour) dans les champs correspondants.</p>
+<p>Pour renseigner les mots-clés, il est conseillé d’utiliser le thésaurus GEMET qui est multilingue : http://www.eionet.europa.eu/gemet/alphabetic?langcode=fr.</p>
+<p>Pour ce thésaurus, les informations à renseigner sont :</p>
+<ul>
+<li>Nom du thésaurus : <code>GEMET - Concepts, version 3.0, 2011-07-13</code></li>
+<li>Date de publication : <code>13/07/2011</code></li>
+</ul>
+<h5 id="exemples-16">Exemples</h5>
+<p>Mot-clé complémentaire :</p>
+<ul>
+<li>Mot-clé : <code>modèle terrestre numérique</code></li>
+<li>Nom du thésaurus : <code>GEMET - Concepts, version 3.0, 2011-07-13</code></li>
+<li>Date de publication : <code>13/07/2011</code></li>
+</ul>
+<h5 id="références-techniques-16">Références techniques</h5>
+<h6 id="mot-clé-complémentaire">Mot-clé complémentaire</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 3.1
+- Nom:                  Keyword value (Mots-clés complémentaires)
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          53
+- Nom:                  keyword
+- Code:                 keyword
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/descriptiveKeywords/*/keyword</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Le langage dans lequel les thèmes INSPIRE sont exprimés dans le fichier d’échange XML
+doit concorder avec le ou les langages des métadonnées.</code></pre>
+<h6 id="thesaurus">Thesaurus</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 3.2
+- Nom:                  Originating controlled vocabulary
+                        (Thesaurus / Vocabulaire contrôlé)
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          55
+- Nom:                  thesaurusName
+- Code:                 thesaName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/descriptiveKeywords/*
+                        /thesaurusName/*/title</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Pour ces mots-clés, le nom du thesaurus ne peut pas être `GEMET – INSPIRE Themes`.
+- En respect de la norme ISO 19115 et de la directive INSPIRE, il est nécessaire de
+préciser la date de création, édition ou publication du thesaurus.
+- Toujours selon la norme ISO 19115, les mots-clés issus d’un même thésaurus doivent
+être regroupés dans une même instance au sein du fichier d’échange XML.</code></pre>
+<h6 id="date-1">Date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/descriptiveKeywords
+                        /*/date/*/date</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD`
+dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
+<h6 id="type-de-date-2">Type de date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/dateType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs possibles.</code></pre>
+<hr />
+<h4 id="contacts-pour-les-données">Contacts pour les données</h4>
+<h5 id="définition-17">Définition</h5>
+<p>Ce groupe de champs permet de connaître les personnes ou les organismes qui sont intervenus ou interviennent encore dans la vie de la donnée (production, mise à jour, diffusion, etc.). Chaque contact se compose de plusieurs informations :</p>
+<ul>
+<li>Nom/Prénom,</li>
+<li>Fonction,</li>
+<li>Nom de l’organisme,</li>
+<li>Adresse,</li>
+<li>Code postal,</li>
+<li>Ville,</li>
+<li>Téléphone,</li>
+<li>Email,</li>
+<li>Rôle de la personne à contacter</li>
+</ul>
+<p>Parmi les valeurs possibles des rôles pour un contact définies par la norme ISO 19115 (liste B.5.5 CI_RoleCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Fournisseur</code>, <code>Gestionnaire</code>, <code>Propriétaire</code>, <code>Point de contact</code> et <code>Auteur</code> (cf. liste complète en annexe).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="5%" />
+<col width="21%" />
+<col width="21%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Fonction de l’organisme cité en référence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">resourceProvider</td>
+<td align="left">Fournisseur</td>
+<td align="left">Organisme ou personne qui délivre physiquement la fiche de description, soit de manière directe au destinataire, soit par l’intermédiaire d’un diffuseur.</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">custodian</td>
+<td align="left">Gestionnaire</td>
+<td align="left">Organisme ou personne responsable de la gestion et de la mise à jour de la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">owner</td>
+<td align="left">Propriétaire</td>
+<td align="left">Organisme ou personne qui est propriétaire de la donnée et qui en détient les droits patrimoniaux.</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left">pointOfContact</td>
+<td align="left">Point de contact</td>
+<td align="left">Organisme ou personne que l’on peut contacter pour avoir des renseignements détaillés sur la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">author</td>
+<td align="left">Auteur</td>
+<td align="left">Organisme ou personne qui a complété la fiche de description. Il en détient les droits moraux.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-17">Recommandations</h5>
+<p>Au moins un contact ayant pour rôle <code>Point de contact</code> doit être défini pour chaque donnée. Il correspond à la personne ou l’organisme à contacter pour obtenir des informations complémentaires et des précisions sur la donnée. Il s’agit généralement de son gestionnaire ou administrateur qui est également l’auteur de la fiche de description. D’autres contacts peuvent être également ajoutés. Il est d’ailleurs recommandé d’indiquer le fournisseur de la donnée. Cette information apparaîtra dans la partie <code>Accès aux données</code>sur la fiche de consultation.</p>
+<p>Il est recommandé de saisir l’ensemble des informations descriptives du contact, notamment :</p>
+<ul>
+<li>Le nom du contact en majuscules et le prénom avec la première lettre en majuscules</li>
+<li>La fonction du contact, en précisant si nécessaire la direction ou le service dont il dépend</li>
+<li>L’organisme en toute lettre (éviter les signes non explicités)</li>
+<li>L’adresse e-mail de la peronne à contacter</li>
+<li>Le rôle, indispensable avec comme valeur par défaut <code>Point de contact</code></li>
+</ul>
+<h5 id="exemples-17">Exemples</h5>
+<h5 id="références-techniques-17">Références techniques</h5>
+<h6 id="point-de-contact">Point de contact</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 9.1
+- Nom:                  Responsible party (Partie responsable)
+- Obligation/condition: Obligatoire (1 contact doit être renseigné)</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          29
+- Nom:                  pointOfContact
+- Code:                 idPoC
+- Obligation/condition: Core ISO
+- Type:                 Contact (ensemble d’informations)
+- Cardinalité:          N
+- Xpath:
+    - identificationInfo/*/pointOfContact/*/individualName
+    - identificationInfo/*/pointOfContact/*/organisationName
+    - identificationInfo/*/pointOfContact/*/positionName
+    - identificationInfo/*/pointOfContact/*/phone/*/voice
+    - identificationInfo/*/pointOfContact/*/address/*/deliveryPoint
+    - identificationInfo/*/pointOfContact/*/address/*/city
+    - identificationInfo/*/pointOfContact/*/address/*/postalCode
+    - identificationInfo/*/pointOfContact/*/address/*/electronicMailAddress</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- 3 éléments sont obligatoires pour définir un contact selon la directive INSPIRE :
+    - L’organisme
+    - L’email
+    - Le rôle (par défaut `Point de contact` - se référer à la norme ISO 19115
+    pour les valeurs de la liste)</code></pre>
+<h6 id="rôle-du-contact-1">Rôle du contact</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 9.2
+- Nom:                  Responsible party role (Rôle de la partie responsable)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          29 / 379
+- Nom:                  role
+- Code:                 role
+- Obligation/condition: Core ISO
+- Type:                 Liste de valeur fermée
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/pointOfContact/role/CI_RoleCode</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut le rôle est fixé à `Point de contact (pointOfContact)`</code></pre>
+<h2 id="référence-géographique-de-la-donnée-.page-title">Référence géographique de la donnée {: .page-title}</h2>
+<p>title: Géo description: Description géographique des données path: docs/pages source: data_geo.md</p>
+<h3 id="référence-géographique-de-la-donnée">Référence géographique de la donnée</h3>
+<h4 id="emprise">Emprise</h4>
+<h5 id="définition-18">Définition</h5>
+<p>Ce champ permet d’indiquer l'emprise explorée où des informations ont été recueillies pour constituer la donnée. Ils s’agit d’un rectangle de délimitation intégrant la zone d’étude dans laquelle les données ont été identifiées et localisées.</p>
+<p>Une emprise est ainsi constituée :</p>
+<ul>
+<li>D’un nom la qualifiant</li>
+<li>De 4 coordonnées précisant les longitudes ouest et est et les latitudes sud et nord du rectangle englobant dans lequel est située la zone concernant la donnée</li>
+</ul>
+<h5 id="recommandations-18">Recommandations</h5>
+<p>Dans le cas particulier où la donnée couvre plusieurs zones distinctes, il est possible de renseigner plusieurs emprises si celles-ci ne se superposent pas.</p>
+<p>L’emprise doit englober l’étendue du territoire pour lequel le producteur garantit la connaissance et la saisie de l’information fournie. L’absence vérifiée d’éléments sur un territoire constitue une information en soi, ainsi, le rectangle englobant peut parfois couvrir une zone bien plus large que l’emprise des données elles-mêmes. Cependant, dans un souci de qualité et de précision de la description de la donnée, le rectangle de délimitation doit être le plus ajusté possible, afin de délimiter le plus fidèlement possible la donnée décrite.</p>
+<h5 id="exemples-18">Exemples</h5>
+<p>[A compléter]</p>
+<h5 id="références-techniques-18">Références techniques</h5>
+<h6 id="nom-de-lemprise">Nom de l’emprise</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          335
+- Nom:                  description
+- Code:                 exDesc
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/extent/*/description</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="coordonnées-de-lemprise">Coordonnées de l’emprise</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 4.1
+- Nom:                  Geographic bounding box (Rectangle de délimitation géographique)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          344
+                        345
+                        346
+                        347
+- Nom:                  westBoundLongitude
+                        eastBoundLongitude
+                        southBoundLatitude
+                        northBoundLatitude
+- Code:                 westBL
+                        eastBL
+                        southBL
+                        northBL
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:
+    - identificationInfo/*/extent/*/geographicElement/*/westBoundLongitude
+    - identificationInfo/*/extent/*/geographicElement/*/estBoundLongitude
+    - identificationInfo/*/extent/*/geographicElement/*/southBoundLatitude
+    - identificationInfo/*/extent/*/geographicElement/*/northBoundLatitude</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les coordonnées sont définies en degrés décimaux, avec une précision d’au moins deux
+chiffres après la virgule. Elles sont exprimées dans un système de coordonnées
+géodésique de référence définissant le méridien de Greenwich comme méridien d’origine.</code></pre>
+<hr />
+<h4 id="système-de-projection">Système de projection</h4>
+<h5 id="définition-19">Définition</h5>
+<p>Information qui indique le ou les systèmes de projections dans lesquels sont disponibles la donnée décrite.</p>
+<p>Listes de systèmes de projection couramment utilisées en Grand Est :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Nom</th>
+<th align="left">Code EPSG</th>
+<th align="left">Valeur à saisir</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Lambert 93</td>
+<td align="left">2154</td>
+<td align="left">RGF93 – Lambert 93 (EPSG:2154)</td>
+</tr>
+<tr class="even">
+<td align="left">Lambert 93 CC48 zone 9</td>
+<td align="left">3948</td>
+<td align="left">RGF93 – Lambert 93 CC48 (EPSG:3948)</td>
+</tr>
+<tr class="odd">
+<td align="left">Lambert 93 CC49 zone 8</td>
+<td align="left">3949</td>
+<td align="left">RGF93 – Lambert 93 CC49 (EPSG:3949)</td>
+</tr>
+<tr class="even">
+<td align="left">Lambert 2 étendu</td>
+<td align="left">27572</td>
+<td align="left">NTF Paris – Lambert zone II (EPSG:27572)</td>
+</tr>
+<tr class="odd">
+<td align="left">Lambert 1 Nord</td>
+<td align="left">27571</td>
+<td align="left">NTF Paris – Lambert zone I (EPSG:27571)</td>
+</tr>
+<tr class="even">
+<td align="left">Lambert 1 Carto</td>
+<td align="left">27561</td>
+<td align="left">NTF Paris – Lambert Nord (EPSG:27561)</td>
+</tr>
+<tr class="odd">
+<td align="left">UTM 32N</td>
+<td align="left">32632</td>
+<td align="left">WGS84 – UTM Zone 32N (EPSG:32632)</td>
+</tr>
+<tr class="even">
+<td align="left">WGS84 (2D)</td>
+<td align="left">4326</td>
+<td align="left">WGS84 – 2D (EPSG:4326)</td>
+</tr>
+<tr class="odd">
+<td align="left">WGS84 (3D)</td>
+<td align="left">4979</td>
+<td align="left">WGS84 – 3D (EPSG:4979)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-19">Recommandations</h5>
+<p>Toutes les données échangeables devraient être disponibles au moins en projection Lambert 93. Pour l’Alsace, la projection locale Lambert 93 CC48 (zone 9) est privilégiée.</p>
+<p>Il est recommandé d’indiquer le système géodésique utilisé (datum), le nom habituel d’usage de la projection le cas échéant et son code EPSG.</p>
+<p>Pour la France, la liste des systèmes de projection et des codes EPSG peut être consultée en suivant le lien : http://georezo.net/wiki/main/dico/epsg.</p>
+<h5 id="exemples-19">Exemples</h5>
+<p>Système de projection : <code>RGF93 – Lambert 93 CC48 (EPSG:3948)</code></p>
+<h5 id="références-techniques-19">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  Reference system (Référentiel de coordonnées)
+- Obligation/condition: Obligatoire pour les données de l’annexe 1</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          187
+                        207
+- Nom:                  referenceSystemIdentifier
+- Code:                 refSysId
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/referenceSystemInfo/*
+                        /referenceSystemIdentifier/*/code</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Certaines applications utilisent également un espace de nom.</code></pre>
+<hr />
+<h4 id="etendue-temporelle">Etendue temporelle</h4>
+<h5 id="définition-20">Définition</h5>
+<p>L’étendue temporelle définit la période de temps couverte par le contenu de la donnée. C’est un indicateur de l’actualité de la donnée</p>
+<p>Cette période peut être exprimée de l’une des manières suivantes : - une date déterminée, - un intervalle de dates exprimé par la date de début et la date de fin de l’intervalle, - un mélange de dates et d’intervalles.</p>
+<h5 id="recommandations-20">Recommandations</h5>
+<p>Dans le cadre du partenariat CIGAL il est recommandé de renseigner prioritairement une date de création, de révision ou de publication pour la donnée (cf. paragraphe 2.4). L’étendu temporelle est une information alors considérée comme optionnelle.</p>
+<p>Pour les étendues temporelles, le système de référence par défaut est le calendrier grégorien. Indiquer le système de référence uniquement lors de l’utilisation d’un autre système de calcul des périodes de temps, comme par exemple les ères géologiques.</p>
+<h5 id="exemples-20">Exemples</h5>
+<p>Il peut s’agir par exemple des dates de début et de fin d’une campagne de prise de mesures ou de la période de validité d’une donnée règlementaire.</p>
+<p>Etendue temporelle : <code>2011-08-24</code> / <code>2013-08-24</code></p>
+<h5 id="références-techniques-20">Références techniques</h5>
+<h6 id="etendue-temporelle-1">Etendue temporelle</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.1
+- Nom:                  Temporal extent (Etendue temporelle)
+- Obligation/condition: Conditionnel</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          351
+- Nom:                  extent
+- Code:                 exTemp
+- Obligation/condition: Core ISO
+- Type:                 Date
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/extent/*/temporalElement/*/extent</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates sont exprimées conformément à la norme ISO 8601
+(c’est-à-dire `YYYY-MM-DD`).
+- Une étendue temporelle est généralement constituée de 2 dates.
+- Pour plus d’information sur cet élément cf. nome ISO 19108.</code></pre>
+<h6 id="système-de-référence-temporel">Système de référence temporel</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.1
+- Nom:                  Temporal extent (Etendue temporelle)
+- Obligation/condition: Conditionnel</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Code:                 --
+- Obligation/condition: --
+- Type:                 --
+- Cardinalité:          --
+- Xpath:                --</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut, le système de référence est le calendrier grégorien.
+- Pour plus d’information sur cet élément cf. nome ISO 19108.</code></pre>
+<hr />
+<h4 id="type-de-représentation">Type de représentation</h4>
+<h5 id="définition-21">Définition</h5>
+<p>Cette information permet de savoir s’il s’agit de données vecteur, raster, tabulaire, à maille triangulaire, 3D, etc.</p>
+<p>Parmi les valeurs possibles des type de représentations spatiales définies par la norme ISO 19115 (liste B.5.26 MD_SpatialRepresentationTypeCode), pour faciliter la saisi dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Vecteur</code> et <code>Raster</code> (cf. liste complète en annexe 6).</p>
+<p>Liste des type de représentations spatiales proposés dans le cadre du partenariat GéograndEst:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Mode représentation de l’information géographique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">vector</td>
+<td align="left">Vecteur</td>
+<td align="left">Donnée vecteur (point, ligne, polygone)</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">grid</td>
+<td align="left">Raster</td>
+<td align="left">Donnée raster</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-21">Recommandations</h5>
+<p>La valeur par défaut est <code>Vecteur</code>. La représentation spatiale d’une carte est <code>Raster</code>.</p>
+<h5 id="exemples-21">Exemples</h5>
+<p>Type de représentation : <code>Vecteur</code></p>
+<h5 id="références-techniques-21">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          37
+- Nom:                  spatialRepresentationType
+- Code:                 spatRpType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/spatialRepresentationType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h2 id="qualité-de-la-donnée-.page-title">Qualité de la donnée {: .page-title}</h2>
+<p>title: Qualité description: Qualité des données path: docs/pages source: data_quality.md</p>
+<h3 id="qualité-de-la-donnée">Qualité de la donnée</h3>
+<h4 id="résolution-spatiale">Résolution spatiale</h4>
+<h5 id="définition-22">Définition</h5>
+<p>Ce champ permet de spécifier l’échelle ou la résolution de la donnée. Il s’agit généralement de l’échelle optimum d’utilisation de la donnée pour réaliser des cartes ou des analyses spatiales.</p>
+<p>On choisit d’indiquer la résolution spatiale :</p>
+<ul>
+<li>soit en échelle de représentation ou échelle équivalente (principalement pour les représentations cartographiques),</li>
+<li>soit sous la forme d’une distance au sol, principalement pour les données maillées et des produits dérivés d’imagerie, représentant la résolution des données (typiquement la taille d’un pixel d’une image au sol).</li>
+</ul>
+<h5 id="recommandations-22">Recommandations</h5>
+<p>L’échelle de la donnée décrite ne peut pas être plus grande que celle du référentiel utilisé pour produire cette donnée géographique. Par exemple, on ne produit pas une donnée au 1 :2000ème avec un SCAN 25).</p>
+<p>Pour l’échelle de représentation, indiquer seulement le dénominateur : pour une échelle au 1 :10000ème, la valeur à renseigner est <code>10000</code>. Pour la résolution, la valeur doit être renseignée en mètre.</p>
+<p>Un complément d’information concernant la résolution spatiale et notamment la précision de positionnement altimétrique et planimétrique de la donnée peut être indiqué dans le champ relatif à la qualité (cf. paragraphe 5.3).</p>
+<h5 id="exemples-22">Exemples</h5>
+<p>Echelle : <code>10000</code> Résolution : <code>0,5</code></p>
+<h5 id="références-techniques-22">Références techniques</h5>
+<h6 id="echelle">Echelle</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 6
+- Nom:                  Spatial résolution (Résolution spatiale)
+- Obligation/condition: Obligatoire (si peut être spécifié)</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          60
+- Nom:                  equivalentScale
+- Code:                 equScale
+- Obligation/condition: Core ISO
+- Type:                 Entier
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/spatialResolution/*/equivalentScale
+                        /*/denominator</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="résolution">Résolution</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 6
+- Nom:                  Spatial résolution (Résolution spatiale)
+- Obligation/condition: Obligatoire (si peut être spécifié)</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          61
+- Nom:                  distance
+- Code:                 scaleDist
+- Obligation/condition: Core ISO
+- Type:                 Entier
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/spatialResolution/*/distance</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- L’unité de mesure doit être indiquée en français et en toutes lettres, au singulier.
+Préférer l’utilisation du mètre (`mètre`).</code></pre>
+<hr />
+<h4 id="niveau-décrit">Niveau décrit</h4>
+<h5 id="définition-23">Définition</h5>
+<p>Il s’agit d’une information technique précisant à quel niveau est décrite la qualité de la donnée, généralement au niveau du <code>jeu de données</code> ou de la <code>série de données</code>.</p>
+<p>Parmi les valeurs possibles de type de ressources définies par la norme ISO 19115 (liste B.5.25 MD_ScopeCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Jeu / série de données</code> et <code>Collection / ensemble de série de données</code> (cf. liste complète en annexe 4).</p>
+<p>Liste des types de ressources proposées dans le cadre du partenariat CIGAL :</p>
+<table style="width:83%;">
+<colgroup>
+<col width="4%" />
+<col width="20%" />
+<col width="12%" />
+<col width="45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Id</th>
+<th>Code ISO 19115</th>
+<th>Intitulé</th>
+<th>Description du type de ressource</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>dataset</td>
+<td>Jeu / série de données</td>
+<td>Informations appliquées aux caractéristiques de jeu de données</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>series</td>
+<td>Collection / ensemble de séries de données</td>
+<td>Informations appliquées aux caractéristiques de la collection de données</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-23">Recommandations</h5>
+<p>La valeur par défaut est celle du <code>Type de donnée décrite</code> (cf. paragraphe 1.4). Cette information technique ne devrait pas être modifiée par l’utilisateur.</p>
+<h5 id="exemples-23">Exemples</h5>
+<p>Niveau décrit : <code>Jeu de données</code>.</p>
+<h5 id="références-techniques-23">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          79
+- Nom:                  scope
+- Code:                 dqScope
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/scope/*/level</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="texte-sur-la-qualité">Texte sur la qualité</h4>
+<h5 id="définition-24">Définition</h5>
+<p>La description de la qualité des données n'a pas pour vocation de dire si la donnée est de bonne ou de mauvaise qualité mais de vérifier que le niveau de qualité proposé est en adéquation avec l'application envisagée et les besoins des utilisateurs. Elle en précise par notamment l’exhaustivité, la précision, les limites d’utilisation, etc. Ce texte doit également fournir des éléments sur la généalogie de la donnée (données sources) et son mode de production.</p>
+<h5 id="recommandations-24">Recommandations</h5>
+<p>Il est recommandé d’être le plus précis possible dans la description de la qualité de la donnée. Les informations qui doivent être renseignées sont par exemple :</p>
+<ul>
+<li>L’exhaustivité : quelle partie est concernée par le lot de données ? Qu’est-ce qui est exclut ?</li>
+<li>La précision positionnement planimétrique : indiquer des éléments complémentaires aux informations sur la résolution spatiale (cf. paragraphe 5.1) en explicitant les conditions optimum d’usage et d’exploitation de la donnée.</li>
+<li>Le contrôle qualité : y-a-il un contrôle qualité des données ? Si oui, expliquer les règles générales de celui-ci et les résultats obtenus. Y-a-il des attributs qui informent de la qualité de l’objet (par exemple un code précision) ?</li>
+<li>Le mode de production : existe-il un cahier des charges ou un dossier de spécifications techniques ?</li>
+<li>Les limites techniques d’utilisation : vous pouvez avertir l’utilisateur des usages pour lesquels le jeu de données n’est pas adapté.</li>
+<li>La généalogie et l’historique de la donnée : texte libre qui retrace l'histoire des données en décrivant les principales phases de production, de contrôle et de correction de la base, en indiquant les données ayant permis cette fabrication (référentiels et données exogènes notamment).</li>
+<li>Pour les données 3D préciser l’étendue verticale et le système vertical de référence.</li>
+<li>Préciser les éléments d’étendu temporelle.</li>
+</ul>
+<p>Il est également possible de faire le lien avec des éléments de documentation (cf. paragraphe 6.8).</p>
+<h5 id="exemples-24">Exemples</h5>
+<h5 id="références-techniques-24">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 6.1
+- Nom:                  Lineage (Généalogie)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          83
+- Nom:                  statement
+- Code:                 statement
+- Obligation/condition: Core ISO
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/lineage/*/statement</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Dans le cadre du partenariat CIGAL, regroupe les informations anciennement renseignées
+dans les champs `Texte sur la qualité`, `Données sources` et `Méthode de production`.</code></pre>
+<h2 id="diffusion-de-la-donnée-.page-title">Diffusion de la donnée {: .page-title}</h2>
+<p>title: Diffusion description: Diffusion des données path: docs/pages source: data_distribution.md</p>
+<h3 id="diffusion-de-la-donnée">Diffusion de la donnée</h3>
+<h4 id="jeu-de-caractères-encodage-de-la-donnée">Jeu de caractères (encodage) de la donnée</h4>
+<h5 id="définition-25">Définition</h5>
+<p>Il s’agit d’une information purement technique précisant l’encodage utilisé pour générer le fichier d’échange de la fiche au format XML. Il est normalement définit par l’application utilisée.</p>
+<p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>utf8</code>, <code>utf16</code>, <code>8859part1</code>, <code>8859part15</code> et <code>8859part16</code> (cf. liste complète en annexe 3).</p>
+<p>Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL :</p>
+<table style="width:88%;">
+<colgroup>
+<col width="6%" />
+<col width="18%" />
+<col width="62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Nom du standard de codage des caractères</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">utf8</td>
+<td align="left">8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">utf16</td>
+<td align="left">16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">8859part1</td>
+<td align="left">ISO/IEC 8859-1, Information technology – 8-bit single-byte coded graphic character sets – Part 1: Latin alphabet No. 1</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="left">8859part15</td>
+<td align="left">ISO/IEC 8859-15, Information technology – 8-bit single-byte coded graphic character sets – Part 15: Latin alphabet No. 9</td>
+</tr>
+<tr class="odd">
+<td align="left">21</td>
+<td align="left">8859part16</td>
+<td align="left">ISO/IEC 8859-16, Information technology – 8-bit single-byte coded graphic character sets – Part 16: Latin alphabet No. 10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations-25">Recommandations</h5>
+<p>La valeur par défaut est <code>utf8</code>.</p>
+<h5 id="exemples-25">Exemples</h5>
+<p>Jeu de caractères : <code>utf8</code> Jeu de caractères : <code>8859part1</code></p>
+<h5 id="références-techniques-25">Références techniques</h5>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  (Encodage de caractères)
+- Obligation/condition: Obligatoire pour les données de l’Annexe 1</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          40
+- Nom:                  characterSet
+- Code:                 dataChar
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/characterSet</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut, valeur définie à `utf8`. Se référer à la norme ISO 19115 pour
+plus d’informations.</code></pre>
+<hr />
+<h4 id="format-de-diffusion">Format de diffusion</h4>
+<h5 id="définition-26">Définition</h5>
+<p>Ces informations indiquent le ou les formats dans lesquels la donnée est disponible auprès du fournisseur. Il est demandé de précisé la version du format. Les spécifications ou une description du format peuvent également être renseignées.</p>
+<h5 id="recommandations-26">Recommandations</h5>
+<p>Privilégier les formats communément utilisés dans les SIG et notamment les formats d’échange. Il est recommandé d’indiquer le nom du format en toute lettre en plus de l’extension du fichier lorsque c’est le cas.</p>
+<h5 id="exemples-26">Exemples</h5>
+<p>Format de diffusion :</p>
+<ul>
+<li>Nom du format: <code>Shapefile (shp)</code></li>
+<li>Verison du format: <code>1.0</code>.</li>
+</ul>
+<h5 id="références-techniques-26">Références techniques</h5>
+<h6 id="nom-du-format">Nom du format</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          285
+- Nom:                  name
+- Code:                 formatName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*
+                        /distributionFormat/*/name</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les formats d’encodage par défaut d’INSPIRE sont ISO 19136 (GML 3.2.1) et
+les formats associés. Les formats d’encodage courants sont Shape, MIF-MID,
+etc…
+- Des données produites selon les spécifications de données INSPIRE seront
+par défaut encodées selon ISO 19136 (GML) ou ISO/TS 19139.
+- Se référer aux spécifications INSPIRE pour plus de détails.</code></pre>
+<h6 id="version-du-format">Version du format</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          286
+- Nom:                  version
+- Code:                 formatVer
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*
+                        /distributionFormat/*/version</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="spécification-du-format">Spécification du format</h6>
+<p>Dans le cadre d’Inspire, proposer une liste fermée de valeur correspondant aux restrictions d’accès public INSPIRE (cf. tableau ci-dessus)</p>
+<hr />
+<h4 id="limites-et-contraintes-légales-daccès-et-dutilisation">Limites et contraintes légales d’accès et d’utilisation</h4>
+<h5 id="généralité-sur-les-contraintes-légales-daccès-et-dutilisation">Généralité sur les contraintes légales d’accès et d’utilisation</h5>
+<p>Ces informations concernent l’approche légale des limites et contraintes d’accès et d’utilisation de la donnée. Les limites d’usage de la donnée relatives à ses caractéristiques techniques (échelle, précision, etc.) sont à renseigner dans le texte sur la qualité de la donnée (cf. paragraphe 5.3).</p>
+<p>Pour définir les limites et contraintes légales d’accès et d’utilisation de la donnée, 4 informations sont à renseigner :</p>
+<ul>
+<li>Les contraintes de sécurité liées au niveau de classification ou de confidentialité de la donnée (donnée sensible, donnée secret défense, etc.)</li>
+<li>Les contraintes l’égales d’accès et d’utilisation publique liées à des restrictions permises par la directive Inspire (données sur les espèces menacées, données nominatives, etc.)</li>
+<li>Les contraintes l’égales d’accès et d’utilisation liées à l’existence d’autres restrictions imposées par la loi (droits d’auteur, licence, etc.)</li>
+<li>Les conditions légales d’utilisation de la donnée liées à des contraintes administratives d’usage et d’accès (redevances, droits de représentation, mentions légales, etc.)</li>
+</ul>
+<p>Les 3 premières informations dépendant de listes fermées de valeurs. La dernière permet la saisie de texte libre.</p>
+<p>Dans le cadre du partenariat CIGAL il est proposé de mettre en œuvre ces éléments de la façon suivante :</p>
+<ul>
+<li>Le niveau de confidentialité est une liste de valeurs (secret, confidentiel, etc.) à saisir obligatoirement et ayant par défaut la valeur <code>Non classifié</code> (cf. paragraphe 6.3.2)</li>
+<li>Les contraintes légales d’accès et d’utilisation définis par la directive INSPIRE correspondent à une liste de valeurs relatives au code de l’environnement et à la directive INSPIRE. Par défaut, la valeur est fixée à <code>Pas de restriction d’accès public selon INSPIRE</code> (cf. paragraphe 6.3.3).</li>
+<li>Les contraintes légales d’accès et d’utilisation liées à d’autres restrictions imposées par la loi sont définies via une liste de valeurs relatives au droit d’auteur / propriété (brevet, licence, etc.). Par défaut ce champ est non renseigné et non obligatoire (cf. paragraphe 6.3.4).</li>
+<li>Les conditions et mentions légales d’utilisation sont saisies sous forme de texte libre et viennent compléter les informations des 3 listes précédentes. Par défaut, la valeur renseignée est <code>Aucune condition d’accès ne s’applique</code>. Il est cependant recommandé de bien préciser les mentions légales et les sources à faire figurer sur les supports utilisant les données (cf. paragraphe 6.3.5).</li>
+</ul>
+<hr />
+<h5 id="niveau-de-classification-ou-confidentialité-de-la-donnée">Niveau de classification ou confidentialité de la donnée</h5>
+<h6 id="définition-27">Définition</h6>
+<p>Information sur le niveau de classification ou confidentialité de la donnée.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.11 MD_ClassificationCode) et reprise dans le tableau suivant.</p>
+<p>Liste des valeurs pour la classification de la donné</p>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="17%" />
+<col width="18%" />
+<col width="57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Nom de la restriction d’accès à la donnée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">unclassified</td>
+<td align="left">Non classifié</td>
+<td align="left">La donnée ne revêt pas un caractère sensible</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">restricted</td>
+<td align="left">Restreint</td>
+<td align="left">Le caractère sensible de la donnée restreint son utilisation ou sa diffusion</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">confidential</td>
+<td align="left">Confidentiel</td>
+<td align="left">La donnée présente un caractère confidentiel.</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">secret</td>
+<td align="left">Secret</td>
+<td align="left">La confidentialité de la donnée implique des mesures de protection particulière</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">topSecret</td>
+<td align="left">Top secret</td>
+<td align="left">La confidentialité de la donnée implique des mesures de protection extrêmes</td>
+</tr>
+</tbody>
+</table>
+<h6 id="recommandations-27">Recommandations</h6>
+<p>La valeur par défaut est fixée à <code>Non classifié</code>. Une seule valeur peut-être renseignée.</p>
+<p>La classification de la donnée à un niveau supérieur de confidentialité, autre que <code>Non classifié</code> indique le caractère sensible de la donnée. Elle doit être justifiée légalement.</p>
+<h6 id="exemples-27">Exemples</h6>
+<p>Niveau de confidentialité : <code>Non classifié</code></p>
+<h6 id="références-techniques-27">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          74
+- Nom:                  classification
+- Code:                 classification
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /classification</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Par défaut `unclassified`</code></pre>
+<hr />
+<h5 id="contraintes-légales-daccès-public-selon-inspire">Contraintes légales d’accès public selon INSPIRE</h5>
+<h6 id="définition-28">Définition</h6>
+<p>Cette information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi au regarde la mise en œuvre d’Inspire.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit au niveau français par la Conseil National de l’information Géographique (CNIG) et reprise dans le tableau suivant</p>
+<p>Liste des valeurs pour la définition des contraintes légales d’accès public selon INSPIRE.</p>
+<table style="width:68%;">
+<colgroup>
+<col width="6%" />
+<col width="22%" />
+<col width="38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Raison légale</th>
+<th align="left">Intitulé de la contrainte</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">Pas de restriction d’accès public selon INSPIRE</td>
+<td align="left">Aucun des articles de la loi ne peut être invoqué pour justifier d’une restriction d’accès public.</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.a)</td>
+<td align="left">La confidentialité des travaux des autorités publiques, lorsque cette confidentialité est prévue par la loi.</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">L124-5-II-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article13.1.b)</td>
+<td align="left">Les relations internationales, la sécurité publique ou la défense nationale.</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="left">L124-5-II-2 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.c)</td>
+<td align="left">La bonne marche de la justice, la possibilité pour toute personne d’être jugée équitablement ou la capacité d’une autorité publique d’effectuer une enquête d’ordre pénal ou disciplinaire.</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.d)</td>
+<td align="left">La confidentialité des informations commerciales ou industrielles, lorsque cette confidentialité est prévue par la législation nationale ou communautaire afin de protéger un intérêt économique légitime, notamment l’intérêt public lié à la préservation de la confidentialité des statistiques et du secret fiscal.</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">L124-5-II-3 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.e)</td>
+<td align="left">Les droits de propriété intellectuelle.</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.f)</td>
+<td align="left">La confidentialité des données à caractère personnel et/ou des fichiers concernant une personne physique lorsque cette personne n’a pas consenti à la divulgation de ces informations au public, lorsque la confidentialité de ce type d’information est prévue par la législation nationale ou communautaire.</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left">L124-4-I-3 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.g)</td>
+<td align="left">Les intérêts ou la protection de toute personne qui a fourni les informations demandées sur une base volontaire sans y être contrainte par la loi ou sans que la loi puisse l’y contraindre, à moins que cette personne n’ait consenti à la divulgation de ces données.</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="left">L124-4-I-2 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.h)</td>
+<td align="left">La protection de l’environnement auquel ces informations ont trait, comme par exemple la localisation d’espèces rares.</td>
+</tr>
+</tbody>
+</table>
+<p>Il est précisé que l’article L124-4-I du code de l’environnement (cas 1, 4, 6, 7 et 8) ne peut pas être invoqué pour justifier une restriction d’accès public à des informations concernant des émissions dans l’environnement (article L 127-6 du même code). Par ailleurs, selon l’article L127-8-IV du code de l’environnement, une restriction d’accès public au titre de l’article L124-5-II 1er ou 2ème alinéa du code de l’environnement (cas 2 et 3) induit une restriction de partage de la donnée entre autorités publiques.</p>
+<h6 id="recommandations-28">Recommandations</h6>
+<p>La valeur par défaut est <code>Pas de restriction d’accès public selon INSPIRE</code>.</p>
+<h6 id="exemples-28">Exemples</h6>
+<p>Contrainte légale d’accès public selon Inspire : <code>Pas de restriction d’accès public selon INSPIRE</code>.</p>
+<h6 id="références-techniques-28">Références techniques</h6>
+<h6 id="contrainte-daccès">Contrainte d’accès</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          70
+- Nom:                  accessConstraints
+- Code:                 accessConsts
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /accessConstraints</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Pour ce champ, la valeur par défaut est `otherConstraints`. Le champ
+&quot;otherConstraints&quot; doit prendre l’une des valeurs prévues par la directive
+INSPIRE (cf. tableau ci-dessus).</code></pre>
+<h6 id="autre-contrainte">Autre contrainte</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          72
+- Nom:                  otherConstraints
+- Code:                 otherConsts
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /otherConstraints</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Dans le cadre d’Inspire, proposer une liste fermée de valeur correspondant
+aux restrictions d’accès public INSPIRE (cf. tableau ci-dessus)</code></pre>
+<hr />
+<h5 id="autres-contraintes-légales-daccès-public-à-la-donnée">Autres contraintes légales d’accès public à la donnée</h5>
+<h6 id="définition-29">Définition</h6>
+<p>Cet information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi, indépendamment de la directive Inspire.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.24 MD_RestrictionCode) et reprise dans le tableau suivant.</p>
+<p>Liste des autres contraintes légales d'accès public à la donnée:</p>
+<table style="width:75%;">
+<colgroup>
+<col width="6%" />
+<col width="15%" />
+<col width="15%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Raison de la restriction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">--</td>
+<td align="left">Pas de restriction d’accès public</td>
+<td align="left">Aucune restriction ne s’applique</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">copyright</td>
+<td align="left">Droit d’auteur / Droit moral (copyright)</td>
+<td align="left">Restriction lié à l’exercice du droit moral</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">patent</td>
+<td align="left">Brevet</td>
+<td align="left">Restriction induite par l’existence d’un brevet</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="left">patentPending</td>
+<td align="left">Brevet en instance</td>
+<td align="left">Restriction induite par le dépôt d’un brevet en cours</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">trademark</td>
+<td align="left">Marque de commerce</td>
+<td align="left">Restriction lié à l’existence d’un dépôt de marque</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">license</td>
+<td align="left">Licence</td>
+<td align="left">Restriction induite par l’existence d’une licence</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">intellectualPropertyRights</td>
+<td align="left">Droit de propriété intellectuelle / Droit patrimonial</td>
+<td align="left">Restriction lié à l’exercice du droit patrimonial</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left">restricted</td>
+<td align="left">Restreint</td>
+<td align="left">Cette valeur n’a pas d’application identifiée en France</td>
+</tr>
+</tbody>
+</table>
+<h6 id="recommandations-29">Recommandations</h6>
+<p>Par défaut, le champ est non renseigné ou possède la valeur <code>Pas de restriction d’accès public</code>.</p>
+<h6 id="exemples-29">Exemples</h6>
+<p>Autre contrainte légale d’accès public : <code>Pas de restriction d’accès public</code>.</p>
+<h6 id="références-techniques-29">Références techniques</h6>
+<h6 id="contraintes-daccès">Contraintes d’accès</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access
+                        (Conditions applicables à l’accès et l’utilisation)
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          70
+- Nom:                  accessConstraints
+- Code:                 accessConsts
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /accessConstraints</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Ce champ vient en complément des contraintes d’accès public liées à INSPIRE.
+A ce niveau, il ne peut pas prendre la valeur `otherConstraints` qui est
+réservé pour les restrictions liées à Inspire.</code></pre>
+<hr />
+<h5 id="autres-conditions-et-mentions-légales-daccès-et-dutilisation">Autres conditions et mentions légales d’accès et d’utilisation</h5>
+<h6 id="définition-30">Définition</h6>
+<p>Cet information renseigne l’utilisateur sur les conditions d’utilisation de la donnée d’un point de vue administratif et légal. Il complète les informations relatives aux contraintes d’accès public liées à Inspire et autres contraintes précédemment renseignées. Il précise notamment les conditions d’accès en terme de licence, d’acte d’engagement, de mentions légales, de restriction d’usage dans un cadre commercial ou concurrentiel, etc.</p>
+<h6 id="recommandations-30">Recommandations</h6>
+<p>Les limites techniques d’usage et d’exploitation liées à la qualité de la donnée doivent être indiquées dans le champ dédié à cet effet (cf. paragraphe 5.3). Si aucune condition légale d’utilisation et d’accès n’existe, indiquer <code>Aucune autre condition légale ne s’applique</code>. Si les conditions ne sont pas connues, indiquer <code>Conditions inconnues</code>.</p>
+<p>Il est recommandé de préciser les mentions légales et les sources à faire figurer sur les supports de diffusion utilisant les données concernées.</p>
+<h6 id="exemples-30">Exemples</h6>
+<p>Conditions d’utilisation et mentions légales :</p>
+<ul>
+<li><code>Données disponibles pour les autorités publiques après adhésion au partenariat CIGAL</code></li>
+<li><code>Utilisation commerciale directe ou indirecte interdite</code></li>
+<li><code>Mention obligatoire sur tout support de diffusion : BdOCS2008-CIGAL – www.cigalsace.org</code></li>
+</ul>
+<h6 id="références-techniques-30">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 8.1
+- Nom:                  Condition applying to access and use
+                        (Conditions applicable à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          68
+- Nom:                  useLimitation
+- Code:                 useLimit
+- Obligation/condition: --
+- Type:                 Chaîne de caractère
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*/useLimitation</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- La valeur par défaut est fixée à `Aucune autre condition légale ne s’applique`.</code></pre>
+<hr />
+<h4 id="accès-aux-données-et-documents-associés">Accès aux données et documents associés</h4>
+<h5 id="définition-31">Définition</h5>
+<p>Ce champ permet de lister les liens vers des données concernant la donnée. Il peut s’agir d’un lien de téléchargement de la donnée elle-même ou de tout document complémentaire et utile à une meilleure compréhension du lot de données (dossier de spécifications, acte d’engagement, tarifs, etc.). Ce lien (URL) doit être accompagné d’un nom et d’une description précisant la nature et le contenu de la donnée accessible.</p>
+<h5 id="recommandations-31">Recommandations</h5>
+<p>Il est recommandé d’utiliser des adresses URL complètes (pas de chemin relatif), publiques et pérennes.</p>
+<h5 id="exemples-31">Exemples</h5>
+<p>Accès en ligne :</p>
+<ul>
+<li>Nom : <code>Rapport méthodologique de la BdOCS2008-CIGAL</code></li>
+<li>Description : <code>Rapport méthodologique de production de la base de données d’occupation du sol CIGAL 2008 (BdOCS2008-CIGAL).</code></li>
+<li>URL : <code>http://www.cigalsace.org/content/rapport-m%C3%A9thodologique-bdocs-2008-cigal</code></li>
+</ul>
+<h5 id="références-techniques-31">Références techniques</h5>
+<h6 id="nom">Nom</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          400
+- Nom:                  name
+- Code:                 orName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/name</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="description">Description</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          401
+- Nom:                  description
+- Code:                 orDesc
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/description</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h6 id="url">URL</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 1.4
+- Nom:                  Resource locator (Localisateur de la ressource)
+- Obligation/condition: Conditionnel</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          387
+- Nom:                  linkage
+- Code:                 linkage
+- Obligation/condition: Core ISO
+- Type:                 URL
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/url</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h2 id="conformité-de-la-donnée-.page-title">Conformité de la donnée {: .page-title}</h2>
+<p>title: Conformités description: Conformité des données path: docs/pages source: data_conformity.md</p>
+<h3 id="conformité-de-la-donnée">Conformité de la donnée</h3>
+<h4 id="généralités-sur-la-conformité-des-données">Généralités sur la conformité des données</h4>
+<p>Cette information vise à renseigner l’utilisateur sur le respect de normes, standards ou autre spécification dans la manière dont la donnée est produite, structurée et diffusée.</p>
+<p>Dans le cadre de GéoGrandEst, 2 niveaux distincts de conformité sont distingués afin de faciliter la saisie:</p>
+<ul>
+<li>La conformité aux règlements d’interopérabilité de la directive Inspire pour les données</li>
+<li>La conformité à d’autres spécifications sur lesquelles s’est appuyé le producteur de la donnée (COVADIS, CNIG, AFNOR, etc.).</li>
+</ul>
+<p>Le premier niveau dépend d’une liste fermée de valeurs. Si une classification européenne est renseignée (cf. <a href="data_info/#classification-europeenne-inspire">Classification européenne Inspire</a>), le degré de conformité au règlement d’interopérabilité qui s’y rattache doit être fourni. Le second niveau n’est pas obligatoire et est rempli au libre choix de l’organisme décrivant les données.</p>
+<p>Dans les 2 cas, 4 informations suivantes sont attendues:</p>
+<ul>
+<li>Le nom de la spécification</li>
+<li>La date de sa création, révision ou publication</li>
+<li>La description des du contrôle de conformité réalisé</li>
+<li>Le degré de conformité</li>
+</ul>
+<hr />
+<h4 id="conformité-de-la-donnée-aux-règles-dinteropérabilité-inspire">Conformité de la donnée aux règles d’interopérabilité Inspire</h4>
+<h5 id="nom-de-la-spécification">Nom de la spécification</h5>
+<h6 id="définition-32">Définition</h6>
+<p>Cette information indique le nom et les références de la règle d’interopérabilité Inspire pour laquelle le degré de conformité a été évalué pour les données.</p>
+<p>La liste des valeurs proposées dans le cadre de GéoGrandEst est celle défini au niveau français par la Conseil National de l’Information Géographique (CNIG) et reprise dans le tableau suivant.</p>
+<p>Liste des spécifications relatives aux règles d’interopérabilité Inspire publiées au 1er juin 2012 :</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="26%" />
+<col width="36%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Intitulé Inspire</th>
+<th align="left">Nom de la spécification</th>
+<th align="left">Date de publication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">None</td>
+<td align="left">Aucun test réalisé</td>
+<td align="left">--</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata (publication:2008-12-04)</td>
+<td align="left">COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata (publication:2008-12-04)</td>
+<td align="left">04/12/2008</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">Corrigendum to INSPIRE Metadata Regulation published in the Official Journal of the European Union, L 328, page 83 (publication:2009-12-15))</td>
+<td align="left">Corrigendum to INSPIRE Metadata Regulation published in the Official Journal of the European Union, L 328, page 83 (publication:2009-12-15)</td>
+<td align="left">15/12/2009</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="left">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services (publication:2010-12-08)</td>
+<td align="left">COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services (publication:2010-12-08)</td>
+<td align="left">08/12/2010</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">COMMISSION REGULATION (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services (publication:2010-12-08)</td>
+<td align="left">COMMISSION REGULATION (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services (publication:2010-12-08)</td>
+<td align="left">08/12/2010</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services (publication:2009-10-20)</td>
+<td align="left">COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services (publication:2009-10-20)</td>
+<td align="left">20/10/2009</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">COMMISSION REGULATION (EU) No 268/2010 of 29 March 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the access to spatial data sets and services of the Member States by Community institutions and bodies under harmonised conditions (publication:2010-03-30)</td>
+<td align="left">COMMISSION REGULATION (EU) No 268/2010 of 29 March 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the access to spatial data sets and services of the Member States by Community institutions and bodies under harmonised conditions (publication:2010-03-30)</td>
+<td align="left">30/03/2010</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="left">Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC) (publication:2009-06-11)</td>
+<td align="left">Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC) (publication:2009-06-11)</td>
+<td align="left">11/06/2009</td>
+</tr>
+</tbody>
+</table>
+<h6 id="recommandations-32">Recommandations</h6>
+<p>Seules les règles d’interopérabilité en lien avec le thème de la donnée renseigné au paragraphe 3.9 doit être saisie.</p>
+<h6 id="exemples-32">Exemples</h6>
+<p>Nom de la spécification : <code>COMMISSION REGULATION (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata</code></p>
+<h6 id="références-techniques-32">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 7.1
+- Nom:                  Specification (Spécification)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          130
+- Nom:                  specification
+- Code:                 conSpec
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/title</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h5 id="date-de-création-modification-publication-de-la-spécification">Date de création / modification / publication de la spécification</h5>
+<h6 id="définition-33">Définition</h6>
+<p>Cette information indique la date de modification, publication ou révision de la spécification renseignée.</p>
+<h6 id="recommandations-33">Recommandations</h6>
+<p>Se rapporter à la spécification pour en connaître la date de création, publication ou révision (cf. tableau du paragraphe 7.2.1.1).</p>
+<h6 id="exemples-33">Exemples</h6>
+<p>Date de publication : <code>04/12/2008</code></p>
+<h6 id="références-techniques-33">Références techniques</h6>
+<h6 id="date-2">Date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/date</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD`
+dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
+<h6 id="type-de-date-3">Type de date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/dateType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Dans la norme ISO 19115, c&#39;est le champ &quot;type de date&quot; qui détermine si la date
+renseignée est une date de publication (`publication`), de révision (`revision`) ou
+de création (`creation`).
+- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs possibles et
+plus de détails.</code></pre>
+<hr />
+<h5 id="explication-du-test-de-conformité">Explication du test de conformité</h5>
+<h6 id="définition-34">Définition</h6>
+<p>Cette information permet de renseigner l’utilisateur sur la manière dont le degré de conformité a été évalué.</p>
+<h6 id="recommandations-34">Recommandations</h6>
+<p>Il ne s’agit pas d’indiquer le degré de conformité (cf. paragraphe 7.2.4), mais la façon dont celui-ci a été évalué et les éventuels problèmes rencontrés.</p>
+<h6 id="exemples-34">Exemples</h6>
+<p>Test réalisé : <code>...</code></p>
+<h6 id="références-techniques-34">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          131
+- Nom:                  explaination
+- Code:                 conExpl
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/explanation</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h5 id="degré-de-conformité">Degré de conformité</h5>
+<h6 id="définition-35">Définition</h6>
+<p>Cette information précise le résultat du test de conformité.</p>
+<p>Liste des valeurs possible pour le degré de conformité:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code</th>
+<th align="left">Degré de conformité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">true</td>
+<td align="left">Conforme</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">false</td>
+<td align="left">Non conforme</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">(vide)</td>
+<td align="left">Non évalué</td>
+</tr>
+</tbody>
+</table>
+<h6 id="recommandations-35">Recommandations</h6>
+<p>Si cette information n’est pas renseignée, le degré de conformité est considéré comme <code>Non évalué</code>. La valeur par défaut est <code>Non évalué</code>.</p>
+<h6 id="exemples-35">Exemples</h6>
+<p>Degré de conformité : <code>Non évalué</code></p>
+<h6 id="références-techniques-35">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 7.2
+- Nom:                  Degree (Degré)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          132
+- Nom:                  pass
+- Code:                 conPass
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/pass</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h4 id="conformité-de-la-donnée-à-dautres-spécifications">Conformité de la donnée à d’autres spécifications</h4>
+<h5 id="nom-de-la-spécification-1">Nom de la spécification</h5>
+<h6 id="définition-36">Définition</h6>
+<p>Cette information indique le nom du standard, de la norme ou autre spécification pour lequel le degré de conformité de la donnée a été évalué.</p>
+<h6 id="recommandations-36">Recommandations</h6>
+<p>La conformité aux règles d’interopérabilité Inspire ne doit pas être renseigné à ce niveau (cf. paragraphe 7.2.1).</p>
+<h6 id="exemples-36">Exemples</h6>
+<p>Nom de la spécification : <code>Géostandard de la COVADIS : Aménagement Numérique des Territoires - Infrastructures de communications électroniques</code></p>
+<h6 id="références-techniques-36">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 7.1
+- Nom:                  Specification (Spécification)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          130
+- Nom:                  specification
+- Code:                 conSpec
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/title</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h5 id="date-de-création-modification-publication-de-la-spécification-1">Date de création / modification / publication de la spécification</h5>
+<h6 id="définition-37">Définition</h6>
+<p>Cette information indique la date de modification, publication ou révision de la spécification renseignée.</p>
+<h6 id="recommandations-37">Recommandations</h6>
+<p>Se rapporter à la spécification pour en connaître la date de création, publication ou révision.</p>
+<h6 id="exemples-37">Exemples</h6>
+<p>Date de publication : <code>25/01/2012</code></p>
+<h6 id="références-techniques-37">Références techniques</h6>
+<h6 id="date-3">Date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 5.2 / Part B 5.3 / Part B 5.4
+- Nom:                  Date of publication (Date de publication)
+                        Date of revision (Date de dernière révision)
+                        Date of creation (Date de création)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          394
+- Nom:                  date
+- Code:                 refDate
+- Obligation/condition: Core ISO
+- Type:                 Date (YYYY-MM-DD)
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/specification/*/date/*/date</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Les dates doivent être encodées selon la norme ISO 8601, sous la forme `YYYY-MM-DD` dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
+<h6 id="type-de-date-4">Type de date</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          395
+- Nom:                  dateType
+- Code:                 refDateType
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*/result/*/specification/*
+                        /date/*/dateType</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Se référer si nécessaire à la norme ISO 19115 pour la liste des valeurs
+possibles.</code></pre>
+<hr />
+<h5 id="explication-du-test-de-conformité-1">Explication du test de conformité</h5>
+<h6 id="définition-38">Définition</h6>
+<p>Cette information permet de renseigner l’utilisateur sur la manière dont le degré de conformité a été évalué.</p>
+<h6 id="recommandations-38">Recommandations</h6>
+<p>Il ne s’agit pas d’indiquer le degré de conformité (cf. paragraphe 7.3.4), mais la façon dont celui-ci a été évalué et les éventuels problèmes rencontrés.</p>
+<h6 id="exemples-38">Exemples</h6>
+<p>Résultat du test : <code>…</code></p>
+<h6 id="références-techniques-38">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          --
+- Nom:                  --
+- Obligation/condition: --</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          131
+- Nom:                  explaination
+- Code:                 conExpl
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/explanation</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<hr />
+<h5 id="degré-de-conformité-1">Degré de conformité</h5>
+<h6 id="définition-39">Définition</h6>
+<p>Cette information précise le résultat du test de conformité.</p>
+<p>Liste des valeurs possible pour le degré de conformité:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Id</th>
+<th align="left">Code</th>
+<th align="left">Degré de conformité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">true</td>
+<td align="left">Conforme</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">false</td>
+<td align="left">Non conforme</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">(vide)</td>
+<td align="left">Non évalué</td>
+</tr>
+</tbody>
+</table>
+<h6 id="recommandations-39">Recommandations</h6>
+<p>Si cette information n’est pas renseignée, le degré de conformité est considéré comme <code>Non évalué</code>. La valeur par défaut est <code>Non évalué</code>.</p>
+<h6 id="exemples-39">Exemples</h6>
+<p>Degré de conformité : <code>Non évalué</code></p>
+<h6 id="références-techniques-39">Références techniques</h6>
+<p><strong>INSPIRE:</strong></p>
+<pre><code>- Identifiant:          Part B 7.2
+- Nom:                  Degree (Degré)
+- Obligation/condition: Obligatoire</code></pre>
+<p><strong>ISO 19115:</strong></p>
+<pre><code>- Identifiant:          132
+- Nom:                  pass
+- Code:                 conPass
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/dataQualityInfo/*/report/*
+                        /result/*/pass</code></pre>
+<p><strong>Implémentation:</strong></p>
+<pre><code>- Aucune observation</code></pre>
+<h2 id="annexes-.page-title">Annexes {: .page-title}</h2>
+<p>title: Annexes description: Annexes path: docs/pages source: annexes.md</p>
+<h3 id="annexes">Annexes</h3>
+<h4 id="annexe-1-profil-de-métadonnées-cigal">Annexe 1 : Profil de métadonnées CIGAL</h4>
+<p><small>Dernière mise à jour : 14/06/2012 – V0.11</small></p>
+<p>Le profil de métadonnées CIGAL correspond à la liste des éléments d’information à renseigner pour décrire une donnée géographique dans le cadre du partenariat CIGAL. Cette liste a été établie en considérant:</p>
+<ul>
+<li>La norme ISO 19115</li>
+<li>La directive européenne INSPIRE et les règles associées d’implémentation pour les métadonnées</li>
+<li>Le guide national français réalisé par le CNIG pour la saisie des éléments de métadonnées INSPIRE</li>
+</ul>
+<p>Le profil CIGAL est conforme à l’ensemble des exigences et obligations définis par ces différents documents, auxquels ont été ajoutées des informations complémentaires, qu’il est recommandé de renseigner pour disposer d’une fiche descriptive plus complète et précise.</p>
+<p>Dans le tableau suivant, les informations surlignées en jaune et dont le numéro est noté en gras sont obligatoires pour répondre aux exigences de la directive européenne INSPIRE et/ou la norme ISO 19115. Les autres champs sont simplement recommandés dans le cadre du partenariat CIGAL.</p>
+<p><strong>Information sur les métadonnées</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td></td>
+<td>Identifiant de la fiche</td>
+<td></td>
+<td>Texte</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>10.3</td>
+<td>Langue de la fiche</td>
+<td>Français (fre)</td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td></td>
+<td>Jeu de caractère de la fiche</td>
+<td>Utf8</td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>1.3</td>
+<td>Type de ressource décrite</td>
+<td>Jeu de données (dataset)</td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>8</strong></td>
+<td><strong>10.1</strong></td>
+<td><strong>Contacts pour les métadonnées</strong></td>
+<td></td>
+<td><strong>Contact</strong></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>375</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>377</em></td>
+<td></td>
+<td><em>&gt; Fonction</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>376</em></td>
+<td><em>(10.1)</em></td>
+<td><em>&gt; Organisme</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>381</em></td>
+<td></td>
+<td><em>&gt; Adresse</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><em>384</em></td>
+<td></td>
+<td><em>&gt; Code postal</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>382</em></td>
+<td></td>
+<td><em>&gt; Ville</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>408</em></td>
+<td></td>
+<td><em>&gt; Téléphone</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td><em>386</em></td>
+<td><em>(10.1)</em></td>
+<td><em>&gt; Email</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><em>379</em></td>
+<td><em>(10.1)</em></td>
+<td><em>&gt; Rôle</em></td>
+<td><em>Point de contact (pointOfContact)</em></td>
+<td><em>Liste</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>10.2</td>
+<td>Date de création/mise à jour de la fiche</td>
+<td></td>
+<td>Date</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>--</td>
+<td></td>
+<td><strong>Standard des métadonnées</strong></td>
+<td></td>
+<td><strong>Standard</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><em>10</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td><em>ISO 19115</em></td>
+<td>_Texte_</td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>11</em></td>
+<td></td>
+<td><em>&gt; Version</em></td>
+<td><em>2003/Cor.1:2006</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Description de la donnée</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>360</td>
+<td>1.1</td>
+<td>Titre de la donnée</td>
+<td></td>
+<td>Texte</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>1.2</td>
+<td>Résumé</td>
+<td></td>
+<td>Texte</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>48</strong></td>
+<td></td>
+<td><strong>Illustration de la donnée</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>49</em></td>
+<td></td>
+<td><em>&gt; Chemin du fichier (URL)</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>50</em></td>
+<td></td>
+<td><em>&gt; Description</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td>362</td>
+<td>5.2 / 5.3 / 5.4</td>
+<td>Date de création / mise à jour / publication</td>
+<td></td>
+<td></td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>143</td>
+<td></td>
+<td>Fréquence de mise à jour</td>
+<td>Inconnue (unknown)</td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>39</td>
+<td>1.7</td>
+<td>Langue des données</td>
+<td>Français (fre)</td>
+<td>Liste</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td>40</td>
+<td></td>
+<td>Jeu de caractère des données</td>
+<td>Utf8</td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>365</strong></td>
+<td><strong>1.5</strong></td>
+<td><strong>Identifiant des données</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="odd">
+<td><em>207</em></td>
+<td><em>(1.5)</em></td>
+<td><em>&gt; Code</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><em>208.1</em></td>
+<td>(1.5)</td>
+<td><em>&gt; Espace de codage</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td>41</td>
+<td>2.1</td>
+<td>Catégorie internationale</td>
+<td></td>
+<td>Liste</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>3.1</td>
+<td>Classification européenne INSPIRE</td>
+<td></td>
+<td></td>
+<td>Liste</td>
+<td>N</td>
+</tr>
+<tr class="odd">
+<td><strong>3.1</strong></td>
+<td><strong>Mots-clés</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>53</em></td>
+<td><em>(3.1)</em></td>
+<td><em>&gt; Mot-clé</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>54</em></td>
+<td></td>
+<td><em>&gt; Type de mot-clé</em></td>
+<td></td>
+<td><em>Liste</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>55</em></td>
+<td><em>3.2</em></td>
+<td><em>&gt; Nom du thésaurus</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>362</em></td>
+<td><em>(3.2)</em></td>
+<td><em>&gt; Date du thésaurus (création, modification ou publication)</em></td>
+<td></td>
+<td></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><strong>29</strong></td>
+<td><strong>9.1</strong></td>
+<td><strong>Contacts pour les données</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="odd">
+<td><em>375</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>377</em></td>
+<td></td>
+<td><em>&gt; Fonction</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>376</em></td>
+<td><em>(9.1)</em></td>
+<td><em>&gt; Organisme</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>381</em></td>
+<td></td>
+<td><em>&gt; Adresse</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td><em>384</em></td>
+<td></td>
+<td><em>&gt; Code postal</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>382</em></td>
+<td></td>
+<td><em>&gt; Ville</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>408</em></td>
+<td></td>
+<td><em>&gt; Téléphone</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><em>386</em></td>
+<td><em>(9.1)</em></td>
+<td><em>&gt; Email</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td><em>379</em></td>
+<td><em>(9.2)</em></td>
+<td><em>&gt; Rôle</em></td>
+<td><em>Point de contact (pointOfContact)</em></td>
+<td><em>Liste</em></td>
+<td><em>N</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Référence géographiques des données</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>45</strong></td>
+<td><strong>4.1</strong></td>
+<td><strong>Emprise</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>335</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td><em>Alsace</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>347</em></td>
+<td><em>(4.1)</em></td>
+<td><em>&gt; Latitude Nord</em></td>
+<td><em>49.08</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>346</em></td>
+<td><em>(4.1)</em></td>
+<td><em>&gt; Latitude Sud</em></td>
+<td><em>47.42</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>344</em></td>
+<td><em>(4.1)</em></td>
+<td><em>&gt; Longitude Ouest</em></td>
+<td><em>6.84</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>345</em></td>
+<td><em>(4.1)</em></td>
+<td><em>&gt; Longitude Est</em></td>
+<td><em>8.23</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><strong>187</strong></td>
+<td></td>
+<td><strong>Système de projection</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>207</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td><em>RGF93 – Lambert 93 CC48 (EPSG:3948)</em></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><strong>351</strong></td>
+<td><strong>5.1</strong></td>
+<td><strong>Etendue temporelle</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>(5.1)</em></td>
+<td><em>&gt; Date début</em></td>
+<td></td>
+<td></td>
+<td>_Date_</td>
+<td>_1_</td>
+</tr>
+<tr class="odd">
+<td><em>(5.1)</em></td>
+<td><em>&gt; Date fin</em></td>
+<td></td>
+<td></td>
+<td><em>Date</em></td>
+<td>_1_</td>
+</tr>
+<tr class="even">
+<td>37</td>
+<td></td>
+<td>Type de représentation</td>
+<td></td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qualité des données</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>6.2</strong></td>
+<td><strong>Résolution</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>60</em></td>
+<td><em>(6.2)</em></td>
+<td><em>&gt; Echelle</em></td>
+<td></td>
+<td><em>Entier</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>61</em></td>
+<td><em>(6.2)</em></td>
+<td><em>&gt; Taille de pixel (mètres)</em></td>
+<td></td>
+<td><em>Décimal</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td>139</td>
+<td></td>
+<td>Niveau décrit</td>
+<td></td>
+<td>Liste</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>83</td>
+<td>6.1</td>
+<td>Texte sur la qualité</td>
+<td></td>
+<td>Texte</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conformité</strong></p>
+<table style="width:74%;">
+<colgroup>
+<col width="9%" />
+<col width="11%" />
+<col width="12%" />
+<col width="25%" />
+<col width="6%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>130</strong></td>
+<td></td>
+<td><strong>Test de conformité Inspire</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td><em>360</em></td>
+<td><em>7.1</em></td>
+<td><em>&gt; Nom de la spécification</em></td>
+<td></td>
+<td><em>Liste</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>362</em></td>
+<td><em>(7.1)</em></td>
+<td><em>&gt; Date de la spécification (création, modification ou publication)</em></td>
+<td></td>
+<td><em>Date</em></td>
+<td>_1_</td>
+</tr>
+<tr class="even">
+<td><em>131</em></td>
+<td></td>
+<td><em>&gt; Explication du test</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>132</em></td>
+<td><em>7.2</em></td>
+<td><em>&gt; Degré de conformité</em></td>
+<td></td>
+<td><em>Booléen</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><strong>130</strong></td>
+<td></td>
+<td><strong>Autres tests de conformité</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="odd">
+<td><em>360</em></td>
+<td><em>7.1</em></td>
+<td><em>&gt; Nom de la spécification</em></td>
+<td></td>
+<td><em>Liste</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>362</em></td>
+<td><em>(7.1)</em></td>
+<td><em>&gt; Date de la spécification (création, modification ou publication)</em></td>
+<td></td>
+<td><em>Date</em></td>
+<td>_1_</td>
+</tr>
+<tr class="odd">
+<td><em>131</em></td>
+<td></td>
+<td><em>&gt; Explication du test</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>132</em></td>
+<td><em>7.2</em></td>
+<td><em>&gt; Degré de conformité</em></td>
+<td></td>
+<td><em>Booléen</em></td>
+<td><em>1</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Diffusion des données</strong></p>
+<table style="width:74%;">
+<colgroup>
+<col width="9%" />
+<col width="11%" />
+<col width="12%" />
+<col width="25%" />
+<col width="6%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID ISO</th>
+<th>ID INS.</th>
+<th>Eléments</th>
+<th>Valeur par défaut</th>
+<th>Type</th>
+<th>Card.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>271</strong></td>
+<td></td>
+<td><strong>Format de diffusion</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="even">
+<td>_285</td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td>_286</td>
+<td></td>
+<td><em>&gt; Version</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td>_287</td>
+<td></td>
+<td><em>&gt; Spécification</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>Limites et contraintes légales d’accès et d’utilisation</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><em>74</em></td>
+<td><em>8.2</em></td>
+<td><em>&gt; Niveau de classification et de confidentialité de la donnée</em></td>
+<td><em>Non classifié (unclassified)</em></td>
+<td><em>Liste</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>70/72</em></td>
+<td><em>8.2</em></td>
+<td><em>&gt; Contraintes légales d’accès public liées à INSPIRE</em></td>
+<td>Pas de restriction d’accès public selon INSPIRE_</td>
+<td><em>Liste</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td><em>70/72</em></td>
+<td></td>
+<td><em>&gt; Autres contraintes légales d’accès public</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="odd">
+<td><em>68</em></td>
+<td><em>8.1</em></td>
+<td>_&gt; Limites d’utilisation</td>
+<td>Aucune autre condition légale ne s’applique_</td>
+<td><em>Texte</em></td>
+<td><em>N</em></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><strong>Accès aux données et documents associés</strong></td>
+<td></td>
+<td></td>
+<td><strong>N</strong></td>
+</tr>
+<tr class="odd">
+<td><em>400</em></td>
+<td></td>
+<td><em>&gt; Nom</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="even">
+<td><em>401</em></td>
+<td></td>
+<td><em>&gt; Description</em></td>
+<td></td>
+<td><em>Texte</em></td>
+<td><em>1</em></td>
+</tr>
+<tr class="odd">
+<td><em>397</em></td>
+<td><em>1.4</em></td>
+<td><em>&gt; URL</em></td>
+<td></td>
+<td><em>URL</em></td>
+<td><em>1</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-2-liste-des-23-langues-officielles-de-lunion-européenne-selon-la-directive-inspire">Annexe 2 : Liste des 23 langues officielles de l’union européenne selon la directive Inspire</h4>
+<p>La directive européenne Inspire prévoit la possibilité de sélectionner une ou plusieurs langues parmi la liste des 23 langues officielles de l’union européenne présentées dans le tableau ci-dessous.</p>
+<p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Nom en français</th>
+<th>Nom en anglais</th>
+<th>Code ISO 639-2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bulgare</td>
+<td>Bulgarian</td>
+<td>bul</td>
+</tr>
+<tr class="even">
+<td>Tchèque</td>
+<td>Czech</td>
+<td>cze</td>
+</tr>
+<tr class="odd">
+<td>Danois</td>
+<td>Danish</td>
+<td>dan</td>
+</tr>
+<tr class="even">
+<td>Hollandais</td>
+<td>Dutch</td>
+<td>dut</td>
+</tr>
+<tr class="odd">
+<td>Anglais</td>
+<td>English</td>
+<td>eng</td>
+</tr>
+<tr class="even">
+<td>Estonien</td>
+<td>Estonian</td>
+<td>est</td>
+</tr>
+<tr class="odd">
+<td>Finlandais</td>
+<td>Finnish</td>
+<td>fin</td>
+</tr>
+<tr class="even">
+<td>Français</td>
+<td>French</td>
+<td>fre</td>
+</tr>
+<tr class="odd">
+<td>Allemand</td>
+<td>German</td>
+<td>ger</td>
+</tr>
+<tr class="even">
+<td>Grecque</td>
+<td>Greek</td>
+<td>gre</td>
+</tr>
+<tr class="odd">
+<td>Hongrois</td>
+<td>Hungarian</td>
+<td>hun</td>
+</tr>
+<tr class="even">
+<td>Irlandais</td>
+<td>Irish</td>
+<td>gle</td>
+</tr>
+<tr class="odd">
+<td>Italien</td>
+<td>Italian</td>
+<td>ita</td>
+</tr>
+<tr class="even">
+<td>Letton</td>
+<td>Latvian</td>
+<td>lav</td>
+</tr>
+<tr class="odd">
+<td>Lithuanien</td>
+<td>Lithuanian</td>
+<td>lit</td>
+</tr>
+<tr class="even">
+<td>Maltais</td>
+<td>Maltese</td>
+<td>mlt</td>
+</tr>
+<tr class="odd">
+<td>Polonais</td>
+<td>Polish</td>
+<td>pol</td>
+</tr>
+<tr class="even">
+<td>Portugais</td>
+<td>Portuguese</td>
+<td>por</td>
+</tr>
+<tr class="odd">
+<td>Roumain</td>
+<td>Romanian</td>
+<td>rum</td>
+</tr>
+<tr class="even">
+<td>Slovaque</td>
+<td>Slovak</td>
+<td>slo</td>
+</tr>
+<tr class="odd">
+<td>Slovène</td>
+<td>Slovenian</td>
+<td>slv</td>
+</tr>
+<tr class="even">
+<td>Espagnol</td>
+<td>Spanish</td>
+<td>spa</td>
+</tr>
+<tr class="odd">
+<td>Suédois</td>
+<td>Swedish</td>
+<td>swe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-3-liste-des-jeux-de-caractères-de-la-norme-iso-19115">Annexe 3 : Liste des jeux de caractères de la norme ISO 19115</h4>
+<p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir l’encodage des caractères d’une fiche de description ou d’une donnée (liste B.5.10 MD_CharacterSetCode) présentée dans le tableau ci-dessous.</p>
+<p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
+<table style="width:71%;">
+<colgroup>
+<col width="4%" />
+<col width="9%" />
+<col width="56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Id</th>
+<th>Valeur</th>
+<th>Nom du standard de codage des caractères</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>ucs2</td>
+<td>16-bit fixed size Universal Character Set, based on ISO/IEC 10646</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>ucs4</td>
+<td>32-bit fixed size Universal Character Set, based on ISO/IEC 10646</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>utf7</td>
+<td>7-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>utf8</td>
+<td>8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>utf16</td>
+<td>16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>8859part1</td>
+<td>ISO/IEC 8859-1, Information technology – 8-bit single-byte coded graphic character sets – Part 1: Latin alphabet No. 1</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>8859part2</td>
+<td>ISO/IEC 8859-2, Information technology – 8-bit single-byte coded graphic character sets Part 2: Latin alphabet No. 2</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>8859part3</td>
+<td>ISO/IEC 8859-3, Information technology – 8-bit single-byte coded graphic character sets – Part 3: Latin alphabet No. 3</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>8859part4</td>
+<td>ISO/IEC 8859-4, Information technology – 8-bit single-byte coded graphic character sets – Part 4: Latin alphabet No. 4</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>8859part5</td>
+<td>ISO/IEC 8859-51, Information technology – 8-bit single-byte coded graphic character sets – Part 5: Latin/Cyrillic alphabet</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>8859part6</td>
+<td>ISO/IEC 8859-6, Information technology – 8-bit single-byte coded graphic character sets – Part 6: Latin/Arabic alphabet</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>8859part7</td>
+<td>ISO/IEC 8859-7, Information technology – 8-bit single-byte coded graphic character sets – Part 7: Latin/Greek alphabet</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>8859part8</td>
+<td>ISO/IEC 8859-8, Information technology – 8-bit single-byte coded graphic character sets – Part 8: Latin/Hebrew alphabet</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>8859part9</td>
+<td>ISO/IEC8859-9, Information technology – 8-bit single-byte coded graphic character sets – Part 9: Latin alphabet No. 5</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>8859part10</td>
+<td>ISO/IEC 8859-10, Information technology – 8-bit single-byte coded graphic character sets – Part 10: Latin alphabet No. 6</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>8859part11</td>
+<td>ISO/IEC 8859-11, Information technology – 8-bit single-byte coded graphic character sets – Part 11: Latin/Thai alphabet</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>8859part13</td>
+<td>ISO/IEC 8859-13, Information technology – 8-bit single-byte coded graphic character sets – Part 13: Latin alphabet No. 7</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td>8859part14</td>
+<td>ISO/IEC 8859-14, Information technology – 8-bit single-byte coded graphic character sets – Part 14: Latin alphabet No. 8 (Celtic)</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>8859part15</td>
+<td>ISO/IEC 8859-15, Information technology – 8-bit single-byte coded graphic character sets – Part 15: Latin alphabet No. 9</td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>8859part16</td>
+<td>ISO/IEC 8859-16, Information technology – 8-bit single-byte coded graphic character sets – Part 16: Latin alphabet No. 10</td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td>jis</td>
+<td>japanese code set used for electronic transmission</td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td>shiftJIS</td>
+<td>japanese code set used on MS-DOS based machines</td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td>eucJP</td>
+<td>japanese code set used on UNIX based machines</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>usAscii</td>
+<td>united states ASCII code set (ISO 646 US)</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>ebcdic</td>
+<td>ibm mainframe code set</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>eucKR</td>
+<td>korean code set</td>
+</tr>
+<tr class="odd">
+<td>28</td>
+<td>big5</td>
+<td>traditional Chinese code set used in Taiwan, Hong Kong of China and other areas</td>
+</tr>
+<tr class="even">
+<td>29</td>
+<td>GB2312</td>
+<td>simplified Chinese code set</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-4-liste-des-types-de-ressources-selon-la-norme-iso-19115">Annexe 4 : Liste des types de ressources selon la norme ISO 19115</h4>
+<p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le type de ressource décrite (liste B.5.25 MD_ScopeCode) présentée dans le tableau ci-dessous.</p>
+<p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
+<table style="width:75%;">
+<colgroup>
+<col width="4%" />
+<col width="12%" />
+<col width="12%" />
+<col width="45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Id</th>
+<th>Code ISO</th>
+<th>Intitulé</th>
+<th>Description du type de ressource</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>attribute</td>
+<td>Attribut</td>
+<td>Informations appliquées aux caractéristiques de l’attribut</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>attributeType</td>
+<td>Type d’attribut</td>
+<td>Informations appliquées aux caractéristiques de l’entité</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>collectionHardware</td>
+<td>Collection matérielle</td>
+<td>Informations appliquées aux caractéristiques d’une collection matérielle</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>collectionSession</td>
+<td>Collection de session</td>
+<td>Informations appliquées aux caractéristiques d’une collection de session</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>dataset</td>
+<td>Jeu / série de données</td>
+<td>Informations appliquées aux caractéristiques de jeu de données</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>series</td>
+<td>Collection / ensemble de séries de données</td>
+<td>Informations appliquées aux caractéristiques de la collection de données</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>nonGeographicDataset</td>
+<td>Jeu de données non géographique</td>
+<td>Informations appliquées aux caractéristiques de jeux de données non géographiques</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>dimensionGroup</td>
+<td>Dimension d’un groupe</td>
+<td>informations appliquées à un groupe</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>feature</td>
+<td>Entité</td>
+<td>Informations appliquées à une entité</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>featureType</td>
+<td>Type d’entité</td>
+<td>Informations appliquées à un type d’entité</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>propertyType</td>
+<td>Type de propriété</td>
+<td>Informations appliquées à un type de propriété</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>software</td>
+<td>Logiciel</td>
+<td>Informations appliquées à programme ou à une routine</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>fieldSession</td>
+<td>Champ de Session</td>
+<td>Informations appliquées aux caractéristiques d’un champ de session</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>service</td>
+<td>Service</td>
+<td>Informations appliquées à un service Internet</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>model</td>
+<td>Modèle</td>
+<td>Informations appliquées à modèle décrivant les objets ou un ensemble d'objets</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>tile</td>
+<td>Sous-ensemble de données</td>
+<td>Informations appliquées à un sous-ensemble, partie d’un jeu de données</td>
+</tr>
+<tr class="odd">
+<td>RO001</td>
+<td>fieldCampaign</td>
+<td>Campagne de mesures</td>
+<td>Informations appliquées à une campagne de mesure de terrain</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-5-liste-des-rôles-selon-la-norme-iso-19115">Annexe 5 : Liste des rôles selon la norme ISO 19115</h4>
+<p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le rôle d’un contact (liste B.5.5 CI_RoleCode) présentée dans le tableau ci-dessous.</p>
+<p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
+<table style="width:88%;">
+<colgroup>
+<col width="4%" />
+<col width="12%" />
+<col width="12%" />
+<col width="58%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Id</th>
+<th>Code ISO</th>
+<th>Intitulé</th>
+<th>Fonction de l’organisme cité en référence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>resourceProvider</td>
+<td>Fournisseur</td>
+<td>Organisme ou personne qui délivre physiquement la fiche de description, soit de manière directe au destinataire, soit par l’intermédiaire d’un diffuseur.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>custodian</td>
+<td>Gestionnaire</td>
+<td>Organisme ou personne responsable de la gestion et de la mise à jour de la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>owner</td>
+<td>Propriétaire</td>
+<td>Organisme ou personne qui est propriétaire de la fiche de description et qui en détient les droits patrimoniaux.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>user</td>
+<td>Utilisateur</td>
+<td>Organisme ou personne qui utilise ou a utilisé la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>distributor</td>
+<td>Distributeur</td>
+<td>Organisme ou personne qui distribue et diffuse la fiche de description.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>originator</td>
+<td>Commanditaire</td>
+<td>Organisme ou personne qui a commandé la fiche de description. Il a été habilité à créer la fiche de description et a mis en place les moyens pour la constituer.</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>pointOfContact</td>
+<td>Point de contact</td>
+<td>Organisme ou personne que l’on peut contacter pour avoir des renseignements détaillés sur la fiche de description.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>principalInvestigator</td>
+<td>Producteur / Maître d’œuvre principal ou d'ensemble</td>
+<td>Organisme ou personne clé pour obtenir des informations sur la fiche de description. Il en a assuré la réalisation, éventuellement en faisant appel à des co-traitants ou des sous traitants.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>processor</td>
+<td>Intégrateur / Exécutant secondaire</td>
+<td>Organisme ou personne qui est intervenu lors de la réalisation de la fiche de description et qui a réalisé des traitements.</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>publisher</td>
+<td>Editeur</td>
+<td>Organisme ou personne qui assure la publication de la fiche de description.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>author</td>
+<td>Auteur</td>
+<td>Organisme ou personne qui a complété la fiche de description. Il en détient les droits moraux.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-6-liste-des-types-de-représentation-spatiales-selon-la-norme-iso-19115">Annexe 6 : Liste des types de représentation spatiales selon la norme ISO 19115</h4>
+<p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le type de représentation spatiale (liste B.5.25 MD_SpatialRepresentationTypeCode) présentée dans le tableau ci-dessous.</p>
+<p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de ne proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Id</th>
+<th>Code ISO</th>
+<th>Intitulé</th>
+<th>Mode représentation de l’information géographique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>vector</td>
+<td>Vecteur</td>
+<td>Donnée vecteur (point, ligne, polygone)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>grid</td>
+<td>Raster</td>
+<td>Donnée raster</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>textTable</td>
+<td>Table texte</td>
+<td>Texte ou donnée tabulaire</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>tin</td>
+<td>Tin</td>
+<td>Réseau de triangle irrégulier (Triangulated Irregular Network)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>stereoModel</td>
+<td>Vue 3D</td>
+<td>Vue en 3 dimensions</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>video</td>
+<td>Vidéo</td>
+<td>Enregistrement vidéo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annexe-7-correspondance-thèmes-inspire-catégories-internationales">Annexe 7 : correspondance thèmes INSPIRE / catégories internationales</h4>
+<p>Le tableau ci-dessous présente une correspondance entre les catégories internationales (ISO) et la classification thématique européenne Inspire des données. Lors de la description d’une donnée, il est indispensable de veiller à la cohérence de la saisie entre ces 2 listes de valeurs.</p>
+<table style="width:47%;">
+<colgroup>
+<col width="9%" />
+<col width="18%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Annexe</th>
+<th>Thème INSPIRE</th>
+<th>Catégorie ISO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Référentiel de coordonnées</td>
+<td>--</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Système de maillage géographique</td>
+<td>--</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Dénominations géographiques</td>
+<td>Localisation (location)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Unités administratives</td>
+<td>Limites (boundaries)</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Adresses</td>
+<td>Localisation (location)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Parcelles cadastrales</td>
+<td>Planification/Cadastre (planningCadastre)</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Réseaux de transport</td>
+<td>Transport (transportation)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Hydrographie</td>
+<td>Eaux intérieures (inlandWaters)</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Sites protégés</td>
+<td>Environnement (environment)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Altitude</td>
+<td>Altitude (elevation)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Occupation des terres</td>
+<td>Imagerie/Cartes de base/Occupation des terres (imageryBaseMapsEarthCover)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Ortho-imagerie</td>
+<td>Imagerie/Cartes de base/Occupation des terres (imageryBaseMapsEarthCover)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Géologie</td>
+<td>Informations géoscientifiques (geoscientificInformation)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Unités statistiques</td>
+<td>Limites (boundaries)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Bâtiments</td>
+<td>Structure (structure)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Sols</td>
+<td>Informations géoscientifiques (geoscientificInformation)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Usage des sols</td>
+<td>Planification/Cadastre (planningCadastre)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Santé et sécurité des personnes</td>
+<td>Santé (health)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Services d’utilité publique et services publics</td>
+<td>Services d’utilité publique/Communication (utilitiesCommunication)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Installations de suivi environnemental</td>
+<td>Structure (structure)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Lieux de production et sites industriels</td>
+<td>Structure (structure)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Installations agricoles et aquacoles</td>
+<td>Agriculture (farming)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Répartition de la population – Démographie</td>
+<td>Société (society)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Zones de gestion, de restriction ou de réglementation et unités de déclaration</td>
+<td>Planification/Cadastre (planningCadastre)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Zones à risque naturel</td>
+<td>Informations géoscientifiques (geoscientificInformation)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Conditions atmosphériques</td>
+<td>Climatologie/Météorologie/Atmosphère (climatologyMeteorologyAtmosphere)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Caractéristiques géographiques météorologiques</td>
+<td>Climatologie/Météorologie/Atmosphère (climatologyMeteorologyAtmosphere)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Caractéristiques géographiques océanographiques</td>
+<td>Océans (oceans)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Régions maritimes</td>
+<td>Océans (oceans)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Régions biogéographiques</td>
+<td>Biote (biota)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Habitats et biotopes</td>
+<td>Biote (biota)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Répartition des espèces»</td>
+<td>Biote (biota)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Sources d’énergie</td>
+<td>Économie (economy)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Données minérales</td>
+<td>Économie (economy)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bibliographie-.page-title">Bibliographie {: .page-title}</h2>
+<p>title: Biblio description: Bibliographie path: docs/pages source: biblio.md</p>
+<h3 id="bibliographie">Bibliographie</h3>
+<p>Sans être exhaustif, vous trouverez ci-dessous les principaux documents ayant permis la rédaction du présent guide, ainsi que des éléments incontournables concernant la description des données géographiques.</p>
+<ul>
+<li><p>Norme ISO 19115:2003 / TC 211 – Information Géographique / Métadonnées</p></li>
+<li><p>Norme ISO 19115:2003/Cor 1:2006 / TC 211 – Géographic information/Geomatics / Metadata</p></li>
+<li><p>DIRECTIVE 2007/2/CE DU PARLEMENT EUROPÉEN ET DU CONSEIL du 14 mars 2007 établissant une infrastructure d'information géographique dans la Communauté européenne (INSPIRE) http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2007:108:0001:0014:fr:PDF</p></li>
+<li><p>REGLEMENT (CE) No 1205/2008 DE LA COMMISSION du 3 décembre 2008 portant modalités d'application de la directive 2007/2/CE du Parlement européen et du Conseil en ce qui concerne les métadonnées http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:326:0012:0030:FR:PDF</p></li>
+<li><p>Rectificatif au règlement (CE) No 1205/2008 de la Commission du 3 décembre 2008 portant modalités d'application de la directive 2007/2/CE du Parlement européen et du Conseil en ce qui concerne les métadonnées http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:328:0083:0083:FR:PDF</p></li>
+<li><p>Rectificatif au règlement (CE) No 1205/2008 de la Commission du 3 décembre 2008 portant modalités d'application de la directive 2007/2/CE du Parlement européen et du Conseil en ce qui concerne les métadonnées http://inspire.jrc.ec.europa.eu/documents/Metadata/INSPIRE_MD_IR_and_ISO_v1_2_20100616.pdf</p></li>
+<li><p>La directive INSPIRE pour les néophytes – 3ème édition (décembre 2011) http://georezo.net/blog/inspire/files/2011/12/La_directive_Inspire_pour_les_neophytes_V3.pdf</p></li>
+<li><p>Guide de saisie des éléments de métadonnées INSPIRE – Gabarit des données Groupe de travail &quot;Métadonnées&quot; / Version 1.0 – Décembre 2011 http://inspire.ign.fr/images/INSPIRE/metadonnees/guide-saisie-metadonnees-inspire_prj12.pdf</p></li>
+</ul>
+<h1 id="a-propos-.page-title">A propos {: .page-title}</h1>
+<h2 id="license-.page-title">License {: .page-title}</h2>
+<h2 id="license">License</h2>
+<p>mdGuide Copyright GéoGrandEst 2017</p>
+<h2 id="release-notes-.page-title">Release Notes {: .page-title}</h2>
+<p>Release notes</p>
+</body>
+</html>

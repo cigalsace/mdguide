@@ -3,16 +3,8 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/Guide/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,404 +12,72 @@
     
         
     <url>
-     <loc>None/pages/data_abstract/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/intro/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_browsegraphic_description/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/md_info/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_browsegraphic_image/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/data_info/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_browsegraphic_type/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/data_geo/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_browsegraphic_url/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/data_quality/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_browsegraphics/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/data_distribution/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_characterset/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/data_conformity/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_constraints_limitations/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/annexes/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/data_contact_address/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/pages/biblio/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc>None/pages/data_contact_city/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_cp/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_email/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_logo_text/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_name/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_organisation/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_position/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_role/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contact_tel/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_contacts/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dates/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_distformats/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_conformities/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_inspireconformities/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_inspireconformities_dates/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_inspireconformities_explaination/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_inspireconformities_pass/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_inspireconformities_specification/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_dq_level/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_geographicextents/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_identifiers/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_inspirekeywords/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_keywords/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_languages/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_legal_accessinspireconstraints/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_legal_accessotherconstraints/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_li_statement/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_linkages/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_maintenancefrequencycode/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_referencesystems/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_scales/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_security_classification/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_spatialrepresentationtype/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_temporalextents/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_title/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/data_topiccategories/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/empty/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/mdEdit/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_characterset/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_address/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_city/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_cp/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_email/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_logo_text/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_name/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_organisation/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_position/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_role/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contact_tel/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_contacts/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_datestamp/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_fileidentifier/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_hierarchylevel/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_infos/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_language/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/pages/md_standardname/</loc>
-     <lastmod>2016-02-21</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
+    
+
+    
         
     <url>
-     <loc>None/pages/md_standardversion/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/about/license/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/pages/todo/</loc>
-     <lastmod>2016-02-21</lastmod>
+     <loc>https://cigalsace.github.io/mdguide/about/release-notes/</loc>
+     <lastmod>2017-06-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

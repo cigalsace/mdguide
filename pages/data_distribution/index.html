@@ -1,0 +1,1889 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Diffusion des données">
+      
+      
+        <link rel="canonical" href="https://cigalsace.github.io/mdguide/pages/data_distribution/">
+      
+      
+        <meta name="author" content="Guillaume R. (GéoGrandEst)">
+      
+      
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.3">
+    
+    
+      
+        <title>Diffusion</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-acc56dad49.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-8817cfa535.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"sans-serif","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://cigalsace.github.io/mdguide" title="mdGuide" class="md-logo md-header-nav__button">
+            <img src="../../img/open-book.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Guide
+                </span>
+              
+            
+            Diffusion de la donnée
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../img/open-book.svg">
+      </i>
+    
+    mdGuide
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master" title="Go to repository" class="md-source" data-md-source="">
+    
+    <div class="md-source__repository">
+      cigalsace/mdguide
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../md_info/" title="Information sur les métadonnées" class="md-nav__link">
+      Information sur les métadonnées
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_info/" title="Description de la donnée géographique" class="md-nav__link">
+      Description de la donnée géographique
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_geo/" title="Référence géographique de la donnée" class="md-nav__link">
+      Référence géographique de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_quality/" title="Qualité de la donnée" class="md-nav__link">
+      Qualité de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Diffusion de la donnée
+      </label>
+    
+    <a href="./" title="Diffusion de la donnée" class="md-nav__link md-nav__link--active">
+      Diffusion de la donnée
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#diffusion-de-la-donnee" title="Diffusion de la donnée" class="md-nav__link">
+    Diffusion de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jeu-de-caracteres-encodage-de-la-donnee" title="Jeu de caractères (encodage) de la donnée" class="md-nav__link">
+    Jeu de caractères (encodage) de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-de-diffusion" title="Format de diffusion" class="md-nav__link">
+    Format de diffusion
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-du-format" title="Nom du format" class="md-nav__link">
+    Nom du format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-et-contraintes-legales-dacces-et-dutilisation" title="Limites et contraintes légales d’accès et d’utilisation" class="md-nav__link">
+    Limites et contraintes légales d’accès et d’utilisation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalite-sur-les-contraintes-legales-dacces-et-dutilisation" title="Généralité sur les contraintes légales d’accès et d’utilisation" class="md-nav__link">
+    Généralité sur les contraintes légales d’accès et d’utilisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-de-classification-ou-confidentialite-de-la-donnee" title="Niveau de classification ou confidentialité de la donnée" class="md-nav__link">
+    Niveau de classification ou confidentialité de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-legales-dacces-public-selon-inspire" title="Contraintes légales d’accès public selon INSPIRE" class="md-nav__link">
+    Contraintes légales d’accès public selon INSPIRE
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autres-contraintes-legales-dacces-public-a-la-donnee" title="Autres contraintes légales d’accès public à la donnée" class="md-nav__link">
+    Autres contraintes légales d’accès public à la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_4" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_4" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_4" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_4" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autres-conditions-et-mentions-legales-dacces-et-dutilisation" title="Autres conditions et mentions légales d’accès et d’utilisation" class="md-nav__link">
+    Autres conditions et mentions légales d’accès et d’utilisation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_5" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_5" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_5" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_5" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees-et-documents-associes" title="Accès aux données et documents associés" class="md-nav__link">
+    Accès aux données et documents associés
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_6" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_6" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_6" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_6" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom" title="Nom" class="md-nav__link">
+    Nom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" title="URL" class="md-nav__link">
+    URL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_conformity/" title="Conformité de la donnée" class="md-nav__link">
+      Conformité de la donnée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../annexes/" title="Annexes" class="md-nav__link">
+      Annexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../biblio/" title="Bibliographie" class="md-nav__link">
+      Bibliographie
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      A propos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        A propos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        <li class="md-nav__item">
+  <a href="#diffusion-de-la-donnee" title="Diffusion de la donnée" class="md-nav__link">
+    Diffusion de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jeu-de-caracteres-encodage-de-la-donnee" title="Jeu de caractères (encodage) de la donnée" class="md-nav__link">
+    Jeu de caractères (encodage) de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-de-diffusion" title="Format de diffusion" class="md-nav__link">
+    Format de diffusion
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_1" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_1" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_1" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom-du-format" title="Nom du format" class="md-nav__link">
+    Nom du format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-et-contraintes-legales-dacces-et-dutilisation" title="Limites et contraintes légales d’accès et d’utilisation" class="md-nav__link">
+    Limites et contraintes légales d’accès et d’utilisation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalite-sur-les-contraintes-legales-dacces-et-dutilisation" title="Généralité sur les contraintes légales d’accès et d’utilisation" class="md-nav__link">
+    Généralité sur les contraintes légales d’accès et d’utilisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-de-classification-ou-confidentialite-de-la-donnee" title="Niveau de classification ou confidentialité de la donnée" class="md-nav__link">
+    Niveau de classification ou confidentialité de la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_2" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_2" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_2" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-legales-dacces-public-selon-inspire" title="Contraintes légales d’accès public selon INSPIRE" class="md-nav__link">
+    Contraintes légales d’accès public selon INSPIRE
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_3" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_3" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_3" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_3" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autres-contraintes-legales-dacces-public-a-la-donnee" title="Autres contraintes légales d’accès public à la donnée" class="md-nav__link">
+    Autres contraintes légales d’accès public à la donnée
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_4" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_4" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_4" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_4" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autres-conditions-et-mentions-legales-dacces-et-dutilisation" title="Autres conditions et mentions légales d’accès et d’utilisation" class="md-nav__link">
+    Autres conditions et mentions légales d’accès et d’utilisation
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_5" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_5" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_5" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_5" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees-et-documents-associes" title="Accès aux données et documents associés" class="md-nav__link">
+    Accès aux données et documents associés
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_6" title="Définition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommandations_6" title="Recommandations" class="md-nav__link">
+    Recommandations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples_6" title="Exemples" class="md-nav__link">
+    Exemples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references-techniques_6" title="Références techniques" class="md-nav__link">
+    Références techniques
+  </a>
+  
+    
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nom" title="Nom" class="md-nav__link">
+    Nom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" title="URL" class="md-nav__link">
+    URL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Diffusion de la donnée</h1>
+                
+                <h2 id="diffusion-de-la-donnee">Diffusion de la donnée<a class="headerlink" href="#diffusion-de-la-donnee" title="Permanent link">&para;</a></h2>
+<h3 id="jeu-de-caracteres-encodage-de-la-donnee">Jeu de caractères (encodage) de la donnée<a class="headerlink" href="#jeu-de-caracteres-encodage-de-la-donnee" title="Permanent link">&para;</a></h3>
+<h4 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
+<p>Il s’agit d’une information purement technique précisant l’encodage utilisé pour générer le fichier d’échange de la fiche au format XML. Il est normalement définit par l’application utilisée.</p>
+<p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code class="codehilite">utf8</code>, <code class="codehilite">utf16</code>, <code class="codehilite">8859part1</code>, <code class="codehilite">8859part15</code> et <code class="codehilite">8859part16</code> (cf. liste complète en annexe 3).</p>
+<p>Table: Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Nom du standard de codage des caractères</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">4</td>
+<td align="left">utf8</td>
+<td align="left">8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">utf16</td>
+<td align="left">16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">8859part1</td>
+<td align="left">ISO/IEC 8859-1, Information technology – 8-bit single-byte coded graphic character sets  – Part 1: Latin alphabet No. 1</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">8859part15</td>
+<td align="left">ISO/IEC 8859-15, Information technology – 8-bit single-byte coded graphic character sets – Part 15: Latin alphabet No. 9</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">8859part16</td>
+<td align="left">ISO/IEC 8859-16, Information technology – 8-bit single-byte coded graphic character sets – Part 16: Latin alphabet No. 10</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recommandations">Recommandations<a class="headerlink" href="#recommandations" title="Permanent link">&para;</a></h4>
+<p>La valeur par défaut est <code class="codehilite">utf8</code>.</p>
+<h4 id="exemples">Exemples<a class="headerlink" href="#exemples" title="Permanent link">&para;</a></h4>
+<p>Jeu de caractères : <code class="codehilite">utf8</code>
+Jeu de caractères : <code class="codehilite">8859part1</code></p>
+<h4 id="references-techniques">Références techniques<a class="headerlink" href="#references-techniques" title="Permanent link">&para;</a></h4>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          --
+- Nom:                  (Encodage de caractères)
+- Obligation/condition: Obligatoire pour les données de l’Annexe 1
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          40
+- Nom:                  characterSet
+- Code:                 dataChar
+- Obligation/condition: Core ISO
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/characterSet
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Par défaut, valeur définie à `utf8`. Se référer à la norme ISO 19115 pour
+plus d’informations.
+</pre></div>
+
+
+<hr />
+<h3 id="format-de-diffusion">Format de diffusion<a class="headerlink" href="#format-de-diffusion" title="Permanent link">&para;</a></h3>
+<h4 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h4>
+<p>Ces informations indiquent le ou les formats dans lesquels la donnée est disponible auprès du fournisseur. Il est demandé de précisé la version du format.
+Les spécifications ou une description du format peuvent également être renseignées.</p>
+<h4 id="recommandations_1">Recommandations<a class="headerlink" href="#recommandations_1" title="Permanent link">&para;</a></h4>
+<p>Privilégier les formats communément utilisés dans les SIG et notamment les formats d’échange.
+Il est recommandé d’indiquer le nom du format en toute lettre en plus de l’extension du fichier lorsque c’est le cas.</p>
+<h4 id="exemples_1">Exemples<a class="headerlink" href="#exemples_1" title="Permanent link">&para;</a></h4>
+<p>Format de diffusion :</p>
+<ul>
+<li>Nom du format: <code class="codehilite">Shapefile (shp)</code></li>
+<li>Verison du format: <code class="codehilite">1.0</code>.</li>
+</ul>
+<h4 id="references-techniques_1">Références techniques<a class="headerlink" href="#references-techniques_1" title="Permanent link">&para;</a></h4>
+<h5 id="nom-du-format">Nom du format<a class="headerlink" href="#nom-du-format" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          285
+- Nom:                  name
+- Code:                 formatName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*
+                        /distributionFormat/*/name
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Les formats d’encodage par défaut d’INSPIRE sont ISO 19136 (GML 3.2.1) et
+les formats associés. Les formats d’encodage courants sont Shape, MIF-MID,
+etc…
+- Des données produites selon les spécifications de données INSPIRE seront
+par défaut encodées selon ISO 19136 (GML) ou ISO/TS 19139.
+- Se référer aux spécifications INSPIRE pour plus de détails.
+</pre></div>
+
+
+<h6 id="version-du-format">Version du format<a class="headerlink" href="#version-du-format" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          286
+- Nom:                  version
+- Code:                 formatVer
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*
+                        /distributionFormat/*/version
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<h6 id="specification-du-format">Spécification du format<a class="headerlink" href="#specification-du-format" title="Permanent link">&para;</a></h6>
+<p>Dans le cadre d’Inspire, proposer une liste fermée de valeur correspondant aux restrictions d’accès public INSPIRE (cf. tableau ci-dessus)</p>
+<hr />
+<h3 id="limites-et-contraintes-legales-dacces-et-dutilisation">Limites et contraintes légales d’accès et d’utilisation<a class="headerlink" href="#limites-et-contraintes-legales-dacces-et-dutilisation" title="Permanent link">&para;</a></h3>
+<h4 id="generalite-sur-les-contraintes-legales-dacces-et-dutilisation">Généralité sur les contraintes légales d’accès et d’utilisation<a class="headerlink" href="#generalite-sur-les-contraintes-legales-dacces-et-dutilisation" title="Permanent link">&para;</a></h4>
+<p>Ces informations concernent l’approche légale des limites et contraintes d’accès et d’utilisation de la donnée. Les limites d’usage de la donnée relatives à ses caractéristiques techniques (échelle, précision, etc.) sont à renseigner dans le texte sur la qualité de la donnée (cf. paragraphe 5.3).</p>
+<p>Pour définir les limites et contraintes légales d’accès et d’utilisation de la donnée, 4 informations sont à renseigner :</p>
+<ul>
+<li>Les contraintes de sécurité liées au niveau de classification ou de confidentialité de la donnée (donnée sensible, donnée secret défense, etc.)</li>
+<li>Les contraintes l’égales d’accès et d’utilisation publique liées à des restrictions permises par la directive Inspire (données sur les espèces menacées, données nominatives, etc.)</li>
+<li>Les contraintes l’égales d’accès et d’utilisation liées à l’existence d’autres restrictions imposées par la loi (droits d’auteur, licence, etc.)</li>
+<li>Les conditions légales d’utilisation de la donnée liées à des contraintes administratives d’usage et d’accès (redevances, droits de représentation, mentions légales, etc.)</li>
+</ul>
+<p>Les 3 premières informations dépendant de listes fermées de valeurs. La dernière permet la saisie de texte libre.</p>
+<p>Dans le cadre du partenariat CIGAL il est proposé de mettre en œuvre ces éléments de la façon suivante :</p>
+<ul>
+<li>Le niveau de confidentialité est une liste de valeurs (secret, confidentiel, etc.) à saisir obligatoirement et ayant par défaut la valeur <code class="codehilite">Non classifié</code> (cf. paragraphe 6.3.2)</li>
+<li>Les contraintes légales d’accès et d’utilisation définis par la directive INSPIRE correspondent à une liste de valeurs relatives au code de l’environnement et à la directive INSPIRE. Par défaut, la valeur est fixée à <code class="codehilite">Pas de restriction d’accès public selon INSPIRE</code> (cf. paragraphe 6.3.3).</li>
+<li>Les contraintes légales d’accès et d’utilisation liées à d’autres restrictions imposées par la loi sont définies via une liste de valeurs relatives au droit d’auteur / propriété (brevet, licence, etc.). Par défaut ce champ est non renseigné et non obligatoire (cf. paragraphe 6.3.4).</li>
+<li>Les conditions et mentions légales d’utilisation sont saisies sous forme de texte libre et viennent compléter les informations des 3 listes précédentes. Par défaut, la valeur renseignée est <code class="codehilite">Aucune condition d’accès ne s’applique</code>. Il est cependant recommandé de bien préciser les mentions légales et les sources à faire figurer sur les supports utilisant les données (cf. paragraphe 6.3.5).</li>
+</ul>
+<hr />
+<h4 id="niveau-de-classification-ou-confidentialite-de-la-donnee">Niveau de classification ou confidentialité de la donnée<a class="headerlink" href="#niveau-de-classification-ou-confidentialite-de-la-donnee" title="Permanent link">&para;</a></h4>
+<h5 id="definition_2">Définition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h5>
+<p>Information sur le niveau de classification ou confidentialité de la donnée.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.11 MD_ClassificationCode) et reprise dans le tableau suivant.</p>
+<p>Table: Liste des valeurs pour la classification de la donné</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Nom de la restriction d’accès à la donnée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">unclassified</td>
+<td align="left">Non classifié</td>
+<td align="left">La donnée ne revêt pas un caractère sensible</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">restricted</td>
+<td align="left">Restreint</td>
+<td align="left">Le caractère sensible de la donnée restreint son utilisation ou sa diffusion</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">confidential</td>
+<td align="left">Confidentiel</td>
+<td align="left">La donnée présente un caractère confidentiel.</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">secret</td>
+<td align="left">Secret</td>
+<td align="left">La confidentialité de la donnée implique des mesures de protection particulière</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">topSecret</td>
+<td align="left">Top secret</td>
+<td align="left">La confidentialité de la donnée implique des mesures de protection extrêmes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations_2">Recommandations<a class="headerlink" href="#recommandations_2" title="Permanent link">&para;</a></h5>
+<p>La valeur par défaut est fixée à <code class="codehilite">Non classifié</code>.
+Une seule valeur peut-être renseignée.</p>
+<p>La classification de la donnée à un niveau supérieur de confidentialité, autre que <code class="codehilite">Non classifié</code> indique le caractère sensible de la donnée. Elle doit être justifiée légalement.</p>
+<h5 id="exemples_2">Exemples<a class="headerlink" href="#exemples_2" title="Permanent link">&para;</a></h5>
+<p>Niveau de confidentialité : <code class="codehilite">Non classifié</code></p>
+<h5 id="references-techniques_2">Références techniques<a class="headerlink" href="#references-techniques_2" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          74
+- Nom:                  classification
+- Code:                 classification
+- Obligation/condition: --
+- Type:                 Liste fermée de valeurs
+- Cardinalité:          1
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /classification
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Par défaut `unclassified`
+</pre></div>
+
+
+<hr />
+<h4 id="contraintes-legales-dacces-public-selon-inspire">Contraintes légales d’accès public selon INSPIRE<a class="headerlink" href="#contraintes-legales-dacces-public-selon-inspire" title="Permanent link">&para;</a></h4>
+<h5 id="definition_3">Définition<a class="headerlink" href="#definition_3" title="Permanent link">&para;</a></h5>
+<p>Cette information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi au regarde la mise en œuvre d’Inspire.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit au niveau français par la Conseil National de l’information Géographique (CNIG) et reprise dans le tableau suivant</p>
+<p>Table: Liste des valeurs pour la définition des contraintes légales d’accès public selon INSPIRE</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Raison légale</th>
+<th align="left">Intitulé de la contrainte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">Pas de restriction d’accès public selon INSPIRE</td>
+<td align="left">Aucun des articles de la loi ne peut être invoqué pour justifier d’une restriction d’accès public.</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.a)</td>
+<td align="left">La confidentialité des travaux des autorités publiques, lorsque cette confidentialité est prévue par la loi.</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">L124-5-II-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article13.1.b)</td>
+<td align="left">Les relations internationales, la sécurité publique ou la défense nationale.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">L124-5-II-2 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.c)</td>
+<td align="left">La bonne marche de la justice, la possibilité pour toute personne d’être jugée équitablement ou la capacité d’une autorité publique d’effectuer une enquête d’ordre pénal ou disciplinaire.</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.d)</td>
+<td align="left">La confidentialité des informations commerciales ou industrielles, lorsque cette confidentialité est prévue par la législation nationale ou communautaire afin de protéger un intérêt économique légitime, notamment l’intérêt public lié à la préservation de la confidentialité des statistiques et du secret fiscal.</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">L124-5-II-3 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.e)</td>
+<td align="left">Les droits de propriété intellectuelle.</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">L124-4-I-1 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.f)</td>
+<td align="left">La confidentialité des données à caractère personnel et/ou des fichiers concernant une personne physique lorsque cette personne n’a pas consenti à la divulgation de ces informations au public, lorsque la confidentialité de ce type d’information est prévue par la législation nationale ou communautaire.</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">L124-4-I-3 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.g)</td>
+<td align="left">Les intérêts ou la protection de toute personne qui a fourni les informations demandées sur une base volontaire sans y être contrainte par la loi ou sans que la loi puisse l’y contraindre, à moins que cette personne n’ait consenti à la divulgation de ces données.</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">L124-4-I-2 du code de l’environnement (Directive 2007/2/CE (INSPIRE), Article 13.1.h)</td>
+<td align="left">La protection de l’environnement auquel ces informations ont trait, comme par exemple la localisation d’espèces rares.</td>
+</tr>
+</tbody>
+</table>
+<p>Il est précisé que l’article L124-4-I du code de l’environnement (cas 1, 4, 6, 7 et 8) ne peut pas être invoqué pour justifier une restriction d’accès public à des informations concernant des émissions dans l’environnement (article L 127-6 du même code).
+Par ailleurs, selon l’article L127-8-IV du code de l’environnement, une restriction d’accès public au titre de l’article L124-5-II 1er ou 2ème alinéa du code de l’environnement (cas 2 et 3) induit une restriction de partage de la donnée entre autorités publiques.</p>
+<h5 id="recommandations_3">Recommandations<a class="headerlink" href="#recommandations_3" title="Permanent link">&para;</a></h5>
+<p>La valeur par défaut est <code class="codehilite">Pas de restriction d’accès public selon INSPIRE</code>.</p>
+<h5 id="exemples_3">Exemples<a class="headerlink" href="#exemples_3" title="Permanent link">&para;</a></h5>
+<p>Contrainte légale d’accès public selon Inspire : <code class="codehilite">Pas de restriction d’accès public selon INSPIRE</code>.</p>
+<h5 id="references-techniques_3">Références techniques<a class="headerlink" href="#references-techniques_3" title="Permanent link">&para;</a></h5>
+<h6 id="contrainte-dacces">Contrainte d’accès<a class="headerlink" href="#contrainte-dacces" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          70
+- Nom:                  accessConstraints
+- Code:                 accessConsts
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /accessConstraints
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Pour ce champ, la valeur par défaut est `otherConstraints`. Le champ
+&quot;otherConstraints&quot; doit prendre l’une des valeurs prévues par la directive
+INSPIRE (cf. tableau ci-dessus).
+</pre></div>
+
+
+<h6 id="autre-contrainte">Autre contrainte<a class="headerlink" href="#autre-contrainte" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access (Conditions applicables
+                        à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          72
+- Nom:                  otherConstraints
+- Code:                 otherConsts
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /otherConstraints
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Dans le cadre d’Inspire, proposer une liste fermée de valeur correspondant
+aux restrictions d’accès public INSPIRE (cf. tableau ci-dessus)
+</pre></div>
+
+
+<hr />
+<h4 id="autres-contraintes-legales-dacces-public-a-la-donnee">Autres contraintes légales d’accès public à la donnée<a class="headerlink" href="#autres-contraintes-legales-dacces-public-a-la-donnee" title="Permanent link">&para;</a></h4>
+<h5 id="definition_4">Définition<a class="headerlink" href="#definition_4" title="Permanent link">&para;</a></h5>
+<p>Cet information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi, indépendamment de la directive Inspire.</p>
+<p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.24 MD_RestrictionCode) et reprise dans le tableau suivant.</p>
+<p>Table: Liste des autres contraintes légales d'accès public à la donnée</p>
+<table>
+<thead>
+<tr>
+<th align="left">Id</th>
+<th align="left">Code ISO</th>
+<th align="left">Intitulé</th>
+<th align="left">Raison de la restriction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">--</td>
+<td align="left">Pas de restriction d’accès public</td>
+<td align="left">Aucune restriction ne s’applique</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">copyright</td>
+<td align="left">Droit d’auteur / Droit moral (copyright)</td>
+<td align="left">Restriction lié à l’exercice du droit moral</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">patent</td>
+<td align="left">Brevet</td>
+<td align="left">Restriction induite par l’existence d’un brevet</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">patentPending</td>
+<td align="left">Brevet en instance</td>
+<td align="left">Restriction induite par le dépôt d’un brevet en cours</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">trademark</td>
+<td align="left">Marque de commerce</td>
+<td align="left">Restriction lié à l’existence d’un dépôt de marque</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">license</td>
+<td align="left">Licence</td>
+<td align="left">Restriction induite par l’existence d’une licence</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">intellectualPropertyRights</td>
+<td align="left">Droit de propriété intellectuelle / Droit patrimonial</td>
+<td align="left">Restriction lié à l’exercice du droit patrimonial</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">restricted</td>
+<td align="left">Restreint</td>
+<td align="left">Cette valeur n’a pas d’application identifiée en France</td>
+</tr>
+</tbody>
+</table>
+<h5 id="recommandations_4">Recommandations<a class="headerlink" href="#recommandations_4" title="Permanent link">&para;</a></h5>
+<p>Par défaut, le champ est non renseigné ou possède la valeur <code class="codehilite">Pas de restriction d’accès public</code>.</p>
+<h5 id="exemples_4">Exemples<a class="headerlink" href="#exemples_4" title="Permanent link">&para;</a></h5>
+<p>Autre contrainte légale d’accès public : <code class="codehilite">Pas de restriction d’accès public</code>.</p>
+<h5 id="references-techniques_4">Références techniques<a class="headerlink" href="#references-techniques_4" title="Permanent link">&para;</a></h5>
+<h6 id="contraintes-dacces">Contraintes d’accès<a class="headerlink" href="#contraintes-dacces" title="Permanent link">&para;</a></h6>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 8.2
+- Nom:                  Limitation on public access
+                        (Conditions applicables à l’accès et l’utilisation)
+- Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          70
+- Nom:                  accessConstraints
+- Code:                 accessConsts
+- Obligation/condition: --
+- Type:                 Liste de valeurs
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*
+                        /accessConstraints
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Ce champ vient en complément des contraintes d’accès public liées à INSPIRE.
+A ce niveau, il ne peut pas prendre la valeur `otherConstraints` qui est
+réservé pour les restrictions liées à Inspire.
+</pre></div>
+
+
+<hr />
+<h4 id="autres-conditions-et-mentions-legales-dacces-et-dutilisation">Autres conditions et mentions légales d’accès et d’utilisation<a class="headerlink" href="#autres-conditions-et-mentions-legales-dacces-et-dutilisation" title="Permanent link">&para;</a></h4>
+<h5 id="definition_5">Définition<a class="headerlink" href="#definition_5" title="Permanent link">&para;</a></h5>
+<p>Cet information renseigne l’utilisateur sur les conditions d’utilisation de la donnée d’un point de vue administratif et légal.
+Il complète les informations relatives aux contraintes d’accès public liées à Inspire et autres contraintes précédemment renseignées. Il précise notamment les conditions d’accès en terme de licence, d’acte d’engagement, de mentions légales, de restriction d’usage dans un cadre commercial ou concurrentiel, etc.</p>
+<h5 id="recommandations_5">Recommandations<a class="headerlink" href="#recommandations_5" title="Permanent link">&para;</a></h5>
+<p>Les limites techniques d’usage et d’exploitation liées à la qualité de la donnée doivent être indiquées dans le champ dédié à cet effet (cf. paragraphe 5.3).
+Si aucune condition légale d’utilisation et d’accès n’existe, indiquer <code class="codehilite">Aucune autre condition légale ne s’applique</code>.
+Si les conditions ne sont pas connues, indiquer <code class="codehilite">Conditions inconnues</code>.</p>
+<p>Il est recommandé de préciser les mentions légales et les sources à faire figurer sur les supports de diffusion utilisant les données concernées.</p>
+<h5 id="exemples_5">Exemples<a class="headerlink" href="#exemples_5" title="Permanent link">&para;</a></h5>
+<p>Conditions d’utilisation et mentions légales :</p>
+<ul>
+<li><code class="codehilite">Données disponibles pour les autorités publiques après adhésion au partenariat CIGAL</code></li>
+<li><code class="codehilite">Utilisation commerciale directe ou indirecte interdite</code></li>
+<li><code class="codehilite">Mention obligatoire sur tout support de diffusion : BdOCS2008-CIGAL – www.cigalsace.org</code></li>
+</ul>
+<h5 id="references-techniques_5">Références techniques<a class="headerlink" href="#references-techniques_5" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 8.1
+- Nom:                  Condition applying to access and use
+                        (Conditions applicable à l’accès et l’utilisation)
+- Obligation/condition: Obligatoire
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          68
+- Nom:                  useLimitation
+- Code:                 useLimit
+- Obligation/condition: --
+- Type:                 Chaîne de caractère
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/resourceConstraints/*/useLimitation
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- La valeur par défaut est fixée à `Aucune autre condition légale ne s’applique`.
+</pre></div>
+
+
+<hr />
+<h3 id="acces-aux-donnees-et-documents-associes">Accès aux données et documents associés<a class="headerlink" href="#acces-aux-donnees-et-documents-associes" title="Permanent link">&para;</a></h3>
+<h4 id="definition_6">Définition<a class="headerlink" href="#definition_6" title="Permanent link">&para;</a></h4>
+<p>Ce champ permet de lister les liens vers des données concernant la donnée. Il peut s’agir d’un lien de téléchargement de la donnée elle-même ou de tout document complémentaire et utile à une meilleure compréhension du lot de données (dossier de spécifications, acte d’engagement, tarifs, etc.).
+Ce lien (URL) doit être accompagné d’un nom et d’une description précisant la nature et le contenu de la donnée accessible.</p>
+<h4 id="recommandations_6">Recommandations<a class="headerlink" href="#recommandations_6" title="Permanent link">&para;</a></h4>
+<p>Il est recommandé d’utiliser des adresses URL complètes (pas de chemin relatif), publiques et pérennes.</p>
+<h4 id="exemples_6">Exemples<a class="headerlink" href="#exemples_6" title="Permanent link">&para;</a></h4>
+<p>Accès en ligne :</p>
+<ul>
+<li>Nom : <code class="codehilite">Rapport méthodologique de la BdOCS2008-CIGAL</code></li>
+<li>Description : <code class="codehilite">Rapport méthodologique de production de la base de données d’occupation du sol CIGAL 2008 (BdOCS2008-CIGAL).</code></li>
+<li>URL : <code class="codehilite">http://www.cigalsace.org/content/rapport-m%C3%A9thodologique-bdocs-2008-cigal</code></li>
+</ul>
+<h4 id="references-techniques_6">Références techniques<a class="headerlink" href="#references-techniques_6" title="Permanent link">&para;</a></h4>
+<h5 id="nom">Nom<a class="headerlink" href="#nom" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          400
+- Nom:                  name
+- Code:                 orName
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/name
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<h5 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span><span class="m">-</span> Identifiant:          --
+<span class="m">-</span> Nom:                  --
+<span class="m">-</span> Obligation/condition: --
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          401
+- Nom:                  description
+- Code:                 orDesc
+- Obligation/condition: --
+- Type:                 Chaîne de caractères
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/description
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+
+
+<h5 id="url">URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h5>
+<p><strong>INSPIRE:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          Part B 1.4
+- Nom:                  Resource locator (Localisateur de la ressource)
+- Obligation/condition: Conditionnel
+</pre></div>
+
+
+<p><strong>ISO 19115:</strong></p>
+<div class="codehilite"><pre><span></span>- Identifiant:          387
+- Nom:                  linkage
+- Code:                 linkage
+- Obligation/condition: Core ISO
+- Type:                 URL
+- Cardinalité:          N
+- Xpath:                identificationInfo/*/distributionInfo/*/online/*/url
+</pre></div>
+
+
+<p><strong>Implémentation:</strong></p>
+<div class="codehilite"><pre><span></span>- Aucune observation
+</pre></div>
+                
+                  
+                    <h2 id="__source">Source</h2>
+                    
+                    
+                      <a href="https://gogs.makou.org/guillaume_ryckelynck/mdguide/src/master/docs/pages/data_distribution.md" title="data_distribution.md" class="md-source-file">
+                        data_distribution.md
+                      </a>
+                    
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data_quality/" title="Qualité de la donnée" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Qualité de la donnée
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../data_conformity/" title="Conformité de la donnée" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Conformité de la donnée
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 GéoGrandEst
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://gogs.makou.org/guillaue_ryckelynck/mdguide" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/cigal_alsace" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="../../pdf/mdguide.pdf" class="md-footer-social__link fa fa-file-pdf-o"></a>
+    
+      <a href="../../pdf/mdguide.epub" class="md-footer-social__link fa fa-book"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-b30566c560.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
