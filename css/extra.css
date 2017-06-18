@@ -1,3 +1,24 @@
 body {
     font-size: 30%;
 }
+
+.md-main__inner {
+    padding: 0;
+}
+
+.md-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 13rem;
+}
+.md-footer-nav__link {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+}
+
+.md-content {
+    margin-bottom: 14rem;
+}
+

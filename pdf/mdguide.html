@@ -6,16 +6,13 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+  <link rel="stylesheet" href="docs/pdf/pandoc.css" type="text/css" />
 </head>
 <body>
-<h1 id="accueil-.page-title">Accueil {: .page-title}</h1>
 <p>title: Home description: Page d'accueil du guide de saisie des métadonnées géographique de GéoGrandEst (mdGuide). path: docs source: index.md</p>
 <h2 id="guide-de-saisie-des-metadonnees-geograndest">GUIDE DE SAISIE DES METADONNEES GEOGRANDEST</h2>
 <p>V1.0 – 7 août 2012</p>
 <p>Le présent guide a vocation à servir de support pour la description des données géographique dans le cadre du partenariat GéoGrandEst. Les copies d'écran proviennent du formulaire de saisie <a href="">mdEdit</a>. Cependant, il n'est pas lié à un outil spécifique et se veut suffisamment général pour se décliner sur d'autres application de gestion de métadonnées.</p>
-<h1 id="guide-.page-title">Guide {: .page-title}</h1>
-<h2 id="introduction-.page-title">Introduction {: .page-title}</h2>
 <p>title: Intro description: Page d'introduction. path: docs/pages source: intro.md</p>
 <h3 id="introduction">Introduction</h3>
 <p>L’un des objectifs du partenariat GéoGrandEst (Coopération pour l’Information Géographique en Grand Est – https://www.cigalsace.org) est de faciliter l’échanges et le partage d’informations géographiques entre les acteurs de l’aménagement des territoires. La description des données géographiques et la constitution d’un inventaire régional est donc un élément clé pour la dynamique régionale.</p>
@@ -29,7 +26,6 @@
 <li>Les références techniques de l’élément considéré pour ceux qui voudraient aller plus loin</li>
 </ul>
 <p>Pour faciliter la lecture du document et la description de vos données, vous pouvez également vous référer au formulaire Excel ou à l'application <a href="https://www.cigalsace.org/tools/mdEdit/">mdEdit</a> élaborés dans le cadre du groupe de travail métadonnées GéoGrandEst.</p>
-<h2 id="information-sur-les-métadonnées-.page-title">Information sur les métadonnées {: .page-title}</h2>
 <p>title: Info description: Information sur les métadonnées. path: docs/pages source: md_info.md</p>
 <h3 id="information-sur-les-métadonnées">Information sur les métadonnées</h3>
 <h4 id="identifiant-de-la-fiche">Identifiant de la fiche</h4>
@@ -106,14 +102,14 @@
 <pre><code>- Cet élément doit être renseigné sous la forme d’un code à trois lettres
   dans le fichier d’échange XML, en faisant référence aux langues officielles
   communautaires identifiées dans la norme ISO 639-2.
-- Pour le français il s’agit de `fre ».</code></pre>
+- Pour le français il s’agit de `fre`.</code></pre>
 <hr />
 <h4 id="jeu-de-caractères-encodage-de-la-fiche">Jeu de caractères (encodage) de la fiche</h4>
 <h5 id="définition-2">Définition</h5>
 <p>Il s’agit d’une information purement technique précisant l’encodage utilisé pour générer le fichier d’échange de la fiche au format XML. Il est normalement définit par l’application utilisée.</p>
-<p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>utf8 »,</code>utf16 », <code>8859part1 »,</code>8859part15 » et `8859part16 » (cf. liste complète en <a href="...">annexe 3</a>).</p>
-<p>Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL.</p>
+<p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>utf8</code>, <code>utf16</code>, <code>8859part1</code>, <code>8859part15</code> et <code>8859part16</code> (cf. liste complète en <a href="...">annexe 3</a>).</p>
 <table style="width:85%;">
+<caption>Liste des jeux de caractères proposés dans le cadre du partenariat GéoGrandEst</caption>
 <colgroup>
 <col width="6%" />
 <col width="18%" />
@@ -172,7 +168,7 @@
 - Cardinalité:          1
 - Xpath:                characterSet</code></pre>
 <p><strong>Implémentation:</strong></p>
-<pre><code>- Par défaut, valeur définie à `utf8 ».
+<pre><code>- Par défaut, valeur définie à `utf8`.
   Se référer à la norme ISO 19115 pour plus d’informations.</code></pre>
 <hr />
 <h4 id="type-de-ressource-décrite">Type de ressource décrite</h4>
@@ -185,8 +181,8 @@
 <li>Les <code>services de données géographiques</code>.</li>
 </ol>
 <p>Le présent document concerne uniquement la description des <code>séries et ensembles de séries de données géographiques</code>. Parmi les valeurs possibles de types de ressources définies par la norme ISO 19115 (liste B.5.25 MD_ScopeCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Jeu / série de données</code> et <code>Collection / ensemble de série de données</code> (cf. liste complète en <a href="annexes/#annexe-4-liste-des-types-de-ressources-selon-la-norme-iso-19115">annexe 4</a>).</p>
-<p>Liste des types de ressources proposées dans le cadre du partenariat GéoGrandEst:</p>
 <table style="width:86%;">
+<caption>Liste des types de ressources proposées dans le cadre du partenariat GéoGrandEst</caption>
 <colgroup>
 <col width="6%" />
 <col width="15%" />
@@ -214,14 +210,10 @@
 <td align="left">Collection / ensemble de séries de données</td>
 <td align="left">Informations appliquées aux caractéristiques de la collection de données</td>
 </tr>
-<tr class="odd">
-<td align="left">ées</td>
-<td align="left"></td>
-</tr>
 </tbody>
 </table>
 <h5 id="recommandations-3">Recommandations</h5>
-<p>Dans un souci de simplification et d’homogénéité, il est proposé dans le cadre du partenariat CIGAL de décrire les données à un niveau suffisamment fin (couche d’information ou base de donnée cohérente – ex. : BdOCS2008-CIGAL). Ainsi, par défaut la valeur utilisée est `jeu de données ».</p>
+<p>Dans un souci de simplification et d’homogénéité, il est proposé dans le cadre du partenariat CIGAL de décrire les données à un niveau suffisamment fin (couche d’information ou base de donnée cohérente – ex. : BdOCS2008-CIGAL). Ainsi, par défaut la valeur utilisée est <code>jeu de données</code>.</p>
 <h5 id="exemples-3">Exemples</h5>
 <p>Type de donnée décrite : <code>jeu de données</code> Type de donnée décrite : <code>ensemble de jeux de données</code></p>
 <h5 id="références-techniques-3">Références techniques</h5>
@@ -261,9 +253,9 @@ ISO 19115 pour étudier les autres valeurs de la liste.</code></pre>
 <li>de l’Email,</li>
 <li>et du Rôle de la personne à contacter</li>
 </ul>
-<p>Parmi les valeurs possibles des rôles pour un contact définies par la norme ISO 19115 (liste B.5.5 CI_RoleCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Fournisseur »,</code>Gestionnaire », <code>Point de contact » et</code>Auteur » (cf. liste complète en <a href="annexes/#annexe-5-liste-des-roles-selon-la-norme-iso-19115">annexe 5</a>).</p>
-<p>Liste des rôles proposés dans le cadre du partenariat:</p>
+<p>Parmi les valeurs possibles des rôles pour un contact définies par la norme ISO 19115 (liste B.5.5 CI_RoleCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Fournisseur</code>, <code>Gestionnaire</code>, <code>Point de contact</code> et <code>Auteur</code> (cf. liste complète en <a href="annexes/#annexe-5-liste-des-roles-selon-la-norme-iso-19115">annexe 5</a>).</p>
 <table style="width:100%;">
+<caption>Liste des rôles proposés dans le cadre du partenariat GéoGrandEst</caption>
 <colgroup>
 <col width="6%" />
 <col width="24%" />
@@ -306,14 +298,14 @@ ISO 19115 pour étudier les autres valeurs de la liste.</code></pre>
 </tbody>
 </table>
 <h5 id="recommandations-4">Recommandations</h5>
-<p>Au moins un contact avec pour rôle `Point de contact » doit être défini pour chaque fiche. Il correspond au gestionnaire de la fiche ou de l’inventaire des données géographique. D’autres contacts peuvent être également ajoutés, comme par exemple l’auteur de la fiche en précisant le rôle correspondant.</p>
+<p>Au moins un contact avec pour rôle <code>Point de contact</code> doit être défini pour chaque fiche. Il correspond au gestionnaire de la fiche ou de l’inventaire des données géographique. D’autres contacts peuvent être également ajoutés, comme par exemple l’auteur de la fiche en précisant le rôle correspondant.</p>
 <p>Il est recommandé de saisir l’ensemble des informations descriptives du contact, notamment :</p>
 <ul>
 <li>Le nom du contact en majuscules et le prénom avec la première lettre en majuscules</li>
 <li>La fonction du contact, en précisant si nécessaire la direction ou le service dont il dépend</li>
 <li>L’organisme en toute lettre (éviter les signes non explicités)</li>
 <li>L’adresse e-mail de la personne à contacter</li>
-<li>Le rôle, indispensable avec comme valeur par défaut `Point de contact »</li>
+<li>Le rôle, indispensable avec comme valeur par défaut <code>Point de contact</code></li>
 </ul>
 <h5 id="exemples-4">Exemples</h5>
 <p>[A compléter]</p>
@@ -343,7 +335,8 @@ ISO 19115 pour étudier les autres valeurs de la liste.</code></pre>
 <pre><code>- 3 éléments sont obligatoires pour définir un contact selon la directive INSPIRE :
     - L’organisme
     - L’email
-    - Le rôle (par défaut, `Point de contact` - se référer si nécessaire à la norme ISO 19115 pour plus de détails)</code></pre>
+    - Le rôle (par défaut, `Point de contact` - se référer si nécessaire à la norme ISO
+    19115 pour plus de détails)</code></pre>
 <h6 id="rôle-du-contact">Rôle du contact</h6>
 <p><strong>INSPIRE:</strong></p>
 <pre><code>- Identifiant:          Part B 10.2
@@ -433,7 +426,6 @@ Par exemple : `2016-10-02`</code></pre>
 - Xpath:                metadataStandardVersion</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Valeur par défaut : `2003/Cor.1:2006`</code></pre>
-<h2 id="description-de-la-donnée-géographique-.page-title">Description de la donnée géographique {: .page-title}</h2>
 <p>title: Description description: Description des données path: docs/pages source: data_info.md</p>
 <h3 id="description-de-la-donnée-géographique">Description de la donnée géographique</h3>
 <h4 id="titre-de-la-donnée">Titre de la donnée</h4>
@@ -622,8 +614,8 @@ Par exemple : `2008-10-02`.</code></pre>
 <h5 id="définition-11">Définition</h5>
 <p>Ce champ permet de spécifier la fréquence de mise à jour prévue de la donnée, selon une liste fermée de possibilités.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.18 MD_MaintenanceFrequencyCode) et reprise dans le tableau suivant.</p>
-<p>Liste des fréquences de mise à jour de la donnée :</p>
 <table>
+<caption>Liste des fréquences de mise à jour de la donnée</caption>
 <thead>
 <tr class="header">
 <th align="left">Id</th>
@@ -733,8 +725,8 @@ Par exemple : `2008-10-02`.</code></pre>
 <h5 id="définition-12">Définition</h5>
 <p>Si la donnée décrite contient des informations textuelles (table attributaire avec des noms de lieu par exemple), c’est la ou les langue(s) utilisée(s) pour renseigner ces informations.</p>
 <p>Parmi la liste des 23 langues officielles de l’union européenne indiquées par la directive Inspire, dans le cadre du partenariat CIGAL, 3 langues sont proposées par défaut : le français, l’anglais et l’allemand (cf. liste complète en annexe 2).</p>
-<p>Liste des langues proposées dans le cadre du partenariat GéoGrandEst:</p>
 <table>
+<caption>Liste des langues proposées dans le cadre du partenariat GéoGrandEst</caption>
 <thead>
 <tr class="header">
 <th align="left">Nom en français</th>
@@ -859,8 +851,8 @@ l’identifiant de la fiche. Cet ajout peut être automatisé.</code></pre>
 <h5 id="définition-14">Définition</h5>
 <p>Ce champ permet de classer la donnée dans une ou plusieurs catégories d’une liste fermée et internationale, facilitant ainsi la recherche de cette donnée. Il est important d’associer la donnée à la (ou les) thématique(s) la plus pertinente.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.27 MD_TopicCategories) et reprise dans le tableau suivant.</p>
-<p>Liste des catégories internationales:</p>
 <table style="width:56%;">
+<caption>Liste des catégories internationales</caption>
 <colgroup>
 <col width="6%" />
 <col width="15%" />
@@ -1016,8 +1008,8 @@ l’identifiant de la fiche. Cet ajout peut être automatisé.</code></pre>
 <h5 id="définition-15">Définition</h5>
 <p>Ce champ permet de classer la donnée dans un ou plusieurs thèmes d’une liste fermée de valeurs définis au niveau européen via la directive INSPIRE. Cette classification vise à faciliter la recherche de cette donnée. Il est important d’associer la donnée au(x) thème(s) le(s) plus pertinent parmi les 34 thèmes ci-après définis.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la directive européenne Inspire, s’appuyant sur le Thesaurus GEMET des thèmes Inspire et reprise dans le tableau suivant.</p>
-<p>Liste des thèmes INSPIRE</p>
 <table style="width:57%;">
+<caption>Liste des thèmes INSPIRE</caption>
 <colgroup>
 <col width="6%" />
 <col width="16%" />
@@ -1406,6 +1398,7 @@ dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
 </ul>
 <p>Parmi les valeurs possibles des rôles pour un contact définies par la norme ISO 19115 (liste B.5.5 CI_RoleCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Fournisseur</code>, <code>Gestionnaire</code>, <code>Propriétaire</code>, <code>Point de contact</code> et <code>Auteur</code> (cf. liste complète en annexe).</p>
 <table style="width:100%;">
+<caption>Liste des rôles utilisés dans le cadre du partenariat GéoGrandEst</caption>
 <colgroup>
 <col width="5%" />
 <col width="21%" />
@@ -1507,7 +1500,6 @@ dans le fichier d’échange XML. Par exemple : `2008-10-02`.</code></pre>
 - Xpath:                identificationInfo/*/pointOfContact/role/CI_RoleCode</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Par défaut le rôle est fixé à `Point de contact (pointOfContact)`</code></pre>
-<h2 id="référence-géographique-de-la-donnée-.page-title">Référence géographique de la donnée {: .page-title}</h2>
 <p>title: Géo description: Description géographique des données path: docs/pages source: data_geo.md</p>
 <h3 id="référence-géographique-de-la-donnée">Référence géographique de la donnée</h3>
 <h4 id="emprise">Emprise</h4>
@@ -1573,8 +1565,8 @@ géodésique de référence définissant le méridien de Greenwich comme méridi
 <h4 id="système-de-projection">Système de projection</h4>
 <h5 id="définition-19">Définition</h5>
 <p>Information qui indique le ou les systèmes de projections dans lesquels sont disponibles la donnée décrite.</p>
-<p>Listes de systèmes de projection couramment utilisées en Grand Est :</p>
 <table>
+<caption>Listes de systèmes de projection couramment utilisées en Grand Est</caption>
 <thead>
 <tr class="header">
 <th align="left">Nom</th>
@@ -1704,8 +1696,8 @@ géodésique de référence définissant le méridien de Greenwich comme méridi
 <h5 id="définition-21">Définition</h5>
 <p>Cette information permet de savoir s’il s’agit de données vecteur, raster, tabulaire, à maille triangulaire, 3D, etc.</p>
 <p>Parmi les valeurs possibles des type de représentations spatiales définies par la norme ISO 19115 (liste B.5.26 MD_SpatialRepresentationTypeCode), pour faciliter la saisi dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Vecteur</code> et <code>Raster</code> (cf. liste complète en annexe 6).</p>
-<p>Liste des type de représentations spatiales proposés dans le cadre du partenariat GéograndEst:</p>
 <table>
+<caption>Liste des type de représentations spatiales proposés dans le cadre du partenariat GéograndEst</caption>
 <thead>
 <tr class="header">
 <th align="left">Id</th>
@@ -1748,7 +1740,6 @@ géodésique de référence définissant le méridien de Greenwich comme méridi
 - Xpath:                identificationInfo/*/spatialRepresentationType</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Aucune observation</code></pre>
-<h2 id="qualité-de-la-donnée-.page-title">Qualité de la donnée {: .page-title}</h2>
 <p>title: Qualité description: Qualité des données path: docs/pages source: data_quality.md</p>
 <h3 id="qualité-de-la-donnée">Qualité de la donnée</h3>
 <h4 id="résolution-spatiale">Résolution spatiale</h4>
@@ -1803,8 +1794,8 @@ Préférer l’utilisation du mètre (`mètre`).</code></pre>
 <h5 id="définition-23">Définition</h5>
 <p>Il s’agit d’une information technique précisant à quel niveau est décrite la qualité de la donnée, généralement au niveau du <code>jeu de données</code> ou de la <code>série de données</code>.</p>
 <p>Parmi les valeurs possibles de type de ressources définies par la norme ISO 19115 (liste B.5.25 MD_ScopeCode), pour faciliter la saisie dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>Jeu / série de données</code> et <code>Collection / ensemble de série de données</code> (cf. liste complète en annexe 4).</p>
-<p>Liste des types de ressources proposées dans le cadre du partenariat CIGAL :</p>
 <table style="width:83%;">
+<caption>Liste des types de ressources proposées dans le cadre du partenariat GéoGrandEst</caption>
 <colgroup>
 <col width="4%" />
 <col width="20%" />
@@ -1887,15 +1878,14 @@ Préférer l’utilisation du mètre (`mètre`).</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Dans le cadre du partenariat CIGAL, regroupe les informations anciennement renseignées
 dans les champs `Texte sur la qualité`, `Données sources` et `Méthode de production`.</code></pre>
-<h2 id="diffusion-de-la-donnée-.page-title">Diffusion de la donnée {: .page-title}</h2>
 <p>title: Diffusion description: Diffusion des données path: docs/pages source: data_distribution.md</p>
 <h3 id="diffusion-de-la-donnée">Diffusion de la donnée</h3>
 <h4 id="jeu-de-caractères-encodage-de-la-donnée">Jeu de caractères (encodage) de la donnée</h4>
 <h5 id="définition-25">Définition</h5>
 <p>Il s’agit d’une information purement technique précisant l’encodage utilisé pour générer le fichier d’échange de la fiche au format XML. Il est normalement définit par l’application utilisée.</p>
 <p>Parmi les valeurs possibles d’encodage des caractères de la fiche définies par la norme ISO 19115 (liste B.5.10 MD_CharacterSetCode), dans le cadre du partenariat CIGAL, les valeurs proposées par défaut sont <code>utf8</code>, <code>utf16</code>, <code>8859part1</code>, <code>8859part15</code> et <code>8859part16</code> (cf. liste complète en annexe 3).</p>
-<p>Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL :</p>
 <table style="width:88%;">
+<caption>Liste des jeux de caractères proposés dans le cadre du partenariat CIGAL</caption>
 <colgroup>
 <col width="6%" />
 <col width="18%" />
@@ -2032,8 +2022,8 @@ par défaut encodées selon ISO 19136 (GML) ou ISO/TS 19139.
 <h6 id="définition-27">Définition</h6>
 <p>Information sur le niveau de classification ou confidentialité de la donnée.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.11 MD_ClassificationCode) et reprise dans le tableau suivant.</p>
-<p>Liste des valeurs pour la classification de la donné</p>
 <table>
+<caption>Liste des valeurs pour la classification de la donné</caption>
 <colgroup>
 <col width="5%" />
 <col width="17%" />
@@ -2108,8 +2098,8 @@ par défaut encodées selon ISO 19136 (GML) ou ISO/TS 19139.
 <h6 id="définition-28">Définition</h6>
 <p>Cette information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi au regarde la mise en œuvre d’Inspire.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit au niveau français par la Conseil National de l’information Géographique (CNIG) et reprise dans le tableau suivant</p>
-<p>Liste des valeurs pour la définition des contraintes légales d’accès public selon INSPIRE.</p>
 <table style="width:68%;">
+<caption>Liste des valeurs pour la définition des contraintes légales d’accès public selon INSPIRE</caption>
 <colgroup>
 <col width="6%" />
 <col width="22%" />
@@ -2218,8 +2208,8 @@ aux restrictions d’accès public INSPIRE (cf. tableau ci-dessus)</code></pre>
 <h6 id="définition-29">Définition</h6>
 <p>Cet information renseigne l’utilisateur sur les contraintes d’accès publics imposées par la loi, indépendamment de la directive Inspire.</p>
 <p>La liste des valeurs proposées dans le cadre du partenariat CIGAL est celle définit par la norme ISO 19115 (liste B.5.24 MD_RestrictionCode) et reprise dans le tableau suivant.</p>
-<p>Liste des autres contraintes légales d'accès public à la donnée:</p>
 <table style="width:75%;">
+<caption>Liste des autres contraintes légales d'accès public à la donnée</caption>
 <colgroup>
 <col width="6%" />
 <col width="15%" />
@@ -2398,7 +2388,6 @@ réservé pour les restrictions liées à Inspire.</code></pre>
 - Xpath:                identificationInfo/*/distributionInfo/*/online/*/url</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Aucune observation</code></pre>
-<h2 id="conformité-de-la-donnée-.page-title">Conformité de la donnée {: .page-title}</h2>
 <p>title: Conformités description: Conformité des données path: docs/pages source: data_conformity.md</p>
 <h3 id="conformité-de-la-donnée">Conformité de la donnée</h3>
 <h4 id="généralités-sur-la-conformité-des-données">Généralités sur la conformité des données</h4>
@@ -2422,8 +2411,8 @@ réservé pour les restrictions liées à Inspire.</code></pre>
 <h6 id="définition-32">Définition</h6>
 <p>Cette information indique le nom et les références de la règle d’interopérabilité Inspire pour laquelle le degré de conformité a été évalué pour les données.</p>
 <p>La liste des valeurs proposées dans le cadre de GéoGrandEst est celle défini au niveau français par la Conseil National de l’Information Géographique (CNIG) et reprise dans le tableau suivant.</p>
-<p>Liste des spécifications relatives aux règles d’interopérabilité Inspire publiées au 1er juin 2012 :</p>
 <table>
+<caption>Liste des spécifications relatives aux règles d’interopérabilité Inspire publiées au 1er juin 2012</caption>
 <colgroup>
 <col width="6%" />
 <col width="26%" />
@@ -2585,8 +2574,8 @@ plus de détails.</code></pre>
 <h5 id="degré-de-conformité">Degré de conformité</h5>
 <h6 id="définition-35">Définition</h6>
 <p>Cette information précise le résultat du test de conformité.</p>
-<p>Liste des valeurs possible pour le degré de conformité:</p>
 <table>
+<caption>Liste des valeurs possible pour le degré de conformité</caption>
 <thead>
 <tr class="header">
 <th align="left">Id</th>
@@ -2729,8 +2718,8 @@ possibles.</code></pre>
 <h5 id="degré-de-conformité-1">Degré de conformité</h5>
 <h6 id="définition-39">Définition</h6>
 <p>Cette information précise le résultat du test de conformité.</p>
-<p>Liste des valeurs possible pour le degré de conformité:</p>
 <table>
+<caption>Liste des valeurs possible pour le degré de conformité</caption>
 <thead>
 <tr class="header">
 <th align="left">Id</th>
@@ -2776,7 +2765,6 @@ possibles.</code></pre>
                         /result/*/pass</code></pre>
 <p><strong>Implémentation:</strong></p>
 <pre><code>- Aucune observation</code></pre>
-<h2 id="annexes-.page-title">Annexes {: .page-title}</h2>
 <p>title: Annexes description: Annexes path: docs/pages source: annexes.md</p>
 <h3 id="annexes">Annexes</h3>
 <h4 id="annexe-1-profil-de-métadonnées-cigal">Annexe 1 : Profil de métadonnées CIGAL</h4>
@@ -2789,8 +2777,8 @@ possibles.</code></pre>
 </ul>
 <p>Le profil CIGAL est conforme à l’ensemble des exigences et obligations définis par ces différents documents, auxquels ont été ajoutées des informations complémentaires, qu’il est recommandé de renseigner pour disposer d’une fiche descriptive plus complète et précise.</p>
 <p>Dans le tableau suivant, les informations surlignées en jaune et dont le numéro est noté en gras sont obligatoires pour répondre aux exigences de la directive européenne INSPIRE et/ou la norme ISO 19115. Les autres champs sont simplement recommandés dans le cadre du partenariat CIGAL.</p>
-<p><strong>Information sur les métadonnées</strong></p>
 <table>
+<caption><strong>Information sur les métadonnées</strong></caption>
 <thead>
 <tr class="header">
 <th>ID ISO</th>
@@ -2948,8 +2936,8 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Description de la donnée</strong></p>
 <table>
+<caption><strong>Description de la donnée</strong></caption>
 <thead>
 <tr class="header">
 <th>ID ISO</th>
@@ -3195,8 +3183,8 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Référence géographiques des données</strong></p>
 <table>
+<caption><strong>Référence géographiques des données</strong></caption>
 <thead>
 <tr class="header">
 <th>ID ISO</th>
@@ -3306,8 +3294,8 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Qualité des données</strong></p>
 <table>
+<caption><strong>Qualité des données</strong></caption>
 <thead>
 <tr class="header">
 <th>ID ISO</th>
@@ -3361,8 +3349,8 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Conformité</strong></p>
 <table style="width:74%;">
+<caption><strong>Conformité</strong></caption>
 <colgroup>
 <col width="9%" />
 <col width="11%" />
@@ -3464,8 +3452,8 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Diffusion des données</strong></p>
 <table style="width:74%;">
+<caption><strong>Diffusion des données</strong></caption>
 <colgroup>
 <col width="9%" />
 <col width="11%" />
@@ -3594,6 +3582,7 @@ possibles.</code></pre>
 <p>La directive européenne Inspire prévoit la possibilité de sélectionner une ou plusieurs langues parmi la liste des 23 langues officielles de l’union européenne présentées dans le tableau ci-dessous.</p>
 <p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
 <table>
+<caption>Liste des lanhues officielles de l'union européenne</caption>
 <thead>
 <tr class="header">
 <th>Nom en français</th>
@@ -3723,6 +3712,7 @@ possibles.</code></pre>
 <p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir l’encodage des caractères d’une fiche de description ou d’une donnée (liste B.5.10 MD_CharacterSetCode) présentée dans le tableau ci-dessous.</p>
 <p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
 <table style="width:71%;">
+<caption>Liste des jeux de caractères</caption>
 <colgroup>
 <col width="4%" />
 <col width="9%" />
@@ -3882,6 +3872,7 @@ possibles.</code></pre>
 <p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le type de ressource décrite (liste B.5.25 MD_ScopeCode) présentée dans le tableau ci-dessous.</p>
 <p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
 <table style="width:75%;">
+<caption>Liste des types de ressources</caption>
 <colgroup>
 <col width="4%" />
 <col width="12%" />
@@ -4005,6 +3996,7 @@ possibles.</code></pre>
 <p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le rôle d’un contact (liste B.5.5 CI_RoleCode) présentée dans le tableau ci-dessous.</p>
 <p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
 <table style="width:88%;">
+<caption>Liste des rôles</caption>
 <colgroup>
 <col width="4%" />
 <col width="12%" />
@@ -4092,6 +4084,7 @@ possibles.</code></pre>
 <p>La norme ISO 19115 prévoit une liste complète de valeurs pour définir le type de représentation spatiale (liste B.5.25 MD_SpatialRepresentationTypeCode) présentée dans le tableau ci-dessous.</p>
 <p>Afin de faciliter la saisie, dans le cadre du partenariat CIGAL, il a été décidé de ne proposer que les valeurs les plus fréquemment utilisées au niveau local.</p>
 <table>
+<caption>Liste des types de représentation spatiales</caption>
 <thead>
 <tr class="header">
 <th>Id</th>
@@ -4142,6 +4135,7 @@ possibles.</code></pre>
 <h4 id="annexe-7-correspondance-thèmes-inspire-catégories-internationales">Annexe 7 : correspondance thèmes INSPIRE / catégories internationales</h4>
 <p>Le tableau ci-dessous présente une correspondance entre les catégories internationales (ISO) et la classification thématique européenne Inspire des données. Lors de la description d’une donnée, il est indispensable de veiller à la cohérence de la saisie entre ces 2 listes de valeurs.</p>
 <table style="width:47%;">
+<caption>Correspondance des thèmes Inspire et des catégories ISO</caption>
 <colgroup>
 <col width="9%" />
 <col width="18%" />
@@ -4327,7 +4321,6 @@ possibles.</code></pre>
 </tr>
 </tbody>
 </table>
-<h2 id="bibliographie-.page-title">Bibliographie {: .page-title}</h2>
 <p>title: Biblio description: Bibliographie path: docs/pages source: biblio.md</p>
 <h3 id="bibliographie">Bibliographie</h3>
 <p>Sans être exhaustif, vous trouverez ci-dessous les principaux documents ayant permis la rédaction du présent guide, ainsi que des éléments incontournables concernant la description des données géographiques.</p>
@@ -4341,11 +4334,8 @@ possibles.</code></pre>
 <li><p>La directive INSPIRE pour les néophytes – 3ème édition (décembre 2011) http://georezo.net/blog/inspire/files/2011/12/La_directive_Inspire_pour_les_neophytes_V3.pdf</p></li>
 <li><p>Guide de saisie des éléments de métadonnées INSPIRE – Gabarit des données Groupe de travail &quot;Métadonnées&quot; / Version 1.0 – Décembre 2011 http://inspire.ign.fr/images/INSPIRE/metadonnees/guide-saisie-metadonnees-inspire_prj12.pdf</p></li>
 </ul>
-<h1 id="a-propos-.page-title">A propos {: .page-title}</h1>
-<h2 id="license-.page-title">License {: .page-title}</h2>
 <h2 id="license">License</h2>
 <p>mdGuide Copyright GéoGrandEst 2017</p>
-<h2 id="release-notes-.page-title">Release Notes {: .page-title}</h2>
 <p>Release notes</p>
 </body>
 </html>
