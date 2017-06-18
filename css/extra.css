@@ -22,3 +22,6 @@ body {
     margin-bottom: 14rem;
 }
 
+.md-nav--primary, .md-nav--secondary {
+    margin-bottom: 13rem;
+}
